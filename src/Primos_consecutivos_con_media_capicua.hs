@@ -22,6 +22,8 @@
 -- Calcular cuántos hay anteriores a 2014.
 -- ---------------------------------------------------------------------
 
+module Primos_consecutivos_con_media_capicua where
+
 import Data.Numbers.Primes (primes)
 
 -- 1ª definición

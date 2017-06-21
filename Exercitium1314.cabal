@@ -30,9 +30,11 @@ library
                      , Bandera_tricolor
                      , ElementosMinimales
                      , Mastermind
-  build-depends:       base >= 4.7 && < 5
+                     , Primos_consecutivos_con_media_capicua
+  build-depends:       QuickCheck >= 2.8.1
+                     , base >= 4.7 && < 5
                      , hspec
-                     , QuickCheck >= 2.8.1
+                     , primes
   default-language:    Haskell2010
 
 test-suite spec
@@ -40,9 +42,10 @@ test-suite spec
   hs-source-dirs:      test
   main-is:             Spec.hs
   build-depends:       Exercitium1314
-                     , base
                      , QuickCheck >= 2.8.1
+                     , base
                      , hspec == 2.*
+                     , primes
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
   default-language:    Haskell2010
   
