@@ -121,34 +121,3 @@ buscaminas2 c = matrix m n (\(i,j) -> minas (i,j))
           vecinas (i,j) = [(a,b) | a <- [max 1 (i-1)..min m (i+1)],
                                    b <- [max 1 (j-1)..min n (j+1)],
                                    (a,b) /= (i,j)]
-
--- ---------------------------------------------------------------------
--- § Soluciones de los alumnos                                        --
--- ---------------------------------------------------------------------
-
--- David
--- =====
-
--- import Data.Matrix
--- 
--- type Campo = Matrix Int
-
-buscaminasA1 :: Campo -> Campo
-buscaminasA1 p = 
-    matrix m n (\(i,j) -> if elem (i,j) indAyac && notElem (i,j) indices 
-                          then length (filter (==(i,j)) indAyac) 
-                          else p!(i,j))
-    where 
-      m = nrows p
-      n = ncols p
-      indices = [(i,j) | i <- [1..m], j <- [1..n], p!(i,j) /= 0]
-      adyacentes (i,j) = [(k,l) | k <- [i-1..i+1], l <- [j-1..j+1]]
-      indAyac = concat [adyacentes (i,j) | i<-[1..m], j <- [1..n], p!(i,j) /= 0]
-
--- ---------------------------------------------------------------------
--- § Referencias                                                      --
--- ---------------------------------------------------------------------
-
--- Basado en el problema [Minesweeper](http://bit.ly/1sfq0b8) de 
--- [UVa Online Judge](http://uva.onlinejudge.org).
-

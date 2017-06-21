@@ -26,35 +26,3 @@ algunMenor p =
           vecinos (i,j) = [(a,b) | a <- [max 1 (i-1)..min m (i+1)],
                                    b <- [max 1 (j-1)..min n (j+1)],
                                    (a,b) /= (i,j)]
-
--- ---------------------------------------------------------------------
--- § Soluciones de los alumnos                                        --
--- ---------------------------------------------------------------------
-
--- Luis
--- ====
-
--- type Matriz = Array (Int,Int) Int 
-algunMenorA1 :: Matriz -> [Int]
-algunMenorA1 p = 
-    [x | ((i,j),x) <- assocs p, 
-         x > minimum [y | ((a,b),y) <- assocs p, 
-                          a `elem` [(max 1 (i-1))..(min m (i+1))], 
-                          b `elem` [(max 1 (j-1))..(min n (j+1))]]]
-    where (m,n) = snd (bounds p)
-
--- David
--- =====
-
--- import Data.Array
---  
--- type Matriz = Array (Int,Int) Int
- 
-algunMenorA2 :: Matriz -> [Int]
-algunMenorA2 p = [p!(i,j) | i<- [1..m], j <- [1..n], tieneMenor i j]
-    where (m,n)          = snd (bounds p)
-          tieneMenor i j = or [p!(i,j) > p!(i',j') | i' <- [i-1..i+1],
-                                                     j' <- [j-1..j+1],
-                                                     pertenece i' j']
-          pertenece i' j' = inRange ((1,1),(m,n)) (i',j')
-

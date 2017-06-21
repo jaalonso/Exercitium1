@@ -55,33 +55,3 @@ ramas3 (N x as) = concatMap (map (x:)) (map ramas3 as)
 ramas4 :: Arbol a -> [[a]]
 ramas4 (N x []) = [[x]]
 ramas4 (N x xs) = map ramas4 xs >>= map (x:)
-
--- ---------------------------------------------------------------------
--- § Soluciones de alumnos                                            --
--- ---------------------------------------------------------------------
-
--- Ángela
-ramasA1 :: Arbol b -> [[b]]
-ramasA1 (N x []) = [[x]]
-ramasA1 (N x xs) = map (x:) (concat [ramasA1 ys | ys <- xs])
-
--- ---------------------------------------------------------------------
--- § Verificación                                                     --
--- ---------------------------------------------------------------------
-
-ramas :: Arbol a -> [[a]]
-ramas = ramasA1
-
-ejemplos :: Test
-ejemplos =
-    test ["1" ~: "ramas ej1" ~: 
-          ramas ej1  ~?=  [[1,2],[1,3,4]],
-          "2" ~: "ramas ej2" ~: 
-          ramas ej2  ~?=  [[3,5,6],[3,4],[3,7,2],[3,7,1]]]
-
-verifica = runTestTT ejemplos
-
--- Verificación:
---    ghci> verifica 
---    Cases: 2  Tried: 2  Errors: 0  Failures: 0
---    Counts {cases = 2, tried = 2, errors = 0, failures = 0}

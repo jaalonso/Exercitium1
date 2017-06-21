@@ -29,35 +29,3 @@ elimina1 n (x:xs) = [x:ys | ys <- elimina1 n xs] ++ elimina1 (n-1) xs
 elimina2 :: Int -> [a] -> [[a]]
 elimina2 n xs = [ys | ys <- subsequences xs, length ys == k]
     where k = length xs - n
-
--- ---------------------------------------------------------------------
--- § Soluciones de alumnos                                            --
--- ---------------------------------------------------------------------
-
--- Paco
--- ====
-
-eliminaA1 :: Int -> [a] -> [[a]]
-eliminaA1 n xs = [ys | ys <- subsequences xs, length ys == k]
-    where k = length xs - n
-
--- ---------------------------------------------------------------------
--- § Verificación                                                     --
--- ---------------------------------------------------------------------
-
-verifica f =
-    sort (elimina 0 "abcd")  == ["abcd"]                        &&
-    sort (elimina 1 "abcd")  == ["abc","abd","acd","bcd"]       &&
-    sort (elimina 2 "abcd")  == ["ab","ac","ad","bc","bd","cd"] &&
-    sort (elimina 3 "abcd")  == ["a","b","c","d"]               &&
-    sort (elimina 4 "abcd")  == [""]                            &&
-    sort (elimina 5 "abcd")  == []                              &&
-    sort (elimina 6 "abcd")  == []
-    where elimina = f
-
--- ---------------------------------------------------------------------
--- § Referencia                                                       --
--- ---------------------------------------------------------------------
-
--- Basado en el ejercicio de 1HaskellADay del 5 de junio de 2014
--- publicado [aquí](http://bit.ly/1pduDjS).

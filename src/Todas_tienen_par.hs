@@ -46,22 +46,3 @@ tienePar3 = foldr ((||) . even) False
 
 todasTienenPar4 :: [[Int]] -> Bool
 todasTienenPar4 = all (any even)
-
--- ---------------------------------------------------------------------
--- § Soluciones de alumnos                                            --
--- ---------------------------------------------------------------------
-
--- David
--- =====
-todasTienenParA1 :: [[Int]] -> Bool
-todasTienenParA1 xss = and $ map tienenPar xss
-    where tienenPar xs = filter (even) xs /= []
-
--- ---------------------------------------------------------------------
--- § Verificación                                                     --
--- ---------------------------------------------------------------------
-
-verifica f =
-    todasTienenPar [[1,2],[3,4,5],[8]]  ==  True &&
-    todasTienenPar [[1,2],[3,5]]        ==  False
-    where todasTienenPar = f

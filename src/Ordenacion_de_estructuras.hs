@@ -42,20 +42,3 @@ data Notas = Notas String Int Int
 ordenadas :: [Notas] -> [Notas]
 ordenadas ns =
     [Notas n x y | (y,x,n) <- sort [(y1,x1,n1) | (Notas n1 x1 y1) <- ns]] 
-
--- ---------------------------------------------------------------------
--- § Soluciones de los alumnos                                        --
--- ---------------------------------------------------------------------
-
--- Eduardo
-ordenadasA1 :: [Notas] -> [Notas]
-ordenadasA1 xs = aux (sort [(y,x,xs) | (Notas xs x y) <- xs])
-    where aux []           = []
-          aux ((a,b,c):xs) = [Notas c b a] ++ aux xs
-
--- Donde aux traslada tripletes a nuestro tipo de dato.
-
--- David
-ordenadasA2 :: [Notas] -> [Notas]
-ordenadasA2 ns = [Notas a b c | (c,b,a) <- xs]
-    where xs = sort [(c,b,a) | (Notas a b c) <- ns] 

@@ -40,19 +40,3 @@ regiones1 n = regiones1 (n-1) + n
 -- 2ª definición (por la fórmula):
 regiones2 :: Integer -> Integer
 regiones2 n = n*(n+1) `div` 2 + 1
-
--- ---------------------------------------------------------------------
--- § Soluciones de los alumnos                                        --
--- ---------------------------------------------------------------------
-
--- Luis F.
-regionesA1 :: Integer -> Integer
-regionesA1 n = n*(n+1) `div` 2 + 1
-
--- ---------------------------------------------------------------------
--- § Verificación                                                     --
--- ---------------------------------------------------------------------
-
-prop_equivalencia :: Positive Integer -> Bool
-prop_equivalencia (Positive n) =
-    regiones n == regionesA1 n
