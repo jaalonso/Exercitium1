@@ -1,0 +1,1476 @@
+
+./src/Filtro_booleano.hs,543
+filtroBooleano1 filtroBooleano127,28
+filtroBooleano1 filtroBooleano128,29
+filtroBooleano2 filtroBooleano233,34
+filtroBooleano2 filtroBooleano234,35
+filtroBooleano3 filtroBooleano339,40
+filtroBooleano3 filtroBooleano340,41
+filtroBooleano4 filtroBooleano443,44
+filtroBooleano4 filtroBooleano444,45
+filtroBooleanoA1 filtroBooleanoA155,56
+filtroBooleanoA1 filtroBooleanoA156,57
+filtroBooleano filtroBooleano64,65
+filtroBooleano filtroBooleano65,66
+ejemplos ejemplos67,68
+ejemplos ejemplos68,69
+verifica verifica85,86
+
+./src/Main.hs,52
+module Main Main0,1
+main main2,3
+main main3,4
+
+./src/Laberinto_numerico.hs,140
+longitudCaminoMinimo longitudCaminoMinimo29,30
+longitudCaminoMinimo longitudCaminoMinimo30,31
+orbita orbita38,39
+orbita orbita39,40
+
+./src/Seleccion_con_fallo.hs,1040
+seleccionConFallo1 seleccionConFallo121,22
+seleccionConFallo1 seleccionConFallo122,23
+seleccionConFallo2 seleccionConFallo227,28
+seleccionConFallo2 seleccionConFallo228,29
+seleccionConFalloAv1 seleccionConFalloAv136,37
+seleccionConFalloAv1 seleccionConFalloAv137,38
+seleccionConFalloA1 seleccionConFalloA154,55
+seleccionConFalloA1 seleccionConFalloA155,56
+seleccionConFalloA2 seleccionConFalloA261,62
+seleccionConFalloA2 seleccionConFalloA262,63
+seleccionConFalloA3 seleccionConFalloA368,69
+verificaP verificaP73,74
+seleccionConFalloA4 seleccionConFalloA478,79
+seleccionConFalloA5 seleccionConFalloA584,85
+seleccionConFalloA5 seleccionConFalloA585,86
+seleccionConFalloA6 seleccionConFalloA690,91
+seleccionConFalloA6 seleccionConFalloA691,92
+seleccionConFalloA7 seleccionConFalloA797,98
+seleccionConFalloA7 seleccionConFalloA798,99
+seleccionConFallo seleccionConFallo106,107
+seleccionConFallo seleccionConFallo107,108
+ejemplos ejemplos109,110
+ejemplos ejemplos110,111
+verifica verifica120,121
+
+./src/Lista_cuadrada.hs,880
+listaCuadrada1 listaCuadrada122,23
+listaCuadrada1 listaCuadrada123,24
+grupos grupos31,32
+grupos grupos32,33
+listaCuadrada2 listaCuadrada236,37
+listaCuadrada2 listaCuadrada237,38
+listaCuadrada3 listaCuadrada342,43
+listaCuadrada3 listaCuadrada343,44
+listaCuadrada4 listaCuadrada447,48
+listaCuadrada4 listaCuadrada448,49
+listaCuadradaA1 listaCuadradaA156,57
+listaCuadradaA1 listaCuadradaA157,58
+listaCuadradaA2 listaCuadradaA263,64
+listaCuadradaA2 listaCuadradaA264,65
+listaCuadradaA3 listaCuadradaA373,74
+listaCuadradaA3 listaCuadradaA374,75
+listaCuadradaA4 listaCuadradaA479,80
+listaCuadradaA4 listaCuadradaA480,81
+listaCuadradaA5 listaCuadradaA587,88
+listaCuadradaA5 listaCuadradaA588,89
+listaCuadrada listaCuadrada98,99
+listaCuadrada listaCuadrada99,100
+ejemplos ejemplos101,102
+ejemplos ejemplos102,103
+verifica verifica112,113
+
+./src/Triangulares_con_cifras.hs,1280
+triangularesConCifras1 triangularesConCifras136,37
+triangularesConCifras1 triangularesConCifras137,38
+triangulares1 triangulares142,43
+triangulares1 triangulares143,44
+triangulares2 triangulares247,48
+triangulares2 triangulares248,49
+triangulares3 triangulares352,53
+triangulares3 triangulares353,54
+triangulares triangulares56,57
+triangulares triangulares57,58
+nCifras nCifras62,63
+nCifras nCifras63,64
+triangularesConCifrasA1 triangularesConCifrasA170,71
+triangularesConCifrasA1 triangularesConCifrasA171,72
+triangularesConCifrasA2 triangularesConCifrasA277,78
+triangularesConCifrasA2 triangularesConCifrasA278,79
+cifrasDistTriang cifrasDistTriang80,81
+cifrasDistTriang cifrasDistTriang81,82
+cifras cifras83,84
+cifras cifras84,85
+triangular triangular86,87
+triangular triangular87,88
+triangularesConCifrasA3 triangularesConCifrasA392,93
+triangularesConCifrasA3 triangularesConCifrasA393,94
+triangularesConCifrasA4 triangularesConCifrasA4104,105
+triangularesConCifrasA4 triangularesConCifrasA4105,106
+triangularesA4 triangularesA4108,109
+triangularesConCifras triangularesConCifras114,115
+triangularesConCifras triangularesConCifras115,116
+ejemplos ejemplos117,118
+ejemplos ejemplos118,119
+verifica verifica130,131
+
+./src/Bandera_tricolor.hs,561
+module Bandera_tricolor Bandera_tricolor22,23
+data Color Color26,27
+data Color = R R26,27
+data Color = R | A A26,27
+data Color = R | A | MM26,27
+banderaTricolor banderaTricolor30,31
+banderaTricolor banderaTricolor31,32
+banderaTricolor2 banderaTricolor234,35
+banderaTricolor2 banderaTricolor235,36
+banderaTricolor3 banderaTricolor339,40
+banderaTricolor3 banderaTricolor340,41
+banderaTricolor4 banderaTricolor444,45
+banderaTricolor4 banderaTricolor445,46
+banderaTricolor5 banderaTricolor552,53
+banderaTricolor5 banderaTricolor553,54
+
+./src/Valor_de_un_polinomio.hs,393
+type Polinomio Polinomio34,35
+type Polinomio a a34,35
+ej_pol1 ej_pol137,38
+ej_pol1 ej_pol138,39
+ej_pol2 ej_pol241,42
+ej_pol2 ej_pol242,43
+valor1 valor145,46
+valor1 valor146,47
+valor2 valor250,51
+valor2 valor251,52
+valorA1 valorA158,59
+valorA1 valorA159,60
+valor valor65,66
+valor valor66,67
+ejemplos ejemplos68,69
+ejemplos ejemplos69,70
+verifica verifica83,84
+
+./src/Iguales_al_siguiente.hs,522
+module Iguales_al_siguiente Iguales_al_siguiente15,16
+igualesAlSiguiente igualesAlSiguiente20,21
+igualesAlSiguiente igualesAlSiguiente21,22
+igualesAlSiguiente2 igualesAlSiguiente225,26
+igualesAlSiguiente2 igualesAlSiguiente226,27
+igualesAlSiguiente3 igualesAlSiguiente331,32
+igualesAlSiguiente3 igualesAlSiguiente332,33
+igualesAlSiguiente4 igualesAlSiguiente435,36
+igualesAlSiguiente4 igualesAlSiguiente436,37
+igualesAlSiguiente5 igualesAlSiguiente539,40
+igualesAlSiguiente5 igualesAlSiguiente540,41
+
+./src/Algun_vecino_menor.hs,216
+type Matriz Matriz18,19
+algunMenor algunMenor20,21
+algunMenor algunMenor21,22
+algunMenorA1 algunMenorA137,38
+algunMenorA1 algunMenorA138,39
+algunMenorA2 algunMenorA252,53
+algunMenorA2 algunMenorA253,54
+
+./src/Representacion_de_Zeckendorf.hs,459
+zeckendorf1 zeckendorf145,46
+zeckendorf1 zeckendorf146,47
+fibs fibs54,55
+fibs fibs55,56
+zeckendorf2 zeckendorf259,60
+zeckendorf2 zeckendorf260,61
+zeckendorf3 zeckendorf366,67
+zeckendorf3 zeckendorf367,68
+fibsP1:fibsP190,91
+fibsP1 fibsP191,92
+zeckendorfP1 zeckendorfP193,94
+zeckendorfP1 zeckendorfP194,95
+zeckendorfP2 zeckendorfP2105,106
+zeckendorfP2 zeckendorfP2106,107
+phi phi110,111
+phi phi111,112
+verifica verifica117,118
+
+./src/Producto_de_matrices_como_listas_de_listas.hs,295
+producto producto25,26
+producto producto26,27
+productoA1 productoA136,37
+separa separa40,41
+columna columna43,44
+fila fila45,46
+numeroFilas numeroFilas47,48
+numeroColumnas numeroColumnas49,50
+productoA2 productoA256,57
+productoA2 productoA257,58
+productoA3 productoA365,66
+
+./src/Primos_consecutivos_con_media_capicua.hs,430
+primosConsecutivosConMediaCapicua primosConsecutivosConMediaCapicua27,28
+primosConsecutivosConMediaCapicua primosConsecutivosConMediaCapicua28,29
+primo primo36,37
+primo primo37,38
+primos primos42,43
+primos primos43,44
+capicua capicua47,48
+capicua capicua48,49
+primosConsecutivosConMediaCapicua2 primosConsecutivosConMediaCapicua252,53
+primosConsecutivosConMediaCapicua2 primosConsecutivosConMediaCapicua253,54
+
+./src/Reiteracion_de_funciones.hs,1096
+reiteracion1 reiteracion126,27
+reiteracion1 reiteracion127,28
+reiteracion2 reiteracion231,32
+reiteracion2 reiteracion232,33
+reiteracion3 reiteracion336,37
+reiteracion3 reiteracion337,38
+reiteracionA1 reiteracionA144,45
+reiteracionA1 reiteracionA145,46
+reiteracionA2 reiteracionA262,63
+reiteracionA2 reiteracionA263,64
+propiedad1 propiedad165,66
+propiedad1 propiedad166,67
+propiedad2 propiedad272,73
+propiedad2 propiedad273,74
+propiedad3 propiedad379,80
+propiedad3 propiedad380,81
+reiteracionA3 reiteracionA389,90
+reiteracionA3 reiteracionA390,91
+reiteracionA3' reiteracionA3'93,94
+reiteracionA3' reiteracionA3'94,95
+propReitera1 propReitera197,98
+propReitera2 propReitera2100,101
+propReitera3 propReitera3103,104
+reiteracion reiteracion110,111
+reiteracion reiteracion111,112
+ejemplos ejemplos113,114
+ejemplos ejemplos114,115
+verifica verifica124,125
+prop_suma prop_suma130,131
+prop_suma prop_suma131,132
+prop_producto prop_producto134,135
+prop_producto prop_producto135,136
+prop_cons prop_cons138,139
+prop_cons prop_cons139,140
+
+./src/Buscaminas.hs,448
+type Campo Campo63,64
+type Casilla Casilla64,65
+ejCampo1, ejCampo2 ejCampo266,67
+ejCampo1,ejCampo166,67
+ejCampo1 ejCampo167,68
+ejCampo2 ejCampo271,72
+buscaminas1 buscaminas178,79
+buscaminas1 buscaminas179,80
+minas minas90,91
+minas minas91,92
+vecinas vecinas102,103
+vecinas vecinas103,104
+buscaminas2 buscaminas2110,111
+buscaminas2 buscaminas2111,112
+buscaminasA1 buscaminasA1135,136
+buscaminasA1 buscaminasA1136,137
+
+./src/Sopa_de_letras.hs,798
+type Matriz Matriz37,38
+type Matriz a a37,38
+p p39,40
+p p40,41
+enLaSopa1 enLaSopa148,49
+enLaSopa1 enLaSopa149,50
+enLaSopa2 enLaSopa260,61
+enLaSopa2 enLaSopa261,62
+estaEnHorizontal estaEnHorizontal63,64
+estaEnHorizontal estaEnHorizontal64,65
+filasL filasL67,68
+filasL filasL68,69
+estaEnVertical estaEnVertical70,71
+estaEnVertical estaEnVertical71,72
+columnasL columnasL74,75
+columnasL columnasL75,76
+listaMatriz listaMatriz77,78
+listaMatriz listaMatriz78,79
+numFilas numFilas82,83
+numFilas numFilas83,84
+numColumnas:numColumnas85,86
+numColumnas numColumnas86,87
+filaMat filaMat88,89
+filaMat filaMat89,90
+columnaMat columnaMat92,93
+columnaMat columnaMat93,94
+enLaSopaA1 enLaSopaA1114,115
+enLaSopaA1 enLaSopaA1115,116
+verifica verifica130,131
+
+./src/Primos_equidistantes.hs,174
+primosEquidistantes primosEquidistantes17,18
+primosEquidistantes primosEquidistantes18,19
+primo primo25,26
+primo primo26,27
+primos primos30,31
+primos primos31,32
+
+./src/Enumera_arbol.hs,553
+data Arbol Arbol42,43
+data Arbol a = H H42,43
+             | N N43,44
+ej1 ej146,47
+ej1 ej147,48
+enumeraArbol1 enumeraArbol149,50
+enumeraArbol1 enumeraArbol150,51
+enumeraArbolA1 enumeraArbolA164,65
+numerodeNodos numerodeNodos70,71
+enumeraArbolA2 enumeraArbolA276,77
+enumeraArbolA2 enumeraArbolA277,78
+enumera enumera80,81
+enumera enumera81,82
+numero numero86,87
+numero numero87,88
+enumeraArbol enumeraArbol94,95
+enumeraArbol enumeraArbol95,96
+ejemplos ejemplos97,98
+ejemplos ejemplos98,99
+verifica verifica109,110
+
+./src/Sustitucion_en_una_expresion.hs,176
+data Expr Expr28,29
+data Expr = V V28,29
+          | N N29,30
+          | S S30,31
+          | P P31,32
+sustitucion sustitucion34,35
+sustitucion sustitucion35,36
+
+./src/Orbita_prima.hs,952
+orbita1 orbita129,30
+orbita1 orbita130,31
+esPrimo esPrimo33,34
+esPrimo esPrimo34,35
+cifras cifras36,37
+cifras cifras37,38
+orbita2 orbita249,50
+orbita2 orbita250,51
+orbitaA1 orbitaA159,60
+orbitaA1 orbitaA160,61
+menorOrb3 menorOrb366,67
+menorOrb3 menorOrb367,68
+orbitaA2 orbitaA274,75
+divisores divisores77,78
+primo primo79,80
+digitos digitos81,82
+orbitaA3 orbitaA387,88
+orbitaA3 orbitaA388,89
+cifrasA3 cifrasA391,92
+orbitaA4 orbitaA497,98
+orbitaA4 orbitaA498,99
+cifrasA4 cifrasA4103,104
+cifrasA4 cifrasA4104,105
+menor menor106,107
+orbitaA5 orbitaA5111,112
+esPrimoA5 esPrimoA5114,115
+factores factores116,117
+sumaCifras sumaCifras118,119
+orbitaA6 orbitaA6124,125
+orbitaA6 orbitaA6125,126
+primoA6 primoA6128,129
+cifrasA6 cifrasA6130,131
+cifrasA6 cifrasA6131,132
+menorOrbita menorOrbita134,135
+primos primos136,137
+primos primos137,138
+criba criba139,140
+verifica verifica145,146
+
+./src/Ordenada_ciclicamente.hs,1523
+ordenadaCiclicamente1 ordenadaCiclicamente131,32
+ordenadaCiclicamente1 ordenadaCiclicamente132,33
+ordenada ordenada42,43
+ordenada ordenada43,44
+ordenadaCiclicamente2 ordenadaCiclicamente249,50
+ordenadaCiclicamente2 ordenadaCiclicamente250,51
+siguienteCiclo siguienteCiclo59,60
+ordenadaCiclicamenteA1 ordenadaCiclicamenteA169,70
+ordenadaCiclicamenteA1 ordenadaCiclicamenteA170,71
+ordenadaCiclicamenteA2 ordenadaCiclicamenteA280,81
+ordenadaCiclicamenteA3 ordenadaCiclicamenteA394,95
+todosFalse todosFalse99,100
+listaord listaord103,104
+posicion posicion108,109
+listaord2 listaord2112,113
+cambia cambia114,115
+todoscambia todoscambia118,119
+ordenadaCiclicamenteA4 ordenadaCiclicamenteA4123,124
+ordenadaCiclicamenteA4a ordenadaCiclicamenteA4a128,129
+ordenadaCiclicamenteA5 ordenadaCiclicamenteA5137,138
+ordenadaCiclicamenteA6 ordenadaCiclicamenteA6146,147
+ordenadaCiclicamenteA61 ordenadaCiclicamenteA61151,152
+ordenadaA6 ordenadaA6156,157
+ordenadaCiclicamenteA7 ordenadaCiclicamenteA7163,164
+ordenadaCiclicamenteA7 ordenadaCiclicamenteA7164,165
+reordena reordena169,170
+ordenadaCiclicamenteA8 ordenadaCiclicamenteA8173,174
+ordenadaCiclicamenteA8 ordenadaCiclicamenteA8174,175
+ordenadaCiclicamenteA9 ordenadaCiclicamenteA9180,181
+ordenadaCiclicamenteA9 ordenadaCiclicamenteA9181,182
+ordenadaA9 ordenadaA9183,184
+ordenadaA9 ordenadaA9184,185
+prop_ordenadaCiclicamente prop_ordenadaCiclicamente193,194
+prop_ordenadaCiclicamente prop_ordenadaCiclicamente194,195
+
+./src/Limite.hs,121
+limite1 limite116,17
+limite1 limite117,18
+limiteA1 limiteA127,28
+limiteA1 limiteA128,29
+verifica verifica35,36
+
+./src/Sucesiones_pucelanas.hs,553
+pucelanasConNcifras pucelanasConNcifras29,30
+pucelanasConNcifras pucelanasConNcifras30,31
+esCubo esCubo37,38
+pucelanasConNcifrasA1 pucelanasConNcifrasA151,52
+pucelanasConNcifrasA1 pucelanasConNcifrasA152,53
+pucelanas pucelanas56,57
+pucelanas pucelanas57,58
+pucelanasConNcifrasA2 pucelanasConNcifrasA262,63
+pucelanasConNcifrasA2 pucelanasConNcifrasA263,64
+pucelanasA2 pucelanasA269,70
+pucelanasA2 pucelanasA270,71
+cuantsSucesnsPucelns3cfrs cuantsSucesnsPucelns3cfrs75,76
+cuantsSucesnsPucelns3cfrs cuantsSucesnsPucelns3cfrs76,77
+
+./src/Elimina_unitarias.hs,867
+eliminaUnitarias1 eliminaUnitarias142,43
+eliminaUnitarias1 eliminaUnitarias143,44
+eliminaUnitarias2 eliminaUnitarias246,47
+eliminaUnitarias2 eliminaUnitarias247,48
+eliminaUnitarias3 eliminaUnitarias350,51
+eliminaUnitarias3 eliminaUnitarias351,52
+eliminaUnitarias4 eliminaUnitarias461,62
+eliminaUnitarias4 eliminaUnitarias462,63
+eliminaUnitarias5 eliminaUnitarias574,75
+eliminaUnitarias5 eliminaUnitarias575,76
+eliminaUnitarias6 eliminaUnitarias683,84
+eliminaUnitarias6 eliminaUnitarias684,85
+eliminaUnitariasA1 eliminaUnitariasA196,97
+eliminaUnitariasA1 eliminaUnitariasA197,98
+eliminaUnitariasA2 eliminaUnitariasA2101,102
+eliminaUnitariasA2 eliminaUnitariasA2102,103
+eliminaUnitarias eliminaUnitarias156,157
+eliminaUnitarias eliminaUnitarias157,158
+ejemplos ejemplos159,160
+ejemplos ejemplos160,161
+verifica verifica198,199
+
+./src/Mayor_sucesion_3n+1.hs,479
+mayorLongitud1 mayorLongitud133,34
+mayorLongitud1 mayorLongitud134,35
+sucesion sucesion38,39
+sucesion sucesion39,40
+mayorLongitud2 mayorLongitud246,47
+mayorLongitud2 mayorLongitud247,48
+longitud longitud52,53
+longitud longitud53,54
+mayorLongitud3 mayorLongitud360,61
+mayorLongitud3 mayorLongitud361,62
+sucesion2 sucesion265,66
+sucesion2 sucesion266,67
+mayorLongitudA1 mayorLongitudA178,79
+mayorLongitudA1 mayorLongitudA179,80
+verifica verifica88,89
+
+./src/Pares_adyacentes_iguales.hs,2190
+numeroParesAdyacentesIguales1 numeroParesAdyacentesIguales129,30
+numeroParesAdyacentesIguales1 numeroParesAdyacentesIguales130,31
+numeroParesAdyacentesIgualesFilas numeroParesAdyacentesIgualesFilas41,42
+numeroParesAdyacentesIgualesFilas numeroParesAdyacentesIgualesFilas42,43
+numeroParesAdyacentesIgualesFilas2 numeroParesAdyacentesIgualesFilas246,47
+numeroParesAdyacentesIgualesFilas2 numeroParesAdyacentesIgualesFilas247,48
+numeroParesAdyacentesIgualesFilas3 numeroParesAdyacentesIgualesFilas351,52
+numeroParesAdyacentesIgualesFilas3 numeroParesAdyacentesIgualesFilas352,53
+numeroParesAdyacentesIgualesFila numeroParesAdyacentesIgualesFila57,58
+numeroParesAdyacentesIgualesFila numeroParesAdyacentesIgualesFila58,59
+numeroParesAdyacentesIguales2 numeroParesAdyacentesIguales266,67
+numeroParesAdyacentesIguales3 numeroParesAdyacentesIguales373,74
+numeroParesAdyacentesIguales3 numeroParesAdyacentesIguales374,75
+numeroParesAdyacentesIguales4 numeroParesAdyacentesIguales485,86
+numeroParesAdyacentesIguales4 numeroParesAdyacentesIguales486,87
+numeroParesAdyacentesIgualesA1 numeroParesAdyacentesIgualesA194,95
+numeroParesAdyacentesIgualesA1 numeroParesAdyacentesIgualesA195,96
+numeroParesAdyacentesIgualesA2 numeroParesAdyacentesIgualesA2107,108
+numeroParesAdyacentesIgualesA2 numeroParesAdyacentesIgualesA2108,109
+adyPorFilas adyPorFilas112,113
+numeroParesAdyacentesIgualesA3 numeroParesAdyacentesIgualesA3115,116
+numeroParesAdyacentesIgualesA3 numeroParesAdyacentesIgualesA3116,117
+numeroParesAdyacentesIgualesA4 numeroParesAdyacentesIgualesA4122,123
+numeroParesAdyacentesIgualesA4 numeroParesAdyacentesIgualesA4123,124
+numeroParesAdyacentesIgualesA5 numeroParesAdyacentesIgualesA5131,132
+numeroParesAdyacentesIgualesA5 numeroParesAdyacentesIgualesA5132,133
+aux aux134,135
+numeroParesAdyacentesIgualesA5b numeroParesAdyacentesIgualesA5b139,140
+numeroParesAdyacentesIgualesA5b numeroParesAdyacentesIgualesA5b140,141
+numeroParesAdyacentesIguales numeroParesAdyacentesIguales149,150
+numeroParesAdyacentesIguales numeroParesAdyacentesIguales150,151
+ejemplos ejemplos152,153
+ejemplos ejemplos153,154
+verifica verifica170,171
+
+./src/ElementosMinimales.hs,192
+module ElementosMinimales ElementosMinimales15,16
+minimales minimales20,21
+minimales minimales21,22
+subconjuntoPropio subconjuntoPropio29,30
+subconjuntoPropio subconjuntoPropio30,31
+
+./src/Separacion_por_posicion.hs,805
+particion1 particion121,22
+particion1 particion122,23
+pares pares27,28
+pares pares28,29
+impares impares34,35
+impares impares35,36
+particion2 particion240,41
+particion2 particion241,42
+particion3 particion346,47
+particion3 particion347,48
+particion4 particion453,54
+particion4 particion454,55
+particion5 particion559,60
+particion5 particion560,61
+particionA1 particionA168,69
+particionA1 particionA169,70
+particionA2 particionA275,76
+particionA2 particionA276,77
+particionA3 particionA382,83
+particionA3 particionA383,84
+posiciones posiciones85,86
+posicionesPares posicionesPares88,89
+posicionesImpares posicionesImpares90,91
+particion particion96,97
+particion particion97,98
+ejemplos ejemplos99,100
+ejemplos ejemplos100,101
+verifica verifica108,109
+
+./src/Matriz_permutacion.hs,680
+type Matriz Matriz31,32
+type Matriz a a31,32
+q1, q2, q3, q4 q433,34
+q1, q2, q3,q333,34
+q1, q2,q233,34
+q1,q133,34
+q1 q134,35
+q2 q235,36
+q3 q336,37
+q4 q437,38
+esMatrizPermutacion esMatrizPermutacion39,40
+esMatrizPermutacion esMatrizPermutacion40,41
+esListaUnitaria esListaUnitaria50,51
+esListaUnitaria esListaUnitaria51,52
+esMatrizPermutacionA1 esMatrizPermutacionA160,61
+columna columna64,65
+fila fila66,67
+numFilas numFilas68,69
+numColumnas numColumnas70,71
+esMatrizPermutacionA2 esMatrizPermutacionA275,76
+columna1 columna179,80
+fila1 fila183,84
+numFilasA2 numFilasA287,88
+numColumnasA2 numColumnasA289,90
+verifica verifica95,96
+
+./src/Todas_tienen_par.hs,519
+todasTienenPar todasTienenPar18,19
+todasTienenPar todasTienenPar19,20
+todasTienenPar2 todasTienenPar224,25
+todasTienenPar2 todasTienenPar225,26
+tienePar tienePar29,30
+tienePar tienePar30,31
+todasTienenPar3 todasTienenPar336,37
+todasTienenPar3 todasTienenPar337,38
+tienePar3 tienePar340,41
+tienePar3 tienePar341,42
+todasTienenPar4 todasTienenPar446,47
+todasTienenPar4 todasTienenPar447,48
+todasTienenParA1 todasTienenParA155,56
+todasTienenParA1 todasTienenParA156,57
+verifica verifica63,64
+
+./src/Divide_si_todos_multiplos.hs,771
+divideSiTodosMultiplos1 divideSiTodosMultiplos117,18
+divideSiTodosMultiplos1 divideSiTodosMultiplos118,19
+todosMultiplos todosMultiplos26,27
+todosMultiplos todosMultiplos27,28
+divideSiTodosMultiplos2 divideSiTodosMultiplos230,31
+divideSiTodosMultiplos2 divideSiTodosMultiplos231,32
+    | y `mod`mod33,34
+divideSiTodosMultiplos3 divideSiTodosMultiplos340,41
+divideSiTodosMultiplos3 divideSiTodosMultiplos341,42
+divideSiTodosMultiplos4 divideSiTodosMultiplos457,58
+divideSiTodosMultiplos4 divideSiTodosMultiplos458,59
+divideSiTodosMultiplos5 divideSiTodosMultiplos563,64
+divideSiTodosMultiplos5 divideSiTodosMultiplos564,65
+divideSiTodosMultiplosA1 divideSiTodosMultiplosA185,86
+todosMultiplosA1 todosMultiplosA189,90
+verifica verifica97,98
+
+./src/Ordenados_por_maximo.hs,334
+module Ordenados_por_maximo Ordenados_por_maximo17,18
+ordenadosPorMaximo ordenadosPorMaximo23,24
+ordenadosPorMaximo ordenadosPorMaximo24,25
+ordenadosPorMaximo2 ordenadosPorMaximo228,29
+ordenadosPorMaximo2 ordenadosPorMaximo229,30
+ordenadosPorMaximo3 ordenadosPorMaximo333,34
+ordenadosPorMaximo3 ordenadosPorMaximo334,35
+
+./src/Alergias.hs,862
+data Alergeno Alergeno58,59
+data Alergeno = HuevosHuevos58,59
+              | CacahuetesCacahuetes59,60
+              | MariscosMariscos60,61
+              | FresasFresas61,62
+              | TomatesTomates62,63
+              | ChocolateChocolate63,64
+              | PolenPolen64,65
+              | GatosGatos65,66
+alergias1 alergias170,71
+alergias1 alergias171,72
+int2bin int2bin77,78
+int2bin int2bin78,79
+alergias2 alergias283,84
+alergias2 alergias284,85
+alergias3 alergias394,95
+alergias3 alergias395,96
+alergenos alergenos99,100
+alergenos alergenos100,101
+codigos codigos103,104
+codigos codigos104,105
+descomposicion descomposicion113,114
+descomposicion descomposicion114,115
+alergias alergias149,150
+alergias alergias150,151
+ejemplos ejemplos152,153
+ejemplos ejemplos153,154
+verifica verifica182,183
+
+./src/Intercala_n_copias.hs,268
+intercala1 intercala125,26
+intercala1 intercala126,27
+intercala2 intercala235,36
+intercala2 intercala236,37
+intercalaUno intercalaUno42,43
+intercalaUno intercalaUno43,44
+prop_equivalencia prop_equivalencia49,50
+prop_equivalencia prop_equivalencia50,51
+
+./src/Entero_positivo_de_la_cadena.hs,1029
+enteroPositivo enteroPositivo27,28
+enteroPositivo enteroPositivo28,29
+esDigito1 esDigito145,46
+esDigito1 esDigito146,47
+esDigito2 esDigito249,50
+esDigito2 esDigito250,51
+esDigito3 esDigito353,54
+esDigito3 esDigito354,55
+esDigito4 esDigito457,58
+esDigito4 esDigito458,59
+esDigito5 esDigito561,62
+esDigito5 esDigito562,63
+esDigito esDigito65,66
+esDigito esDigito66,67
+todosDigitos todosDigitos69,70
+todosDigitos todosDigitos70,71
+todosDigitos2 todosDigitos273,74
+todosDigitos2 todosDigitos274,75
+todosDigitos3 todosDigitos378,79
+todosDigitos3 todosDigitos379,80
+todosDigitos4 todosDigitos482,83
+todosDigitos4 todosDigitos483,84
+enteroPositivo2 enteroPositivo286,87
+enteroPositivo2 enteroPositivo287,88
+enteroPositivo3 enteroPositivo3103,104
+enteroPositivo3 enteroPositivo3104,105
+enteroPositivoA1 enteroPositivoA1142,143
+enteroPositivoA1 enteroPositivoA1143,144
+enteroPositivoA2 enteroPositivoA2153,154
+enteroPositivoA2 enteroPositivoA2154,155
+verifica verifica163,164
+
+./src/Descomposiciones_triangulares.hs,681
+descomposicionesTriangulares1 descomposicionesTriangulares122,23
+descomposicionesTriangulares1 descomposicionesTriangulares123,24
+triangulares triangulares31,32
+triangulares triangulares32,33
+descomposicionesTriangularesA1 descomposicionesTriangularesA139,40
+descomposicionesTriangularesA1 descomposicionesTriangularesA140,41
+descomposicionesTriangularesA2 descomposicionesTriangularesA246,47
+descomposicionesTriangularesA2 descomposicionesTriangularesA247,48
+descomposicionesTriangulares descomposicionesTriangulares74,75
+descomposicionesTriangulares descomposicionesTriangulares75,76
+ejemplos ejemplos77,78
+ejemplos ejemplos78,79
+verifica verifica89,90
+
+./src/Suma_si_todos_justos.hs,664
+sumaSiTodosJustos sumaSiTodosJustos19,20
+sumaSiTodosJustos sumaSiTodosJustos20,21
+todosJustos todosJustos31,32
+todosJustos todosJustos32,33
+todosJustos2 todosJustos235,36
+todosJustos2 todosJustos236,37
+sumaSiTodosJustos2 sumaSiTodosJustos244,45
+sumaSiTodosJustos2 sumaSiTodosJustos245,46
+sumaSiTodosJustos3 sumaSiTodosJustos350,51
+sumaSiTodosJustos3 sumaSiTodosJustos351,52
+sumaSiTodosJustos4 sumaSiTodosJustos456,57
+sumaSiTodosJustos4 sumaSiTodosJustos457,58
+sumaSiTodosJustos5 sumaSiTodosJustos572,73
+sumaSiTodosJustos5 sumaSiTodosJustos573,74
+sumaSiTodosJustos6 sumaSiTodosJustos684,85
+sumaSiTodosJustos6 sumaSiTodosJustos685,86
+
+./src/Mastermind.hs,338
+module Mastermind Mastermind43,44
+mastermind mastermind48,49
+mastermind mastermind49,50
+aciertos aciertos55,56
+aciertos aciertos56,57
+coincidencias coincidencias62,63
+coincidencias coincidencias63,64
+mastermind2 mastermind270,71
+mastermind2 mastermind271,72
+mastermind3 mastermind380,81
+mastermind3 mastermind381,82
+
+./src/Clausura.hs,128
+clausura clausura23,24
+clausura clausura24,25
+nuevosSucesores nuevosSucesores29,30
+nuevosSucesores nuevosSucesores30,31
+
+./src/Regiones.hs,252
+regiones1 regiones135,36
+regiones1 regiones136,37
+regiones2 regiones240,41
+regiones2 regiones241,42
+regionesA1 regionesA148,49
+regionesA1 regionesA149,50
+prop_equivalencia prop_equivalencia55,56
+prop_equivalencia prop_equivalencia56,57
+
+./src/Mas_cercano_cumpliendo_la_propiedad.hs,1168
+cercano1 cercano134,35
+cercano1 cercano135,36
+ordenaPorCercanos ordenaPorCercanos46,47
+ordenaPorCercanos ordenaPorCercanos47,48
+intercala intercala57,58
+intercala intercala58,59
+cercano2 cercano265,66
+cercano2 cercano266,67
+cercanoA1 cercanoA172,73
+cercanoA1 cercanoA173,74
+parAlista parAlista79,80
+parAlista parAlista80,81
+cercanoC1 cercanoC189,90
+cercanoC1 cercanoC190,91
+posiciones posiciones98,99
+posiciones posiciones99,100
+menorSegContiene menorSegContiene101,102
+menorSegContiene menorSegContiene102,103
+seleccionaSegunPosicion seleccionaSegunPosicion105,106
+seleccionaSegunPosicion seleccionaSegunPosicion106,107
+cercanoC2 cercanoC2115,116
+cercanoC2 cercanoC2116,117
+intercalaC2 intercalaC2121,122
+listaDesde listaDesde124,125
+listaDesde listaDesde125,126
+cercanoC3 cercanoC3133,134
+cercanoC3 cercanoC3134,135
+intercalaC3 intercalaC3139,140
+intercalaC3 intercalaC3140,141
+listaDesdeC3 listaDesdeC3144,145
+listaDesdeC3 listaDesdeC3145,146
+cercanoC4 cercanoC4153,154
+cercanoC4 cercanoC4154,155
+mezcla mezcla161,162
+mezcla mezcla162,163
+verifica verifica170,171
+verifica2 verifica2180,181
+
+./src/Renombra_arbol.hs,505
+data Arbol Arbol56,57
+data Arbol a = H H56,57
+             | N N57,58
+ej1 ej160,61
+ej1 ej161,62
+renombraArbol renombraArbol63,64
+renombraArbol renombraArbol64,65
+valores valores72,73
+valores valores73,74
+posicion posicion79,80
+posicion posicion80,81
+--renombraArbolA1 --renombraArbolA189,90
+renombraArbolA1 renombraArbolA190,91
+cambia cambia94,95
+cambia cambia95,96
+inserta inserta97,98
+renombraArbolA2 renombraArbolA2105,106
+transformaAnumero transformaAnumero109,110
+
+./src/Ordenacion_de_estructuras.hs,234
+data Notas Notas38,39
+data Notas = Notas Notas38,39
+ordenadas ordenadas41,42
+ordenadas ordenadas42,43
+ordenadasA1 ordenadasA150,51
+ordenadasA1 ordenadasA151,52
+ordenadasA2 ordenadasA258,59
+ordenadasA2 ordenadasA259,60
+
+./src/Mayusculas_inicial.hs,905
+mayusculaInicial mayusculaInicial18,19
+mayusculaInicial mayusculaInicial19,20
+mayusculaInicial2 mayusculaInicial223,24
+mayusculaInicial2 mayusculaInicial224,25
+mayusculaInicialA1 mayusculaInicialA136,37
+mayusculaInicialA1 mayusculaInicialA137,38
+mayusculaInicialA2 mayusculaInicialA243,44
+mayusculaInicialA2 mayusculaInicialA244,45
+mayusculaInicialA3 mayusculaInicialA350,51
+mayusculaInicialA3 mayusculaInicialA351,52
+mayusculaInicialA4 mayusculaInicialA459,60
+mayusculaInicialA4 mayusculaInicialA460,61
+letrasMinusculas letrasMinusculas63,64
+primeraMayuscula primeraMayuscula67,68
+mayusculaInicialA5 mayusculaInicialA572,73
+mayusculaInicialA5 mayusculaInicialA573,74
+todoaminusculas todoaminusculas76,77
+todoaminusculas todoaminusculas77,78
+verifica verifica87,88
+prop_mayusculaInicial prop_mayusculaInicial90,91
+prop_mayusculaInicial prop_mayusculaInicial91,92
+
+./src/Numeros_con_digitos_primos.hs,960
+numerosDigitosPrimos numerosDigitosPrimos25,26
+numerosDigitosPrimos numerosDigitosPrimos26,27
+digitosPrimos digitosPrimos33,34
+digitosPrimos digitosPrimos34,35
+digitosPrimos2 digitosPrimos237,38
+digitosPrimos2 digitosPrimos238,39
+cifras cifras41,42
+cifras cifras42,43
+subconjunto subconjunto46,47
+subconjunto subconjunto47,48
+numerosDigitosPrimosA1 numerosDigitosPrimosA160,61
+numerosDigitosPrimosA1 numerosDigitosPrimosA161,62
+cifrasA1:cifrasA163,64
+cifrasA1 cifrasA164,65
+pega:pega69,70
+pega pega70,71
+numerosDigitosPrimosA2 numerosDigitosPrimosA272,73
+numerosDigitosPrimosA2 numerosDigitosPrimosA273,74
+numerosDigitosPrimosA3 numerosDigitosPrimosA376,77
+numerosDigitosPrimosA3 numerosDigitosPrimosA377,78
+numerosDigitosPrimosA4 numerosDigitosPrimosA480,81
+numerosDigitosPrimosA4 numerosDigitosPrimosA481,82
+numerosDigitosPrimosA5 numerosDigitosPrimosA585,86
+numerosDigitosPrimosA5 numerosDigitosPrimosA586,87
+
+./src/Mayor_producto_de_las_ramas_de_un_arbol.hs,905
+data Arbol Arbol38,39
+data Arbol a = N N38,39
+mayorProducto1 mayorProducto142,43
+mayorProducto1 mayorProducto143,44
+mayorProducto1a mayorProducto1a47,48
+mayorProducto1a mayorProducto1a48,49
+mayorProducto2 mayorProducto252,53
+mayorProducto2 mayorProducto253,54
+ramas ramas58,59
+ramas ramas59,60
+mayorProducto2a mayorProducto2a64,65
+mayorProducto2a mayorProducto2a65,66
+mayorProductoA1 mayorProductoA172,73
+mayorProductoA1 mayorProductoA173,74
+ramasA1 ramasA175,76
+ramasA1 ramasA176,77
+mayorProductoA2 mayorProductoA283,84
+mayorProductoA2 mayorProductoA284,85
+mayorProductoA3 mayorProductoA389,90
+mayorProductoA3 mayorProductoA390,91
+mayorProductoA4 mayorProductoA494,95
+mayorProductoA4 mayorProductoA495,96
+mayorProducto mayorProducto102,103
+mayorProducto mayorProducto103,104
+ejemplos ejemplos105,106
+ejemplos ejemplos106,107
+verifica verifica116,117
+
+./src/Emparejamiento_binario.hs,442
+zipBinario zipBinario18,19
+zipBinario zipBinario19,20
+zipBinario2 zipBinario223,24
+zipBinario2 zipBinario224,25
+zipBinario3 zipBinario327,28
+zipBinario3 zipBinario328,29
+zipBinario4 zipBinario437,38
+zipBinario4 zipBinario438,39
+zipbinarioa1 zipbinarioa150,51
+zipbinarioa1 zipbinarioa151,52
+zipbinarioa2 zipbinarioa254,55
+zipbinarioa2 zipbinarioa255,56
+zipBinarioA3 zipBinarioA359,60
+zipBinarioA3 zipBinarioA360,61
+
+./src/Ventana_deslizante.hs,293
+ventanas1 ventanas138,39
+ventanas1 ventanas139,40
+ventanas2 ventanas245,46
+ventanas2 ventanas246,47
+ventanasP1 ventanasP160,61
+ventanasP1 ventanasP161,62
+ventanas ventanas70,71
+ventanas ventanas71,72
+ejemplos ejemplos73,74
+ejemplos ejemplos74,75
+verifica verifica112,113
+
+./src/Codigo_Morse.hs,1212
+caracteres caracteres65,66
+caracteres caracteres66,67
+morse morse70,71
+morse morse71,72
+correspondiente correspondiente79,80
+correspondiente correspondiente80,81
+caracterAmorse caracterAmorse88,89
+caracterAmorse caracterAmorse89,90
+morseAcaracter morseAcaracter96,97
+morseAcaracter morseAcaracter97,98
+palabraAmorse palabraAmorse102,103
+palabraAmorse palabraAmorse103,104
+morseApalabra morseApalabra108,109
+morseApalabra morseApalabra109,110
+fraseAmorse fraseAmorse114,115
+fraseAmorse fraseAmorse115,116
+morseAfrase morseAfrase130,131
+morseAfrase morseAfrase131,132
+fraseAmorseC1 fraseAmorseC1154,155
+morseAfraseC1 morseAfraseC1161,162
+letrasYnumeros letrasYnumeros170,171
+ultimo ultimo173,174
+enMorse enMorse176,177
+enMorse1 enMorse1183,184
+mezcla mezcla189,190
+mezcla1 mezcla1190,191
+fraseAmorseC2 fraseAmorseC2198,199
+fraseAmorseC2 fraseAmorseC2199,200
+frase frase201,202
+frase frase202,203
+cdfca cdfca206,207
+cdfca cdfca207,208
+morseAfraseC2 morseAfraseC2209,210
+morseAfraseC2 morseAfraseC2210,211
+morseC2 morseC2212,213
+morseC2 morseC2213,214
+dcdfca dcdfca217,218
+dcdfca dcdfca218,219
+cdgMrs cdgMrs220,221
+cdgMrs cdgMrs221,222
+
+./src/Biparticiones_de_una_lista.hs,757
+biparticiones1 biparticiones122,23
+biparticiones1 biparticiones123,24
+biparticiones2 biparticiones226,27
+biparticiones2 biparticiones227,28
+biparticiones3 biparticiones330,31
+biparticiones3 biparticiones331,32
+biparticionesA1 biparticionesA140,41
+biparticionesA1 biparticionesA141,42
+biparticionesA2 biparticionesA244,45
+biparticionesA2 biparticionesA245,46
+biparticionesP1 biparticionesP152,53
+biparticionesP1 biparticionesP153,54
+biparticionesP2 biparticionesP256,57
+biparticionesP2 biparticionesP257,58
+biparticionesP3 biparticionesP364,65
+biparticionesP3 biparticionesP365,66
+biparticiones biparticiones71,72
+biparticiones biparticiones72,73
+ejemplos ejemplos74,75
+ejemplos ejemplos75,76
+verifica verifica83,84
+
+./src/Numero_de_inversiones.hs,770
+numeroInversiones1 numeroInversiones126,27
+numeroInversiones1 numeroInversiones127,28
+numeroInversiones2 numeroInversiones232,33
+numeroInversiones2 numeroInversiones233,34
+numeroInversiones3 numeroInversiones338,39
+numeroInversiones3 numeroInversiones339,40
+numeroInversionesMJ numeroInversionesMJ45,46
+numeroInversionesMJ numeroInversionesMJ46,47
+numeroInversionesA1 numeroInversionesA157,58
+numeroInversionesA1 numeroInversionesA158,59
+numeroInversionesA2 numeroInversionesA263,64
+numeroInversionesA3 numeroInversionesA374,75
+numeroInversionesA3 numeroInversionesA375,76
+numeroInversiones numeroInversiones100,101
+numeroInversiones numeroInversiones101,102
+ejemplos ejemplos103,104
+ejemplos ejemplos104,105
+verifica verifica110,111
+
+./src/Descomposiciones_con_n_sumandos.hs,274
+sumas1 sumas122,23
+sumas1 1 ys x | x `elem`elem23,24
+sumas1 sumas125,26
+sumasA1 sumasA135,36
+sumasA1 sumasA136,37
+sumasA2 sumasA246,47
+sumasA2 sumasA247,48
+variacionesR variacionesR49,50
+sumasA3 sumasA356,57
+sumasA3 sumasA357,58
+verifica verifica64,65
+
+./src/Indices_verdaderos.hs,849
+indicesVerdaderos1 indicesVerdaderos125,26
+indicesVerdaderos1 indicesVerdaderos126,27
+pertenece pertenece32,33
+pertenece pertenece33,34
+indicesVerdaderos2 indicesVerdaderos236,37
+indicesVerdaderos2 indicesVerdaderos237,38
+indicesVerdaderos3 indicesVerdaderos342,43
+indicesVerdaderos3 indicesVerdaderos343,44
+indicesVerdaderos4 indicesVerdaderos449,50
+indicesVerdaderos4 indicesVerdaderos450,51
+indicesVerdaderosA1 indicesVerdaderosA162,63
+completahuecos completahuecos69,70
+indicesVerdaderosA2 indicesVerdaderosA275,76
+indicesVerdaderosA2 indicesVerdaderosA276,77
+indicesVerdaderosA3 indicesVerdaderosA383,84
+indicesVerdaderosA3 indicesVerdaderosA384,85
+indicesVerdaderos indicesVerdaderos90,91
+indicesVerdaderos indicesVerdaderos91,92
+ejemplos ejemplos93,94
+ejemplos ejemplos94,95
+verifica verifica108,109
+
+./src/Alfabeto_desde.hs,920
+alfabetoDesde1 alfabetoDesde124,25
+alfabetoDesde1 alfabetoDesde125,26
+alfabetoDesde2 alfabetoDesde229,30
+alfabetoDesde2 alfabetoDesde230,31
+alfabetoDesde3 alfabetoDesde334,35
+alfabetoDesde3 alfabetoDesde335,36
+alfabetoDesde4 alfabetoDesde439,40
+alfabetoDesde4 alfabetoDesde440,41
+alfabetoDesde5 alfabetoDesde551,52
+alfabetoDesde5 alfabetoDesde552,53
+alfabetoDesde6 alfabetoDesde663,64
+alfabetoDesde6 alfabetoDesde664,65
+alfabetoDesdeA1 alfabetoDesdeA173,74
+    | Ã± `elem`elem75,76
+alfabetoDesdeA2 alfabetoDesdeA280,81
+alfabetoDesdeA2 alfabetoDesdeA281,82
+alfabetoDesdeA3 alfabetoDesdeA386,87
+alfabetoDesdeA3 alfabetoDesdeA387,88
+alfabetoDesdeA4 alfabetoDesdeA491,92
+alfabetoDesdeA4 alfabetoDesdeA492,93
+alfMin alfMin96,97
+alfabetoDesde alfabetoDesde102,103
+alfabetoDesde alfabetoDesde103,104
+ejemplos ejemplos105,106
+ejemplos ejemplos106,107
+verifica verifica118,119
+
+./src/MaximosLocales.hs,551
+maximosLocales1 maximosLocales124,25
+maximosLocales1 maximosLocales125,26
+maximosLocales2 maximosLocales230,31
+maximosLocales2 maximosLocales231,32
+maximosLocalesA1 maximosLocalesA139,40
+maximosLocalesA1 maximosLocalesA140,41
+maximosLocalesA2 maximosLocalesA244,45
+maximosLocalesA2 maximosLocalesA245,46
+maximosLocalesA3 maximosLocalesA349,50
+maximosLocalesA3 maximosLocalesA350,51
+maximosLocales maximosLocales60,61
+maximosLocales maximosLocales61,62
+ejemplos ejemplos63,64
+ejemplos ejemplos64,65
+verifica verifica72,73
+
+./src/EmparejamientoDeArboles.hs,582
+data Arbol Arbol37,38
+data Arbol a = N N37,38
+ej1, ej2 ej240,41
+ej1,ej140,41
+ej1 ej141,42
+ej2 ej242,43
+emparejaArboles1 emparejaArboles144,45
+emparejaArboles1 emparejaArboles145,46
+nodo nodo55,56
+emparejaArbolesA1 emparejaArbolesA157,58
+emparejaArbolesA2 emparejaArbolesA265,66
+emparejaArbolesA2 emparejaArbolesA266,67
+emparejaArbolesA4 emparejaArbolesA472,73
+emparejaArbolesA4 emparejaArbolesA473,74
+emparejaArboles emparejaArboles81,82
+emparejaArboles emparejaArboles82,83
+ejemplos ejemplos84,85
+ejemplos ejemplos85,86
+verifica verifica96,97
+
+./src/Cadenas0y1.hs,66
+cadenasDe0y1 cadenasDe0y114,15
+cadenasDe0y1 cadenasDe0y115,16
+
+./src/Ramas_de_un_arbol.hs,442
+data Arbol Arbol31,32
+data Arbol a = N N31,32
+ej1, ej2 ej234,35
+ej1,ej134,35
+ej1 ej135,36
+ej2 ej236,37
+ramas1 ramas139,40
+ramas1 ramas140,41
+ramas2 ramas244,45
+ramas2 ramas245,46
+ramas3 ramas349,50
+ramas3 ramas350,51
+ramas4 ramas454,55
+ramas4 ramas455,56
+ramasA1 ramasA163,64
+ramasA1 ramasA164,65
+ramas ramas71,72
+ramas ramas72,73
+ejemplos ejemplos74,75
+ejemplos ejemplos75,76
+verifica verifica81,82
+
+./src/Buscaminas_v1.hs,374
+type Campo Campo56,57
+type Casilla Casilla57,58
+ejCampo1, ejCampo2 ejCampo259,60
+ejCampo1,ejCampo159,60
+ejCampo1 ejCampo160,61
+ejCampo2 ejCampo264,65
+buscaminas1 buscaminas171,72
+buscaminas1 buscaminas172,73
+minas minas83,84
+minas minas84,85
+vecinas vecinas94,95
+vecinas vecinas95,96
+buscaminas2 buscaminas2102,103
+buscaminas2 buscaminas2103,104
+
+./src/Mas_repetido.hs,1253
+masRepetido1 masRepetido124,25
+masRepetido1 masRepetido125,26
+masRepetido2 masRepetido232,33
+masRepetido2 masRepetido233,34
+masRepetidoP8 masRepetidoP837,38
+masRepetidoP8 masRepetidoP838,39
+masRepetido4 masRepetido442,43
+masRepetido4 masRepetido443,44
+masRepetido5 masRepetido548,49
+masRepetido5 masRepetido549,50
+masRepetidoP1 masRepetidoP156,57
+masRepetidoP1 masRepetidoP157,58
+aux2 aux263,64
+aux1 aux171,72
+agrupa agrupa75,76
+masRepetidoP2 masRepetidoP279,80
+masRepetidoP2 masRepetidoP280,81
+emparejar emparejar88,89
+repetidos repetidos90,91
+uno uno92,93
+masRepetidoP3 masRepetidoP394,95
+masRepetidoP4 masRepetidoP497,98
+masRepetidoP4 masRepetidoP498,99
+consecutivos consecutivos102,103
+consecutivos consecutivos103,104
+masRepetidoP5 masRepetidoP5108,109
+masRepetidoP5 masRepetidoP5109,110
+masRepetidoP6 masRepetidoP6113,114
+masRepetidoP6 masRepetidoP6114,115
+masRepetidoP7 masRepetidoP7118,119
+masRepetidoP7 masRepetidoP7119,120
+masRepetidoP8 masRepetidoP8122,123
+masRepetidoP9 masRepetidoP9126,127
+masRepetidoP9 masRepetidoP9127,128
+masRepetido masRepetido135,136
+masRepetido masRepetido136,137
+ejemplos ejemplos138,139
+ejemplos ejemplos139,140
+verifica verifica145,146
+
+./src/Segmentos_consecutivos.hs,888
+segmentos1 segmentos124,25
+segmentos1 segmentos125,26
+segmentos2 segmentos232,33
+segmentos2 segmentos233,34
+inicial inicial43,44
+inicial inicial44,45
+segmentosA1 segmentosA153,54
+segmentosA1 segmentosA154,55
+segmentosA2 segmentosA264,65
+segmentosA2 segmentosA265,66
+segmentosA3 segmentosA376,77
+segmentosA3 segmentosA377,78
+aux aux80,81
+segmentosA4 segmentosA485,86
+segmentosA4 segmentosA486,87
+segmentoInicial segmentoInicial92,93
+segmentoInicial segmentoInicial93,94
+segmentosA5 segmentosA598,99
+segmentosA5 segmentosA599,100
+segmento segmento103,104
+segmentosA6 segmentosA6108,109
+segmentosA6 segmentosA6109,110
+segmentos segmentos120,121
+segmentos segmentos121,122
+ejemplos ejemplos123,124
+ejemplos ejemplos124,125
+verifica verifica132,133
+prop_equivalencia prop_equivalencia134,135
+prop_equivalencia prop_equivalencia135,136
+
+./src/Insercion_en_arboles_binarios_de_busqueda.hs,328
+data ABB ABB41,42
+data ABB = VV41,42
+         | N N42,43
+ej ej45,46
+ej ej46,47
+inserta inserta48,49
+inserta inserta49,50
+insertaA1 insertaA162,63
+pertenece pertenece70,71
+insertaA2 insertaA277,78
+perteneceA2 perteneceA284,85
+insertaA3 insertaA391,92
+insertaA3 insertaA392,93
+verifica verifica101,102
+
+./src/Numeracion_de_ternas.hs,403
+posicion1 posicion125,26
+posicion1 posicion126,27
+ternas ternas31,32
+ternas ternas32,33
+posicionA1 posicionA139,40
+posicionA1 posicionA140,41
+posicionA2 posicionA249,50
+posicionA2 posicionA250,51
+generaTernas generaTernas52,53
+generaTernas generaTernas53,54
+posicion posicion61,62
+posicion posicion62,63
+ejemplos ejemplos64,65
+ejemplos ejemplos65,66
+verifica verifica73,74
+
+./src/Divisores_con_final.hs,2396
+divisoresConFinal1 divisoresConFinal121,22
+divisoresConFinal1 divisoresConFinal122,23
+final final28,29
+final final29,30
+divisoresConFinal2 divisoresConFinal237,38
+divisoresConFinal2 divisoresConFinal238,39
+divisoresConFinalA1 divisoresConFinalA156,57
+divisores divisores58,59
+cifras cifras60,61
+cifrasPI cifrasPI67,68
+divisoresConFinalA2 divisoresConFinalA273,74
+divisoresConFinalA2 divisoresConFinalA274,75
+divisoresConFinalA3 divisoresConFinalA381,82
+divisoresConFinalA3 divisoresConFinalA382,83
+cifrasA3 cifrasA387,88
+cifrasA3 cifrasA388,89
+divisoresConFinalA4 divisoresConFinalA493,94
+divisoresConFinalA4 divisoresConFinalA494,95
+digitosA4 digitosA498,99
+digitosA4 digitosA499,100
+divisoresA4 divisoresA4101,102
+iniciales iniciales103,104
+divisoresConFinalA5 divisoresConFinalA5112,113
+factores factores114,115
+cifrados cifrados116,117
+listaNumero listaNumero118,119
+cifrasA5 cifrasA5121,122
+divisoresConFinalA6 divisoresConFinalA6127,128
+divisoresConFinalA6 divisoresConFinalA6128,129
+divisoresA6 divisoresA6133,134
+divisoresConFinalA7 divisoresConFinalA7138,139
+divisoresA7 divisoresA7143,144
+divisoresConFinalA8 divisoresConFinalA8148,149
+digitos3 digitos3151,152
+divisores2 divisores2155,156
+multiplos multiplos157,158
+divisoresConFinalA9 divisoresConFinalA9162,163
+divisoresConFinalA9 divisoresConFinalA9163,164
+divisoresA9 divisoresA9167,168
+divisoresConFinalA10 divisoresConFinalA10172,173
+natural natural177,178
+divisoresA10 divisoresA10180,181
+divisoresConFinalA11 divisoresConFinalA11185,186
+cifrasLista cifrasLista187,188
+divisoresA11 divisoresA11191,192
+cifrasA11 cifrasA11193,194
+cifrasA11 cifrasA11194,195
+divisoresConFinalA12 divisoresConFinalA12199,200
+divisoresConFinalA12 divisoresConFinalA12200,201
+divisoresA12 divisoresA12204,205
+digitosA12 digitosA12206,207
+digitosA12 digitosA12207,208
+divisoresConFinalA13 divisoresConFinalA13212,213
+digitosA13 digitosA13218,219
+digitos' digitos'220,221
+factoresA13 factoresA13223,224
+divisoresConFinalA14 divisoresConFinalA14228,229
+divisoresConFinalA14 divisoresConFinalA14229,230
+divisoresA14 divisoresA14233,234
+subcj subcj235,236
+digitosA14 digitosA14239,240
+digitosA14 digitosA14240,241
+verifica verifica246,247
+prop_equivalencia prop_equivalencia251,252
+prop_equivalencia prop_equivalencia252,253
+
+./src/n_gramas.hs,183
+nGramas1 nGramas121,22
+nGramas1 nGramas122,23
+nGramasA1 nGramasA133,34
+nGramasA1 nGramasA134,35
+nGramasA2 nGramasA241,42
+nGramasA2 nGramasA242,43
+verifica verifica50,51
+
+./src/Amplia_columnas.hs,396
+type Matriz Matriz26,27
+ampliaColumnas ampliaColumnas28,29
+ampliaColumnas ampliaColumnas29,30
+ampliaColumnasA1 ampliaColumnasA141,42
+ampliaColumnasA1 ampliaColumnasA142,43
+ampliaColumnasA2 ampliaColumnasA250,51
+ampliaColumnasA2 ampliaColumnasA251,52
+ampliaColumnasA3 ampliaColumnasA359,60
+ampliaColumnasA3 ampliaColumnasA360,61
+verifica verifica66,67
+verifica verifica67,68
+
+./src/Anagramas.hs,434
+anagramas anagramas26,27
+anagramas anagramas27,28
+sonAnagramas sonAnagramas35,36
+sonAnagramas sonAnagramas36,37
+sonAnagramas2 sonAnagramas240,41
+sonAnagramas2 sonAnagramas241,42
+sonAnagramas3 sonAnagramas345,46
+sonAnagramas3 sonAnagramas346,47
+anagramas2 anagramas249,50
+anagramas2 anagramas250,51
+anagramas3 anagramas353,54
+anagramas3 anagramas354,55
+anagramas4 anagramas457,58
+anagramas4 anagramas458,59
+
+./src/PimPamPum.hs,351
+sonido1 sonido126,27
+sonido1 sonido127,28
+sonido2 sonido232,33
+sonido2 sonido233,34
+sonido3 sonido338,39
+sonido3 sonido339,40
+sonido4 sonido443,44
+sonido4 sonido444,45
+sonidoA1 sonidoA154,55
+sonidoA1 sonidoA155,56
+sonido sonido62,63
+sonido sonido63,64
+ejemplos ejemplos65,66
+ejemplos ejemplos66,67
+verifica verifica86,87
+
+./src/Matriz_Toeplitz.hs,123
+ej1, ej2 ej231,32
+ej1,ej131,32
+ej1 ej132,33
+ej2 ej233,34
+esToeplitz esToeplitz35,36
+esToeplitz esToeplitz36,37
+
+./src/Elimina_n_elementos.hs,179
+elimina1 elimina122,23
+elimina1 elimina123,24
+elimina2 elimina228,29
+elimina2 elimina229,30
+eliminaA1 eliminaA139,40
+eliminaA1 eliminaA140,41
+verifica verifica47,48
+
+./src/Trenza.hs,451
+trenza1 trenza120,21
+trenza1 trenza121,22
+trenza2 trenza224,25
+trenza2 trenza225,26
+trenza3 trenza329,30
+trenza3 trenza330,31
+trenza4 trenza434,35
+trenza4 trenza435,36
+trenzaA1 trenzaA143,44
+trenzaA1 trenzaA144,45
+trenzaA2 trenzaA248,49
+trenzaA2 trenzaA249,50
+trenzaA3 trenzaA354,55
+trenzaA3 trenzaA355,56
+trenza trenza61,62
+trenza trenza62,63
+ejemplos ejemplos64,65
+ejemplos ejemplos65,66
+verifica verifica75,76
+
+./app/Main.hs,52
+module Main Main0,1
+main main4,5
+main main5,6
+
+./Setup.hs,15
+main main1,2
+
+./test/Bandera_tricolor_Spec.hs,117
+module Bandera_tricolor_Spec Bandera_tricolor_Spec0,1
+main main5,6
+main main6,7
+spec spec8,9
+spec spec9,10
+
+./test/Mastermind_Spec.hs,194
+module Mastermind_Spec Mastermind_Spec0,1
+main main7,8
+main main8,9
+spec spec10,11
+spec spec11,12
+prop_equivalencia prop_equivalencia27,28
+prop_equivalencia prop_equivalencia28,29
+
+./test/Ordenados_por_maximo_Spec.hs,125
+module Ordenados_por_maximo_Spec Ordenados_por_maximo_Spec0,1
+main main5,6
+main main6,7
+spec spec8,9
+spec spec9,10
+
+./test/Spec.hs,0
+
+./test/Iguales_al_siguiente_Spec.hs,125
+module Iguales_al_siguiente_Spec Iguales_al_siguiente_Spec0,1
+main main5,6
+main main6,7
+spec spec8,9
+spec spec9,10
+
+./test/ElementosMinimales_Spec.hs,121
+module ElementosMinimales_Spec ElementosMinimales_Spec0,1
+main main5,6
+main main6,7
+spec spec8,9
+spec spec9,10
