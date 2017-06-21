@@ -1,7 +1,7 @@
 -- Primos_equidistantes.hs
 -- Primos equidistantes.
 -- José A. Alonso Jiménez <jalonso@us.es>
--- Sevilla, 27 de Abril de 2014
+-- Sevilla, 30 de Abril de 2014
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
@@ -15,10 +15,18 @@
 --    take 3 (primosEquidistantes 8)  ==  [(89,97),(359,367),(389,397)]
 -- ---------------------------------------------------------------------
 
+module Primos_equidistantes where
+
+import Data.Numbers.Primes (primes)
+
+-- 1ª definición
+-- =============
+
 primosEquidistantes :: Integer -> [(Integer,Integer)]
 primosEquidistantes k = aux primos
-    where aux (x:y:ps) | y - x == k = (x,y) : aux (y:ps)
-                       | otherwise  = aux (y:ps)
+  where aux (x:y:ps) | y - x == k = (x,y) : aux (y:ps)
+                     | otherwise  = aux (y:ps)
+        aux _                     = []               
 
 -- (primo x) se verifica si x es primo. Por ejemplo,
 --    primo 7  ==  True
@@ -30,3 +38,22 @@ primo x = [y | y <- [1..x], x `rem` y == 0] == [1,x]
 --    take 10 primos  ==  [2,3,5,7,11,13,17,19,23,29]
 primos :: [Integer]
 primos = 2 : [x | x <- [3,5..], primo x]
+
+-- 2ª definición
+-- =============
+
+primosEquidistantes2 :: Integer -> [(Integer,Integer)]
+primosEquidistantes2 k = aux primes
+  where aux (x:y:ps) | y - x == k = (x,y) : aux (y:ps)
+                     | otherwise  = aux (y:ps)
+        aux _                     = []               
+
+-- Comparación de eficiencia
+-- =========================
+
+--    λ> (primosEquidistantes 10) !! 150
+--    (13513,13523)
+--    (2.18 secs, 1,325,730,640 bytes)
+--    λ> (primosEquidistantes2 10) !! 150
+--    (13513,13523)
+--    (0.01 secs, 0 bytes)
