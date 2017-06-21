@@ -1,7 +1,7 @@
 module Bandera_tricolor_Spec (main, spec) where
 
-import Test.Hspec
 import Bandera_tricolor
+import Test.Hspec
 
 main :: IO ()
 main = hspec spec

@@ -5,9 +5,8 @@
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
--- Ejercicio. Una palabra es una anagrama de otra si se puede obtener
--- permutando sus letras. Por ejemplo, mora y roma son anagramas de
--- amor. 
+-- Una palabra es una anagrama de otra si se puede obtener permutando
+-- sus letras. Por ejemplo, mora y roma son anagramas de amor. 
 -- 
 -- Definir la función
 --    anagramas :: String -> [String] -> [String]
@@ -19,13 +18,15 @@
 --    ["aMar","aRma"]
 -- ---------------------------------------------------------------------
 
+module Anagramas where
+
 import Data.List     (sort)
 import Data.Char     (toLower)
 import Data.Function (on)
 
 -- 1ª definición (por recursión):
 anagramas :: String -> [String] -> [String]
-anagramas x [] = []
+anagramas _ [] = []
 anagramas x (y:ys) | sonAnagramas x y = y : anagramas x ys
                    | otherwise        = anagramas x ys
 
