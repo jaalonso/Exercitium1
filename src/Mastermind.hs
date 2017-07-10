@@ -83,4 +83,3 @@ mastermind3 xs ys = (nAciertos,nCoincidencias)
   where
     nAciertos      = length [(x,y) | (x,y) <- zip xs ys, x == y]
     nCoincidencias = length (xs++ys) - length (nub (xs++ys)) - nAciertos
-

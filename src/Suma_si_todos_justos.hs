@@ -14,6 +14,8 @@
 --    sumaSiTodosJustos [Just 2, Just 5, Nothing]  == Nothing
 -- ---------------------------------------------------------------------
 
+module Suma_si_todos_justos where
+
 import Data.Maybe
 
 -- 1ª definición:

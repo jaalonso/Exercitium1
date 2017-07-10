@@ -33,6 +33,7 @@ library
                      , Primos_consecutivos_con_media_capicua
                      , Anagramas
                      , Primos_equidistantes
+                     , Suma_si_todos_justos
   build-depends:       QuickCheck >= 2.8.1
                      , base >= 4.7 && < 5
                      , primes
