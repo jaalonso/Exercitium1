@@ -24,9 +24,10 @@ igualesAlSiguiente xs =
 
 -- 2ª definición (por recursión):
 igualesAlSiguiente2 :: Eq a => [a] -> [a]
-igualesAlSiguiente2 (x:y:zs) | x == y    = x : igualesAlSiguiente2 (y:zs)
-                             | otherwise = igualesAlSiguiente2 (y:zs)
-igualesAlSiguiente2 _                    = []
+igualesAlSiguiente2 (x:y:zs)
+  | x == y    = x : igualesAlSiguiente2 (y:zs)
+  | otherwise = igualesAlSiguiente2 (y:zs)
+igualesAlSiguiente2 _ = []
 
 -- 3ª definición (con concat y comprensión):
 igualesAlSiguiente3 :: Eq a => [a] -> [a]
