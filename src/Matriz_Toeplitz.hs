@@ -1,13 +1,13 @@
 -- Matriz_Toeplitz.hs
 -- Matrices de Toepliz
 -- José A. Alonso Jiménez <jalonso@us.es>
--- Sevilla, 8 de Septiembre de 2013
+-- Sevilla, 2 de Mayo de 2014
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
--- Ejercicio 1. Una matriz de Toeplitz es una matriz cuadrada que es
--- constante a lo largo de las diagonales paralelas a la diagonal
--- principal. Por ejemplo, 
+-- Una matriz de Toeplitz es una matriz cuadrada que es constante a lo
+-- largo de las diagonales paralelas a la diagonal principal. Por
+-- ejemplo,  
 --    |2 5 1 6|       |2 5 1 6|          
 --    |4 2 5 1|       |4 2 6 1|
 --    |7 4 2 5|       |7 4 2 5|
@@ -26,6 +26,8 @@
 --    esToeplitz ej1  ==  True
 --    esToeplitz ej2  ==  False
 -- ---------------------------------------------------------------------
+
+module Matriz_Toeplitz where
 
 import Data.Array
 
