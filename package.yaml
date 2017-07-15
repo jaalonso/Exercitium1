@@ -16,17 +16,6 @@ dependencies:
 library:
   source-dirs: src
   ghc-options: -Wall
-  exposed-modules:
-  - Iguales_al_siguiente
-  - Ordenados_por_maximo
-  - Bandera_tricolor
-  - ElementosMinimales
-  - Mastermind
-  - Primos_consecutivos_con_media_capicua
-  - Anagramas
-  - Primos_equidistantes
-  - Suma_si_todos_justos
-  - Matriz_Toeplitz
   dependencies:
   - base >=4.7 && <5
 tests:

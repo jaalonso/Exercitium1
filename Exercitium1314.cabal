@@ -2,19 +2,19 @@
 --
 -- see: https://github.com/sol/hpack
 
-name:                Exercitium1314
-version:             0.1.0.0
-synopsis:            Problemas de Exercitium (curso 2013-14)
-description:         Ejercicios de programación funcional con Haskell propuestos en el blog Exercitium durante el curso 2013-14.
-homepage:            https://github.com/jaalonso/Exercitium1314#readme
-bug-reports:         https://github.com/jaalonso/Exercitium1314/issues
-license:             BSD3
-license-file:        LICENSE
-author:              Jose A. Alonso
-maintainer:          JoseA.Alonso@gmail.com
-copyright:           Jose A. Alonso
-build-type:          Simple
-cabal-version:       >= 1.10
+name:           Exercitium1314
+version:        0.1.0.0
+synopsis:       Problemas de Exercitium (curso 2013-14)
+description:    Ejercicios de programación funcional con Haskell propuestos en el blog Exercitium durante el curso 2013-14.
+homepage:       https://github.com/jaalonso/Exercitium1314#readme
+bug-reports:    https://github.com/jaalonso/Exercitium1314/issues
+author:         Jose A. Alonso
+maintainer:     JoseA.Alonso@gmail.com
+copyright:      Jose A. Alonso
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
 
 extra-source-files:
     README.org
@@ -27,31 +27,30 @@ library
   hs-source-dirs:
       src
   ghc-options: -Wall
-  exposed-modules:
-      Iguales_al_siguiente
-      Ordenados_por_maximo
-      Bandera_tricolor
-      ElementosMinimales
-      Mastermind
-      Primos_consecutivos_con_media_capicua
-      Anagramas
-      Primos_equidistantes
-      Suma_si_todos_justos
-      Matriz_Toeplitz
-  other-modules:
-      Paths_Exercitium1314
   build-depends:
       QuickCheck >=2.8.1
     , array
     , primes
     , base >=4.7 && <5
+  exposed-modules:
+      Anagramas
+      Bandera_tricolor
+      ElementosMinimales
+      Iguales_al_siguiente
+      Mastermind
+      Matriz_Toeplitz
+      Ordenados_por_maximo
+      Primos_consecutivos_con_media_capicua
+      Primos_equidistantes
+      Suma_si_todos_justos
   default-language: Haskell2010
 
 test-suite spec
   type: exitcode-stdio-1.0
+  main-is: Spec.hs
   hs-source-dirs:
       test
-  main-is: Spec.hs
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       QuickCheck >=2.8.1
     , array
@@ -69,5 +68,4 @@ test-suite spec
       Primos_consecutivos_con_media_capicua_Spec
       Primos_equidistantes_Spec
       Suma_si_todos_justos_Spec
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
   default-language: Haskell2010
