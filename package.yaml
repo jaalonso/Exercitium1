@@ -1,7 +1,9 @@
 name: Exercitium1314
 version: '0.1.0.0'
 synopsis: Problemas de Exercitium (curso 2013-14)
-description: ! 'Ejercicios de programación funcional con Haskell propuestos en el blog Exercitium durante el curso 2013-14.' 
+description: >
+  Ejercicios de programación funcional con Haskell propuestos en el blog
+  Exercitium durante el curso 2013-14. 
 author: Jose A. Alonso
 maintainer: JoseA.Alonso@gmail.com
 copyright: Jose A. Alonso
