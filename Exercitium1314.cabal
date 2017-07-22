@@ -30,7 +30,7 @@ library
       src
   ghc-options: -Wall
   build-depends:
-      QuickCheck >=2.8.1
+      QuickCheck
     , array
     , base >=4.7 && <5
     , doctest
@@ -55,7 +55,7 @@ test-suite doctests
       test
   ghc-options: -threaded
   build-depends:
-      QuickCheck >=2.8.1
+      QuickCheck
     , array
     , base >=4.7 && <5
     , doctest

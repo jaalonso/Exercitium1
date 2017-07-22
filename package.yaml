@@ -13,7 +13,7 @@ github: jaalonso/Exercitium1314
 extra-source-files:
 - README.org
 dependencies:
-- QuickCheck >=2.8.1
+- QuickCheck
 - array
 - base >=4.7 && <5
 - doctest
