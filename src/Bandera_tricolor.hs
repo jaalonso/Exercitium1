@@ -24,7 +24,8 @@
 -- [R,R,R,A,A,M]
 
 module Bandera_tricolor
-  (banderaTricolor
+  ( Color
+  , banderaTricolor
   , verifica_banderaTricolor
   ) where
 
@@ -37,17 +38,17 @@ data Color = R | A | M
 banderaTricolor :: [Color] -> [Color]
 banderaTricolor = sort
 
--- 2ª definición (por comprensión):
+-- | 2ª definición (por comprensión):
 banderaTricolor2 :: [Color] -> [Color]
 banderaTricolor2 xs =
     [x | x <- xs, x == R] ++ [x | x <- xs, x == A] ++ [x | x <- xs, x == M]
 
--- 3ª definición (por comprensión y concat):
+-- | 3ª definición (por comprensión y concat):
 banderaTricolor3 :: [Color] -> [Color]
 banderaTricolor3 xs =
     concat [[x | x <- xs, x == c] | c <- [R,A,M]]
 
--- 4ª definición (por recursión):
+-- | 4ª definición (por recursión):
 banderaTricolor4 :: [Color] -> [Color]
 banderaTricolor4 xs = aux xs ([],[],[])
     where aux []     (rs,as,ms) = rs ++ as ++ ms
@@ -55,7 +56,7 @@ banderaTricolor4 xs = aux xs ([],[],[])
           aux (A:ys) (rs,as,ms) = aux ys (  rs, A:as,   ms)
           aux (M:ys) (rs,as,ms) = aux ys (  rs,   as, M:ms)
 
--- 5ª definición (por recursión):
+-- | 5ª definición (por recursión):
 banderaTricolor5 :: [Color] -> [Color]
 banderaTricolor5 xs = aux xs (0,0,0)
     where aux []     (as,rs,ms) = replicate rs R ++ 
@@ -64,7 +65,6 @@ banderaTricolor5 xs = aux xs (0,0,0)
           aux (A:ys) (as,rs,ms) = aux ys (1+as,   rs,   ms)
           aux (R:ys) (as,rs,ms) = aux ys (  as, 1+rs,   ms)
           aux (M:ys) (as,rs,ms) = aux ys (  as,   rs, 1+ms)
-
 
 -- | (prop_banderaTricolor xs) se verifica si todas las definiciones
 -- de banderaTricolor son equivalentes para xs. Por ejemplo,
@@ -81,7 +81,7 @@ prop_banderaTricolor xs =
                    , banderaTricolor4
                    , banderaTricolor5]]
 
--- | Incluye el tipo Color en Arbitray
+-- | Incluye el tipo Color en Arbitrary
 instance Arbitrary Color where
   arbitrary = elements [A,R,M]
 

@@ -104,20 +104,46 @@ module ElementosMinimales
 minimales :: Eq a => [[a]] -> [[a]]
 subconjuntoPropio :: Eq a => [a] -> [a] -> Bool
 
+
+-- | El problema de la bandera tricolor consiste en lo siguiente: Dada un
+--   lista de objetos xs que pueden ser rojos, amarillos o morados, se pide
+--   devolver una lista ys que contiene los elementos de xs, primero los
+--   rojos, luego los amarillos y por último los morados.
+--   
+--   Definir el tipo de dato Color para representar los colores con los
+--   constructores R, A y M correspondientes al rojo, azul y morado y la
+--   función
+--   
+--   <pre>
+--   banderaTricolor :: [Color] -&gt; [Color]
+--   </pre>
+--   
+--   tal que (banderaTricolor xs) es la bandera tricolor formada con los
+--   elementos de xs. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; banderaTricolor [M,R,A,A,R,R,A,M,M]
+--   [R,R,R,A,A,A,M,M,M]
+--   
+--   &gt;&gt;&gt; banderaTricolor [M,R,A,R,R,A]
+--   [R,R,R,A,A,M]
+--   </pre>
 module Bandera_tricolor
 data Color
-R :: Color
-A :: Color
-M :: Color
 banderaTricolor :: [Color] -> [Color]
-banderaTricolor2 :: [Color] -> [Color]
-banderaTricolor3 :: [Color] -> [Color]
-banderaTricolor4 :: [Color] -> [Color]
-banderaTricolor5 :: [Color] -> [Color]
+
+-- | Comprueba la equivalencia de las definiciones
+--   
+--   <pre>
+--   &gt;&gt;&gt; verifica_banderaTricolor
+--   +++ OK, passed 100 tests.
+--   </pre>
+verifica_banderaTricolor :: IO ()
 instance GHC.Enum.Enum Bandera_tricolor.Color
 instance GHC.Classes.Ord Bandera_tricolor.Color
 instance GHC.Classes.Eq Bandera_tricolor.Color
 instance GHC.Show.Show Bandera_tricolor.Color
+instance Test.QuickCheck.Arbitrary.Arbitrary Bandera_tricolor.Color
 
 module Anagramas
 anagramas :: String -> [String] -> [String]
