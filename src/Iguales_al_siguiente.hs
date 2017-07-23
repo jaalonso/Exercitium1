@@ -16,9 +16,10 @@
 -- >>> igualesAlSiguiente [1..10::Int]
 -- []
 
-module Iguales_al_siguiente ( igualesAlSiguiente
-                            , verificaIgualesAlSiguiente
-                            ) where
+module Iguales_al_siguiente
+  ( igualesAlSiguiente
+  , verificaIgualesAlSiguiente
+  ) where
 
 import Data.List (group)
 import Test.QuickCheck
