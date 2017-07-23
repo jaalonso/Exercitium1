@@ -1,10 +1,9 @@
--- Mastermind.hs
--- Mastermind.
--- José A. Alonso Jiménez <jalonso@us.es>
--- Sevilla, 25 de Abril de 2014
--- ---------------------------------------------------------------------
-
--- ---------------------------------------------------------------------
+-- |
+-- Module      : Mastermind
+-- Description : Mastermind.
+-- Copyright   : José A. Alonso (25 de Abril de 2014)
+-- License     : GPL-3
+-- 
 -- El Mastermind es un juego que consiste en deducir un código
 -- numérico formado por una lista de números distintos. Cada vez que se
 -- empieza un partido, el programa debe elegir un código, que será lo
@@ -32,34 +31,47 @@
 -- juego.  
 -- 
 -- Definir la función
---    mastermind :: [Int] -> [Int] -> (Int,Int)
+-- 
+-- > mastermind :: [Int] -> [Int] -> (Int,Int)
+-- 
 -- tal que (mastermind xs ys) es el par formado por los números de
 -- aciertos y de coincidencias entre xs e ys. Por ejemplo,
---    mastermind [2,6,0,7] [1,4,0,6]  ==  (1,1)
---    mastermind [2,6,0,7] [3,5,9,1]  ==  (0,0)
---    mastermind [2,6,0,7] [1,6,0,4]  ==  (2,0)
---    mastermind [2,6,0,7] [2,6,0,7]  ==  (4,0)
--- ---------------------------------------------------------------------
+-- >>> mastermind [2,6,0,7] [1,4,0,6]
+-- (1,1)
+-- >>> mastermind [2,6,0,7] [3,5,9,1]
+-- (0,0)
+-- >>> mastermind [2,6,0,7] [1,6,0,4]
+-- (2,0)
+-- >>> mastermind [2,6,0,7] [2,6,0,7]
+-- (4,0)
 
-module Mastermind where
+module Mastermind
+  ( mastermind
+  , verifica_mastermind
+  ) where
 
 import Data.List (nub)
+import Test.QuickCheck
 
--- 1ª solución (por comprensión):
 mastermind :: [Int] -> [Int] -> (Int,Int)
 mastermind xs ys = 
   ( length (aciertos xs ys)
   , length (coincidencias xs ys))
 
--- (aciertos xs ys) es la lista de aciertos entre xs e ys. Por ejemplo,
---    aciertos [2,6,0,7] [1,4,0,6]  ==  [0]
+-- | (aciertos xs ys) es la lista de aciertos entre xs e ys. Por
+-- ejemplo,
+-- 
+-- >>> aciertos [2,6,0,7] [1,4,0,6]
+-- [0]
 aciertos :: Eq a => [a] -> [a] -> [a]
 aciertos xs ys = [x | (x,y) <- zip xs ys
                     , x == y]
 
--- (coincidencia xs ys) es la lista de coincidencias entre xs e ys. Por
--- ejemplo, 
---    coincidencias [2,6,0,7] [1,4,0,6]  ==  [6]
+-- | (coincidencia xs ys) es la lista de coincidencias entre xs e ys. Por
+-- ejemplo,
+-- 
+-- >>> coincidencias [2,6,0,7] [1,4,0,6]
+-- [6]
 coincidencias :: Eq a => [a] -> [a] -> [a]
 coincidencias xs ys = 
   [x | x <- xs
@@ -67,7 +79,7 @@ coincidencias xs ys =
      , x `notElem` zs]
   where zs = aciertos xs ys
 
--- 2ª solución (por recursión):
+-- | 2ª solución (por recursión):
 mastermind2 :: [Int] -> [Int] -> (Int,Int)
 mastermind2 xs ys = aux xs ys 
   where aux (u:us) (z:zs) 
@@ -77,9 +89,43 @@ mastermind2 xs ys = aux xs ys
           where (a,b) = aux us zs
         aux _ _         = (0,0)
         
--- 3ª solución:
+-- | 3ª solución:
 mastermind3 :: [Int] -> [Int] -> (Int,Int)
 mastermind3 xs ys = (nAciertos,nCoincidencias)
   where
     nAciertos      = length [(x,y) | (x,y) <- zip xs ys, x == y]
     nCoincidencias = length (xs++ys) - length (nub (xs++ys)) - nAciertos
+
+-- | (prop_mastermind xs) se verifica si todas las definiciones
+-- de mastermind son equivalentes para xs. Por ejemplo,
+--
+-- >>> prop_mastermind [2,6,0,7] [1,4,0,6]
+-- True
+-- >>> prop_mastermind [2,6,0,7] [3,5,9,1]
+-- True
+-- >>> prop_mastermind [2,6,0,7] [1,6,0,4]
+-- True
+-- >>> prop_mastermind [2,6,0,7] [2,6,0,7]
+-- True
+prop_mastermind :: [Int] -> [Int] -> Bool
+prop_mastermind xs ys =
+  all (== mastermind cs ds)
+      [f cs ds | f <- [ mastermind2
+                      , mastermind3]]
+  where as = nub xs
+        bs = nub ys
+        n  = min (length as) (length bs)
+        cs = take n as
+        ds = take n bs
+
+-- | Comprueba la equivalencia de las definiciones
+--
+-- >>> verifica_mastermind
+-- +++ OK, passed 100 tests.
+verifica_mastermind :: IO ()
+verifica_mastermind = 
+  quickCheck prop_mastermind 
+
+-- Comprobación
+--    > stack exec doctest src/Mastermind.hs 
+--    Examples: 11  Tried: 11  Errors: 0  Failures: 0
