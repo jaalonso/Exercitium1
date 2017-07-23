@@ -1,11 +1,8 @@
 -- |
 -- Module      : Iguales_al_siguiente.hs
--- Description : Sintaxis y semántica de la lógica proposicional
--- Copyright   : José A. Alonso (21 de Abril de 2014)
+-- Description : Iguales al siguiente.
+-- Copyright   : José A. Alonso (21-Abril-2017)
 -- License     : GPL-3
--- Maintainer  : JoseA.Alonso@gmail.com
--- Stability   : Provisional
---
 -- 
 -- Definir la función
 -- 
@@ -26,7 +23,6 @@ module Iguales_al_siguiente ( igualesAlSiguiente
 import Data.List (group)
 import Test.QuickCheck
 
--- | 1ª definición (por comprensión):
 igualesAlSiguiente :: Eq a => [a] -> [a]
 igualesAlSiguiente xs =
   [x | (x,y) <- zip xs (tail xs), x == y]

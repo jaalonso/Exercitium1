@@ -3,10 +3,7 @@
 -- Description : Ordenación por el máximo.
 -- Copyright   : José A. Alonso (22 de Abril de 2014)
 -- License     : GPL-3
--- Maintainer  : JoseA.Alonso@gmail.com
--- Stability   : Provisional
 --
--- 
 -- Definir la función
 --
 -- > ordenadosPorMaximo :: Ord a => [[a]] -> [[a]]
@@ -19,22 +16,43 @@
 -- >>> ordenadosPorMaximo ["este","es","el","primero"]
 -- ["el","primero","es","este"]
 
-module Ordenados_por_maximo where
+module Ordenados_por_maximo
+  ( ordenadosPorMaximo
+  , verificaOrdenadosPorMaximo
+  ) where
 
 import Data.List (sort)
-import GHC.Exts  (sortWith)
+import Test.QuickCheck
 
--- 1ª definición
 ordenadosPorMaximo :: Ord a => [[a]] -> [[a]]
 ordenadosPorMaximo xss =
   map snd (sort [(maximum xs,xs) | xs <- xss])
 
--- 2ª definición
+-- | 2ª definición
 ordenadosPorMaximo2 :: Ord a => [[a]] -> [[a]]
 ordenadosPorMaximo2 xss =
   [xs | (_,xs) <- sort [(maximum xs,xs) | xs <- xss]]
 
--- 3ª definición:
-ordenadosPorMaximo3 :: Ord a => [[a]] -> [[a]]
-ordenadosPorMaximo3 = sortWith maximum
+-- | (prop_ordenadosPorMaximo xs) se verifica si todas las definiciones
+-- de ordenadosPorMaximo son equivalentes para xs. Por ejemplo,
+--
+-- >>> prop_ordenadosPorMaximo [[3,2],[6,7,5],[1,4]]
+-- True
+-- >>> prop_ordenadosPorMaximo ["este","es","el","primero"]
+-- True
+prop_ordenadosPorMaximo :: Ord a => [[a]] -> Bool
+prop_ordenadosPorMaximo xs =
+  ordenadosPorMaximo ys == ordenadosPorMaximo2 ys
+  where ys = filter (not . null) xs
 
+-- | Comprueba la equivalencia de las definiciones
+--
+-- >>> verificaOrdenadosPorMaximo
+-- +++ OK, passed 100 tests.
+verificaOrdenadosPorMaximo :: IO ()
+verificaOrdenadosPorMaximo = 
+  quickCheck (prop_ordenadosPorMaximo :: [[Int]] -> Bool)
+
+-- Comprobación
+--    > stack exec doctest src/Iguales_al_siguiente.hs 
+--    Examples: 5  Tried: 5  Errors: 0  Failures: 0

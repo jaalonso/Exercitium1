@@ -32,10 +32,33 @@ primos :: [Int]
 capicua :: Int -> Bool
 primosConsecutivosConMediaCapicua2 :: [(Int, Int, Int)]
 
+
+-- | Definir la función
+--   
+--   <pre>
+--   ordenadosPorMaximo :: Ord a =&gt; [[a]] -&gt; [[a]]
+--   </pre>
+--   
+--   tal que (ordenadosPorMaximo xss) es la lista de los elementos de xss
+--   ordenada por sus máximos. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; ordenadosPorMaximo [[3,2],[6,7,5],[1,4]]
+--   [[3,2],[1,4],[6,7,5]]
+--   
+--   &gt;&gt;&gt; ordenadosPorMaximo ["este","es","el","primero"]
+--   ["el","primero","es","este"]
+--   </pre>
 module Ordenados_por_maximo
 ordenadosPorMaximo :: Ord a => [[a]] -> [[a]]
-ordenadosPorMaximo2 :: Ord a => [[a]] -> [[a]]
-ordenadosPorMaximo3 :: Ord a => [[a]] -> [[a]]
+
+-- | Comprueba la equivalencia de las definiciones
+--   
+--   <pre>
+--   &gt;&gt;&gt; verificaOrdenadosPorMaximo
+--   +++ OK, passed 100 tests.
+--   </pre>
+verificaOrdenadosPorMaximo :: IO ()
 
 module Matriz_Toeplitz
 ej1 :: Array (Int, Int) Int
@@ -67,8 +90,6 @@ mastermind3 :: [Int] -> [Int] -> (Int, Int)
 --   []
 --   </pre>
 module Iguales_al_siguiente
-
--- | 1ª definición (por comprensión):
 igualesAlSiguiente :: Eq a => [a] -> [a]
 
 -- | Comprueba la equivalencia de las definiciones
