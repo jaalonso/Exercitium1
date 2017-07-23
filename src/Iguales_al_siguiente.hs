@@ -20,12 +20,7 @@
 -- []
 
 module Iguales_al_siguiente ( igualesAlSiguiente
-                            , igualesAlSiguiente2
-                            , igualesAlSiguiente3
-                            , igualesAlSiguiente4
-                            , igualesAlSiguiente5
-                            , prop_igualesAlSiguiente
-                            , verifica
+                            , verificaIgualesAlSiguiente
                             ) where
 
 import Data.List (group)
@@ -72,10 +67,10 @@ prop_igualesAlSiguiente xs =
 
 -- | Comprueba la equivalencia de las definiciones
 --
--- >>> verifica
+-- >>> verificaIgualesAlSiguiente
 -- +++ OK, passed 100 tests.
-verifica :: IO ()
-verifica = 
+verificaIgualesAlSiguiente :: IO ()
+verificaIgualesAlSiguiente = 
   quickCheck prop_igualesAlSiguiente
 
 -- Comprobación

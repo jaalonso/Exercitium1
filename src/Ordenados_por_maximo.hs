@@ -1,19 +1,23 @@
--- Ordenados_por_maximo.hs
--- Ordenación por el máximo.
--- José A. Alonso Jiménez <jalonso@us.es>
--- Sevilla, 22 de Abril de 2014
--- ---------------------------------------------------------------------
-
--- ---------------------------------------------------------------------
--- Definir la función 
---    ordenadosPorMaximo :: Ord a => [[a]] -> [[a]]
+-- |
+-- Module      : Ordenados_por_maximo.hs
+-- Description : Ordenación por el máximo.
+-- Copyright   : José A. Alonso (22 de Abril de 2014)
+-- License     : GPL-3
+-- Maintainer  : JoseA.Alonso@gmail.com
+-- Stability   : Provisional
+--
+-- 
+-- Definir la función
+--
+-- > ordenadosPorMaximo :: Ord a => [[a]] -> [[a]]
+-- 
 -- tal que (ordenadosPorMaximo xss) es la lista de los elementos de xss
 -- ordenada por sus máximos. Por ejemplo,
---    ghci> ordenadosPorMaximo [[3,2],[6,7,5],[1,4]]
---    [[3,2],[1,4],[6,7,5]]
---    ghci> ordenadosPorMaximo ["este","es","el","primero"]
---    ["el","primero","es","este"]
--- ---------------------------------------------------------------------
+-- 
+-- >>> ordenadosPorMaximo [[3,2],[6,7,5],[1,4]]
+-- [[3,2],[1,4],[6,7,5]]
+-- >>> ordenadosPorMaximo ["este","es","el","primero"]
+-- ["el","primero","es","este"]
 
 module Ordenados_por_maximo where
 
