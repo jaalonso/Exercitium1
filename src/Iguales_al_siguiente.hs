@@ -1,11 +1,16 @@
--- Iguales_al_siguiente.hs
--- Iguales al siguiente.
--- José A. Alonso Jiménez <jalonso@us.es>
--- Sevilla, 21 de Abril de 2014
--- ---------------------------------------------------------------------
-
--- | Definir la función
---    igualesAlSiguiente :: Eq a => [a] -> [a]
+-- |
+-- Module      : Iguales_al_siguiente.hs
+-- Description : Sintaxis y semántica de la lógica proposicional
+-- Copyright   : José A. Alonso (21 de Abril de 2014)
+-- License     : GPL-3
+-- Maintainer  : JoseA.Alonso@gmail.com
+-- Stability   : Provisional
+--
+-- 
+-- Definir la función
+-- 
+-- > igualesAlSiguiente :: Eq a => [a] -> [a]
+--
 -- tal que (igualesAlSiguiente xs) es la lista de los elementos de xs
 -- que son iguales a su siguiente. Por ejemplo,
 --
