@@ -27,7 +27,7 @@ module Lista_cuadrada where
 
 import Test.QuickCheck
 
--- | 1ª definición (con auxiliar:
+-- | 1ª definición (con auxiliar).
 listaCuadrada :: Int -> a -> [a] -> [[a]] 
 listaCuadrada n x xs =
   take n (grupos n (xs ++ repeat x))
@@ -44,18 +44,18 @@ grupos :: Int -> [a] -> [[a]]
 grupos _ [] = []
 grupos n xs = take n xs : grupos n (drop n xs)
 
--- | 2ª definición (por comprensión)
+-- | 2ª definición (por comprensión).
 listaCuadrada2 :: Int -> a -> [a] -> [[a]]
 listaCuadrada2 n x xs = 
   take n [take n (drop m xs ++ repeat x)
          | m <- [0,n..n*n]]
 
--- | 3ª definición (por iteración):
+-- | 3ª definición (por iteración).
 listaCuadrada3 :: Int -> a -> [a] -> [[a]] 
 listaCuadrada3 n x xs =
   take n [take n ys | ys <- iterate (drop n) (xs ++ repeat x)]
 
--- | 4ª definición (por iteración sin el último argumento):
+-- | 4ª definición (por iteración sin el último argumento).
 listaCuadrada4 :: Int -> a -> [a] -> [[a]] 
 listaCuadrada4 n x = 
   take n . map (take n) . iterate (drop n) . (++ repeat x)
@@ -63,9 +63,9 @@ listaCuadrada4 n x =
 -- | (prop_listaCuadrada n x xs) se verifica si las definiciones de
 -- listaCuadrada son equivalentes sobre n, x, xs. Por ejemplo,
 --
--- λ> prop_listaCuadrada (NonNegative 3) 7 [0,3,5,2,4]
+-- >>> prop_listaCuadrada (NonNegative 3) 7 [0,3,5,2,4]
 -- True
--- λ> prop_listaCuadrada (NonNegative 3) 7 [0..]
+-- >>> prop_listaCuadrada (NonNegative 3) 7 [0..]
 -- True
 prop_listaCuadrada :: NonNegative Int -> Int -> [Int] -> Bool
 prop_listaCuadrada (NonNegative n) x xs =
