@@ -19,10 +19,43 @@ sumaSiTodosJustos4 :: (Num a, Eq a) => [Maybe a] -> Maybe a
 sumaSiTodosJustos5 :: (Num a, Eq a) => [Maybe a] -> Maybe a
 sumaSiTodosJustos6 :: (Num a, Eq a) => [Maybe a] -> Maybe a
 
+
+-- | Definir la función
+--   
+--   <pre>
+--   primosEquidistantes :: Integer -&gt; [(Integer,Integer)]
+--   </pre>
+--   
+--   tal que <b>(primosEquidistantes k)</b> es la lista de los pares de
+--   primos cuya diferencia es k. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; take 3 (primosEquidistantes 2)
+--   [(3,5),(5,7),(11,13)]
+--   
+--   &gt;&gt;&gt; take 3 (primosEquidistantes 4)
+--   [(7,11),(13,17),(19,23)]
+--   
+--   &gt;&gt;&gt; take 3 (primosEquidistantes 6)
+--   [(23,29),(31,37),(47,53)]
+--   
+--   &gt;&gt;&gt; take 3 (primosEquidistantes 8)
+--   [(89,97),(359,367),(389,397)]
+--   </pre>
 module Primos_equidistantes
+
+-- | 1ª definición
 primosEquidistantes :: Integer -> [(Integer, Integer)]
-primo :: Integer -> Bool
-primos :: [Integer]
+
+-- | 2ª definición
+--   
+--   <pre>
+--   &gt;&gt;&gt; take 20 (primosEquidistantes2 2) == take 20 (primosEquidistantes 2)
+--   True
+--   
+--   &gt;&gt;&gt; take 20 (primosEquidistantes2 4) == take 20 (primosEquidistantes 4)
+--   True
+--   </pre>
 primosEquidistantes2 :: Integer -> [(Integer, Integer)]
 
 
