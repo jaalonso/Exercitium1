@@ -251,11 +251,94 @@ instance GHC.Classes.Eq Bandera_tricolor.Color
 instance GHC.Show.Show Bandera_tricolor.Color
 instance Test.QuickCheck.Arbitrary.Arbitrary Bandera_tricolor.Color
 
+
+-- | Una palabra es una anagrama de otra si se puede obtener permutando sus
+--   letras. Por ejemplo, "mora" y "roma" son anagramas de "amor".
+--   
+--   Definir la función
+--   
+--   <pre>
+--   anagramas :: String -&gt; [String] -&gt; [String]
+--   </pre>
+--   
+--   tal que (anagramas x ys) es la lista de los elementos de ys que son
+--   anagramas de x. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; anagramas "amor" ["Roma","mola","loma","moRa", "rama"]
+--   ["Roma","moRa"]
+--   
+--   &gt;&gt;&gt; anagramas "rama" ["aMar","amaRa","roMa","marr","aRma"]
+--   ["aMar","aRma"]
+--   </pre>
 module Anagramas
+
+-- | 1ª definición (por recursión):
 anagramas :: String -> [String] -> [String]
-sonAnagramas :: String -> String -> Bool
-sonAnagramas2 :: String -> String -> Bool
-sonAnagramas3 :: String -> String -> Bool
+
+-- | 2ª definición (por comprensión)
+--   
+--   <pre>
+--   &gt;&gt;&gt; anagramas2 "amor" ["Roma","mola","loma","moRa", "rama"]
+--   ["Roma","moRa"]
+--   
+--   &gt;&gt;&gt; anagramas2 "rama" ["aMar","amaRa","roMa","marr","aRma"]
+--   ["aMar","aRma"]
+--   </pre>
 anagramas2 :: String -> [String] -> [String]
+
+-- | 3ª definición (con filter y sin el 2ª argumento)
+--   
+--   <pre>
+--   &gt;&gt;&gt; anagramas3 "amor" ["Roma","mola","loma","moRa", "rama"]
+--   ["Roma","moRa"]
+--   
+--   &gt;&gt;&gt; anagramas3 "rama" ["aMar","amaRa","roMa","marr","aRma"]
+--   ["aMar","aRma"]
+--   </pre>
 anagramas3 :: String -> [String] -> [String]
+
+-- | 4ª definición (sin sonAnagramas ni el 2º argumento)
+--   
+--   <pre>
+--   &gt;&gt;&gt; anagramas4 "amor" ["Roma","mola","loma","moRa", "rama"]
+--   ["Roma","moRa"]
+--   
+--   &gt;&gt;&gt; anagramas4 "rama" ["aMar","amaRa","roMa","marr","aRma"]
+--   ["aMar","aRma"]
+--   </pre>
 anagramas4 :: String -> [String] -> [String]
+
+-- | (sonAnagramas xs ys) se verifica si xs e ys son anagramas. Por
+--   ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; sonAnagramas "amor" "Roma"
+--   True
+--   
+--   &gt;&gt;&gt; sonAnagramas "amor" "mola"
+--   False
+--   </pre>
+sonAnagramas :: String -> String -> Bool
+
+-- | 2ª definición de sonAnagramas
+--   
+--   <pre>
+--   &gt;&gt;&gt; sonAnagramas2 "amor" "Roma"
+--   True
+--   
+--   &gt;&gt;&gt; sonAnagramas2 "amor" "mola"
+--   False
+--   </pre>
+sonAnagramas2 :: String -> String -> Bool
+
+-- | 3ª definición de sonAnagramas (con on)
+--   
+--   <pre>
+--   &gt;&gt;&gt; sonAnagramas3 "amor" "Roma"
+--   True
+--   
+--   &gt;&gt;&gt; sonAnagramas3 "amor" "mola"
+--   False
+--   </pre>
+sonAnagramas3 :: String -> String -> Bool
