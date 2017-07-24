@@ -52,6 +52,7 @@ library
       Bandera_tricolor
       ElementosMinimales
       Iguales_al_siguiente
+      Lista_cuadrada
       Mastermind
       Matriz_Toeplitz
       MaximosLocales
