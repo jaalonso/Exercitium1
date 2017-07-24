@@ -1,4 +1,11 @@
-En este repositorio se encuentran los problemas del curso 2013-14.
+Durante el curso 2013-14 se creó el blog [[http://www.glc.us.es/~jalonso/exercitium][Exercitium]] como complemento del curso
+de [[http://www.cs.us.es/~jalonso/cursos/i1m-13][Informática]] de 1º del Grado de Matemáticas de la Universidad de Sevilla.
+
+El objetivo de [[http://www.glc.us.es/~jalonso/exercitium][Exercitium]] es plantear diariamente un problema para que los
+alumnos pudieran practicar y escribir distintas soluciones en los comentarios.
+
+Esta librería es una recopilación de los ejercicios propuestos en [[http://www.glc.us.es/~jalonso/exercitium][Exercitium]]
+durante el curso 2013-14.
 
 * Abril de 2014
 + 21: [[./src/Iguales_al_siguiente.hs][Iguales al siguiente]].                 
