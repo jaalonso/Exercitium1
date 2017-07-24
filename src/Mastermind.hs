@@ -36,6 +36,7 @@
 -- 
 -- tal que (mastermind xs ys) es el par formado por los números de
 -- aciertos y de coincidencias entre xs e ys. Por ejemplo,
+--
 -- >>> mastermind [2,6,0,7] [1,4,0,6]
 -- (1,1)
 -- >>> mastermind [2,6,0,7] [3,5,9,1]

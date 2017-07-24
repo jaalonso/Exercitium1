@@ -25,12 +25,50 @@ primo :: Integer -> Bool
 primos :: [Integer]
 primosEquidistantes2 :: Integer -> [(Integer, Integer)]
 
+
+-- | Definir las funciones
+--   
+--   <pre>
+--   primosConsecutivosConMediaCapicua :: [(Int,Int,Int)]
+--   nPrimosConsecutivosConMediaCapicua :: Int -&gt; Int
+--   </pre>
+--   
+--   tales que
+--   
+--   <ul>
+--   <li><b>primosConsecutivosConMediaCapicua</b> es la lista de las ternas
+--   (x,y,z) tales que x e y son primos consecutivos cuya media, z, es
+--   capicúa. Por ejemplo,</li>
+--   </ul>
+--   
+--   <pre>
+--   &gt;&gt;&gt; take 5 primosConsecutivosConMediaCapicua
+--   [(3,5,4),(5,7,6),(7,11,9),(97,101,99),(109,113,111)]
+--   </pre>
+--   
+--   <ul>
+--   <li><b>(nPrimosConsecutivosConMediaCapicua n)</b> es el número de
+--   ternas de primos consecutivos con media capicua que son menores que n.
+--   Por ejemplo,</li>
+--   </ul>
+--   
+--   <pre>
+--   &gt;&gt;&gt; nPrimosConsecutivosConMediaCapicua 2014
+--   20
+--   </pre>
 module Primos_consecutivos_con_media_capicua
 primosConsecutivosConMediaCapicua :: [(Int, Int, Int)]
-primo :: Int -> Bool
-primos :: [Int]
-capicua :: Int -> Bool
-primosConsecutivosConMediaCapicua2 :: [(Int, Int, Int)]
+nPrimosConsecutivosConMediaCapicua :: Int -> Int
+
+-- | (verifica_primosConsecutivosConMediaCapicua n =) se verifica si las
+--   definiciones de primosConsecutivosConMediaCapicua son equivalentes
+--   para los n primeros elementos. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; verifica_primosConsecutivosConMediaCapicua 20
+--   True
+--   </pre>
+verifica_primosConsecutivosConMediaCapicua :: Int -> Bool
 
 
 -- | Definir la función
@@ -65,12 +103,64 @@ ej1 :: Array (Int, Int) Int
 ej2 :: Array (Int, Int) Int
 esToeplitz :: Eq a => Array (Int, Int) a -> Bool
 
+
+-- | El Mastermind es un juego que consiste en deducir un código numérico
+--   formado por una lista de números distintos. Cada vez que se empieza un
+--   partido, el programa debe elegir un código, que será lo que el jugador
+--   debe adivinar en la menor cantidad de intentos posibles. Cada intento
+--   consiste en una propuesta de un código posible que propone el jugador,
+--   y una respuesta del programa. Las respuestas le darán pistas al
+--   jugador para que pueda deducir el código.
+--   
+--   Estas pistas indican cuán cerca estuvo el número propuesto de la
+--   solución a través de dos valores: la cantidad de aciertos es la
+--   cantidad de dígitos que propuso el jugador que también están en el
+--   código en la misma posición. La cantidad de coincidencias es la
+--   cantidad de digitos que propuso el jugador que también están en el
+--   código pero en una posición distinta.
+--   
+--   Por ejemplo, si el código que eligió el programa es el [2,6,0,7], y el
+--   jugador propone el [1,4,0,6], el programa le debe responder un acierto
+--   (el 0, que está en el código original en el mismo lugar, el tercero),
+--   y una coincidencia (el 6, que también está en el código original, pero
+--   en la segunda posición, no en el cuarto como fue propuesto). Si el
+--   jugador hubiera propuesto el [3,5,9,1], habría obtenido como respuesta
+--   ningún acierto y ninguna coincidencia, ya que no hay números en común
+--   con el código original, y si se obtienen cuatro aciertos es porque el
+--   jugador adivinó el código y ganó el juego.
+--   
+--   Definir la función
+--   
+--   <pre>
+--   mastermind :: [Int] -&gt; [Int] -&gt; (Int,Int)
+--   </pre>
+--   
+--   tal que (mastermind xs ys) es el par formado por los números de
+--   aciertos y de coincidencias entre xs e ys. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; mastermind [2,6,0,7] [1,4,0,6]
+--   (1,1)
+--   
+--   &gt;&gt;&gt; mastermind [2,6,0,7] [3,5,9,1]
+--   (0,0)
+--   
+--   &gt;&gt;&gt; mastermind [2,6,0,7] [1,6,0,4]
+--   (2,0)
+--   
+--   &gt;&gt;&gt; mastermind [2,6,0,7] [2,6,0,7]
+--   (4,0)
+--   </pre>
 module Mastermind
 mastermind :: [Int] -> [Int] -> (Int, Int)
-aciertos :: Eq a => [a] -> [a] -> [a]
-coincidencias :: Eq a => [a] -> [a] -> [a]
-mastermind2 :: [Int] -> [Int] -> (Int, Int)
-mastermind3 :: [Int] -> [Int] -> (Int, Int)
+
+-- | Comprueba la equivalencia de las definiciones
+--   
+--   <pre>
+--   &gt;&gt;&gt; verifica_mastermind
+--   +++ OK, passed 100 tests.
+--   </pre>
+verifica_mastermind :: IO ()
 
 
 -- | Definir la función

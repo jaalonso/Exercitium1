@@ -54,7 +54,7 @@ a[href].def:hover { color: rgb(78, 98, 114); }
  */
 
 body {
-	font:18pt/1.4 sans-serif;
+	font:13px/1.4 sans-serif;
 	*font-size:small; /* for IE */
 	*font:x-small; /* for IE in quirks mode */
 }
