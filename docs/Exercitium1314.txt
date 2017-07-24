@@ -9,15 +9,31 @@
 @package Exercitium1314
 @version 0.1.0.0
 
+
+-- | Definir la función
+--   
+--   <pre>
+--   sumaSiTodosJustos :: (Num a, Eq a) =&gt; [Maybe a] -&gt; Maybe a
+--   </pre>
+--   
+--   tal que <b>(sumaSiTodosJustos xs)</b> es justo la suma de todos los
+--   elementos de xs si todos son justos (es decir, si Nothing no pertenece
+--   a xs) y Nothing en caso contrario. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; sumaSiTodosJustos [Just 2, Just 5]
+--   Just 7
+--   
+--   &gt;&gt;&gt; sumaSiTodosJustos [Just 2, Just 5, Nothing]
+--   Nothing
+--   </pre>
 module Suma_si_todos_justos
+
+-- | 1ª definición
 sumaSiTodosJustos :: (Num a, Eq a) => [Maybe a] -> Maybe a
-todosJustos :: Eq a => [Maybe a] -> Bool
-todosJustos2 :: Eq a => [Maybe a] -> Bool
-sumaSiTodosJustos2 :: (Num a, Eq a) => [Maybe a] -> Maybe a
-sumaSiTodosJustos3 :: (Num a, Eq a) => [Maybe a] -> Maybe a
-sumaSiTodosJustos4 :: (Num a, Eq a) => [Maybe a] -> Maybe a
-sumaSiTodosJustos5 :: (Num a, Eq a) => [Maybe a] -> Maybe a
-sumaSiTodosJustos6 :: (Num a, Eq a) => [Maybe a] -> Maybe a
+
+-- | Verificación
+verifica_sumaSiTodosJustos :: IO ()
 
 
 -- | Definir la función
