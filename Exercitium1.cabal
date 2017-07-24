@@ -16,9 +16,10 @@ description:    Durante el curso 2013-14 se creó el blog
                 es plantear diariamente un problema para que los alumnos pudieran practicar y
                 escribir distintas soluciones en los comentarios.
                 .
-                Este repositorio es una recopilación de los ejercicios propuestos en
+                Esta librería es una recopilación de los ejercicios propuestos en
                 <http://www.glc.us.es/~jalonso/exercitium Exercitium>
                 durante el curso 2013-14.
+category:       Education, Learning Haskell, Math, Teaching
 homepage:       https://github.com/jaalonso/Exercitium1314#readme
 bug-reports:    https://github.com/jaalonso/Exercitium1314/issues
 author:         Jose A. Alonso
@@ -53,6 +54,7 @@ library
       Iguales_al_siguiente
       Mastermind
       Matriz_Toeplitz
+      MaximosLocales
       Ordenados_por_maximo
       Primos_consecutivos_con_media_capicua
       Primos_equidistantes

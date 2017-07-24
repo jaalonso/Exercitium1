@@ -12,7 +12,7 @@
 --   para que los alumnos pudieran practicar y escribir distintas
 --   soluciones en los comentarios.
 --   
---   Este repositorio es una recopilación de los ejercicios propuestos en
+--   Esta librería es una recopilación de los ejercicios propuestos en
 --   <a>Exercitium</a> durante el curso 2013-14.
 @package Exercitium1
 @version 0.1.0.0
@@ -201,6 +201,62 @@ prop_ordenadosPorMaximo :: Ord a => [[a]] -> Bool
 --   +++ OK, passed 100 tests.
 --   </pre>
 verificaOrdenadosPorMaximo :: IO ()
+
+
+-- | Un máximo local de una lista es un elemento de la lista que es mayor
+--   que su predecesor y que su sucesor en la lista. Por ejemplo, 5 es un
+--   máximo local de [3,2,5,3,7,7,1,6,2] ya que es mayor que 2 (su
+--   predecesor) y que 3 (su sucesor).
+--   
+--   Definir la función
+--   
+--   <pre>
+--   maximosLocales :: Ord a =&gt; [a] -&gt; [a]
+--   </pre>
+--   
+--   tal que <b>(maximosLocales xs)</b> es la lista de los máximos locales
+--   de la lista xs. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; maximosLocales [3,2,5,3,7,7,1,6,2]
+--   [5,6]
+--   
+--   &gt;&gt;&gt; maximosLocales [1..100]
+--   []
+--   
+--   &gt;&gt;&gt; maximosLocales "adbpmqexyz"
+--   "dpq"
+--   </pre>
+module MaximosLocales
+
+-- | 1ª definición (por recursión):
+maximosLocales :: Ord a => [a] -> [a]
+
+-- | 2ª definición (por comprensión):
+maximosLocales2 :: Ord a => [a] -> [a]
+
+-- | (prop_prop_maximosLocales xs) se verifica si las definiciones de
+--   maximosLocales son equivalentes sobre xs. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; prop_maximosLocales [3,2,5,3,7,7,1,6,2]
+--   True
+--   
+--   &gt;&gt;&gt; prop_maximosLocales [1..100]
+--   True
+--   
+--   &gt;&gt;&gt; prop_maximosLocales "adbpmqexyz"
+--   True
+--   </pre>
+prop_maximosLocales :: Ord a => [a] -> Bool
+
+-- | Comprueba la equivalencia de las definiciones de maximosLocales.
+--   
+--   <pre>
+--   &gt;&gt;&gt; verifica_maximosLocales
+--   +++ OK, passed 100 tests.
+--   </pre>
+verifica_maximosLocales :: IO ()
 
 
 -- | Una matriz de Toeplitz es una matriz cuadrada que es constante a lo

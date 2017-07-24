@@ -20,3 +20,4 @@ durante el curso 2013-14.
 * Mayo de 2014
 + 01: [[./src/Suma_si_todos_justos.hs][Suma si todos los valores son justos]].            
 + 02: [[./src/Matriz_Toeplitz.hs][Matrices de Toeplitz]].                            
++ 05: [[./src/MaximosLocales.hs][Máximos locales]].                                 
