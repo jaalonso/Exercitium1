@@ -1,7 +1,7 @@
 -- |
 -- Module      : Bandera_tricolor.hs 
 -- Description : La bandera tricolor.
--- Copyright   : José A. Alonso (23 de Abril de 2014)
+-- Copyright   : José A. Alonso (23-04-14)
 -- License     : GPL-3
 -- 
 -- El problema de la bandera tricolor consiste en lo siguiente: Dada un
@@ -15,7 +15,7 @@
 --
 -- > banderaTricolor :: [Color] -> [Color]
 -- 
--- tal que (banderaTricolor xs) es la bandera tricolor formada con los
+-- tal que __(banderaTricolor xs)__ es la bandera tricolor formada con los
 -- elementos de xs. Por ejemplo,
 --
 -- >>> banderaTricolor [M,R,A,A,R,R,A,M,M]

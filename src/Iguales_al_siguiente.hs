@@ -1,14 +1,14 @@
 -- |
 -- Module      : Iguales_al_siguiente.hs
 -- Description : Iguales al siguiente.
--- Copyright   : José A. Alonso (21-Abril-2017)
+-- Copyright   : José A. Alonso (21-04-14)
 -- License     : GPL-3
 -- 
 -- Definir la función
 -- 
 -- > igualesAlSiguiente :: Eq a => [a] -> [a]
 --
--- tal que (igualesAlSiguiente xs) es la lista de los elementos de xs
+-- tal que __(igualesAlSiguiente xs)__ es la lista de los elementos de xs
 -- que son iguales a su siguiente. Por ejemplo,
 --
 -- >>> igualesAlSiguiente [1,2,2,2,3,3,4::Int]

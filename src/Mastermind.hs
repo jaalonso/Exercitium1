@@ -1,7 +1,7 @@
 -- |
 -- Module      : Mastermind
 -- Description : Mastermind.
--- Copyright   : José A. Alonso (25 de Abril de 2014)
+-- Copyright   : José A. Alonso (25-04-14)
 -- License     : GPL-3
 -- 
 -- El Mastermind es un juego que consiste en deducir un código
@@ -34,7 +34,7 @@
 -- 
 -- > mastermind :: [Int] -> [Int] -> (Int,Int)
 -- 
--- tal que (mastermind xs ys) es el par formado por los números de
+-- tal que __(mastermind xs ys)__ es el par formado por los números de
 -- aciertos y de coincidencias entre xs e ys. Por ejemplo,
 --
 -- >>> mastermind [2,6,0,7] [1,4,0,6]

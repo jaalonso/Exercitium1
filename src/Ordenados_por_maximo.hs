@@ -1,14 +1,14 @@
 -- |
 -- Module      : Ordenados_por_maximo.hs
 -- Description : Ordenación por el máximo.
--- Copyright   : José A. Alonso (22 de Abril de 2014)
+-- Copyright   : José A. Alonso (22-04-14)
 -- License     : GPL-3
 --
 -- Definir la función
 --
 -- > ordenadosPorMaximo :: Ord a => [[a]] -> [[a]]
 -- 
--- tal que (ordenadosPorMaximo xss) es la lista de los elementos de xss
+-- tal que __(ordenadosPorMaximo xss)__ es la lista de los elementos de xss
 -- ordenada por sus máximos. Por ejemplo,
 -- 
 -- >>> ordenadosPorMaximo [[3,2],[6,7,5],[1,4]]

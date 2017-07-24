@@ -1,14 +1,14 @@
 -- |
 -- Module      : ElementosMinimales
 -- Description : Determinación de los elementos minimales.
--- Copyright   : José A. Alonso (24 de Abril de 2014)
+-- Copyright   : José A. Alonso (24-04-14)
 -- License     : GPL-3
 -- 
 -- Definir la función
 -- 
 -- > minimales :: Eq a => [[a]] -> [[a]]
 -- 
--- tal que (minimales xss) es la lista de los elementos de xss que no
+-- tal que __(minimales xss)__ es la lista de los elementos de xss que no
 -- están contenidos en otros elementos de xss. Por ejemplo,
 -- 
 -- >>> minimales [[1,3],[2,3,1],[3,2,5]]
