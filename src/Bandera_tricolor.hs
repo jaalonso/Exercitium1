@@ -1,6 +1,6 @@
 -- |
 -- Module      : Bandera_tricolor.hs 
--- Description : La bandera tricolor.
+-- Description : Ordenación como bandera tricolor.
 -- Copyright   : José A. Alonso (23-04-14)
 -- License     : GPL-3
 -- 

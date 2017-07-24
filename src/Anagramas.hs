@@ -1,6 +1,6 @@
 -- |
 -- Module      : Anagramas
--- Description : Anagramas.
+-- Description : Selección de anagramas.
 -- Copyright   : José A. Alonso (29-04-17)
 -- License     : GPL-3
 -- 

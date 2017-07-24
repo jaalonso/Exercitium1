@@ -1,6 +1,6 @@
 -- |
 -- Module      : Primos_equidistantes
--- Description : Primos equidistantes.
+-- Description : Pares de primos consecutivos a distancia dada.
 -- Copyright   : José A. Alonso (30-04-14)
 -- License     : GPL-3
 -- 

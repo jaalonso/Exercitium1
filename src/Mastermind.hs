@@ -1,6 +1,6 @@
 -- |
 -- Module      : Mastermind
--- Description : Mastermind.
+-- Description : Puntuación del mastermind.
 -- Copyright   : José A. Alonso (25-04-14)
 -- License     : GPL-3
 -- 

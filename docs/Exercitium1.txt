@@ -154,6 +154,9 @@ primosConsecutivosConMediaCapicua2 :: [(Int, Int, Int)]
 --   </pre>
 verifica_primosConsecutivosConMediaCapicua :: Int -> Bool
 
+-- | Definición de nPrimosConsecutivosConMediaCapicua
+nPrimosConsecutivosConMediaCapicua :: Int -> Int
+
 
 -- | Definir la función
 --   

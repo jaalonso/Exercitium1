@@ -1,6 +1,6 @@
 -- |
 -- Module      : Iguales_al_siguiente.hs
--- Description : Iguales al siguiente.
+-- Description : Elementos iguales a su siguiente.
 -- Copyright   : José A. Alonso (21-04-14)
 -- License     : GPL-3
 -- 

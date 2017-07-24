@@ -1,6 +1,6 @@
 -- |
 -- Module      : Matriz_Toeplitz
--- Description : Matrices de Toepliz
+-- Description : Determinación de matrices de Toepliz
 -- Copyright   : José A. Alonso (01-07-14)
 -- License     : GPL-3
 -- 

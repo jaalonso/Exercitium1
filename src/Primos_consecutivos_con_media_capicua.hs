@@ -25,7 +25,6 @@
 -- >>> nPrimosConsecutivosConMediaCapicua 2014
 -- 20
 
-
 module Primos_consecutivos_con_media_capicua where
 
 import Data.Numbers.Primes (primes)
@@ -92,3 +91,8 @@ verifica_primosConsecutivosConMediaCapicua n =
 --    (12919,12923,12921)
 --    (0.01 secs, 0 bytes)
 
+-- | Definición de nPrimosConsecutivosConMediaCapicua
+nPrimosConsecutivosConMediaCapicua :: Int -> Int
+nPrimosConsecutivosConMediaCapicua n = 
+  length (takeWhile (\(_,y,_) -> y < n)
+                    primosConsecutivosConMediaCapicua)
