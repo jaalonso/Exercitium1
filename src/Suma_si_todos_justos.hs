@@ -133,3 +133,4 @@ verifica_sumaSiTodosJustos = do
 -- Comprobación
 --    > stack exec doctest src/Suma_si_todos_justos.hs 
 --    Examples: 10  Tried: 10  Errors: 0  Failures: 0
+
