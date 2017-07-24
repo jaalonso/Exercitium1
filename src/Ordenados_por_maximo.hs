@@ -16,14 +16,12 @@
 -- >>> ordenadosPorMaximo ["este","es","el","primero"]
 -- ["el","primero","es","este"]
 
-module Ordenados_por_maximo
-  ( ordenadosPorMaximo
-  , verificaOrdenadosPorMaximo
-  ) where
+module Ordenados_por_maximo where
 
 import Data.List (sort)
 import Test.QuickCheck
 
+-- | 1ª definición
 ordenadosPorMaximo :: Ord a => [[a]] -> [[a]]
 ordenadosPorMaximo xss =
   map snd (sort [(maximum xs,xs) | xs <- xss])
@@ -52,7 +50,3 @@ prop_ordenadosPorMaximo xs =
 verificaOrdenadosPorMaximo :: IO ()
 verificaOrdenadosPorMaximo = 
   quickCheck (prop_ordenadosPorMaximo :: [[Int]] -> Bool)
-
--- Comprobación
---    > stack exec doctest src/Iguales_al_siguiente.hs 
---    Examples: 5  Tried: 5  Errors: 0  Failures: 0

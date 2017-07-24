@@ -16,13 +16,12 @@
 -- >>> minimales [[1,3],[2,3,1],[3,2,5],[3,1]]
 -- [[2,3,1],[3,2,5]]
 
-module ElementosMinimales
-  ( minimales
-  ) where
+module ElementosMinimales where
 
 import Data.List ( delete
                  , nub)
 
+-- | Definición
 minimales :: Eq a => [[a]] -> [[a]]
 minimales xss = 
   [xs | xs <- xss
@@ -42,6 +41,3 @@ subconjuntoPropio xs ys = aux (nub xs) (nub ys)
     aux [] _      = True
     aux (a:as) bs = a `elem` bs && aux as (delete a bs)  
 
--- Comprobación
---    > stack exec doctest src/ElementosMinimales.hs 
---    Examples: 4  Tried: 4  Errors: 0  Failures: 0

@@ -1,10 +1,22 @@
 name: Exercitium1
 version: '0.1.0.0'
-synopsis: Problemas de Exercitium (curso 2013-14)
+synopsis: Problemas de Exercitium (Volumen 1)
 description: |
-  Ejercicios de programación funcional con Haskell propuestos en el blog
-  Exercitium durante el curso 2013-14. 
-category: Excercises
+  Durante el curso 2013-14 se creó el blog
+  <http://www.glc.us.es/~jalonso/exercitium Exercitium>
+  como complemento del curso de
+  <http://www.cs.us.es/~jalonso/cursos/i1m-13/ Informática>
+  de 1º del Grado de Matemáticas de la Universidad de Sevilla.
+
+  El objetivo de
+  <http://www.glc.us.es/~jalonso/exercitium Exercitium>
+  es plantear diariamente un problema para que los alumnos pudieran practicar y
+  escribir distintas soluciones en los comentarios.
+
+  Este repositorio es una recopilación de los ejercicios propuestos en
+  <http://www.glc.us.es/~jalonso/exercitium Exercitium>
+  durante el curso 2013-14.
+
 author: Jose A. Alonso
 maintainer: JoseA.Alonso@gmail.com
 copyright: Jose A. Alonso

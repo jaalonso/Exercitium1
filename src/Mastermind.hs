@@ -46,14 +46,12 @@
 -- >>> mastermind [2,6,0,7] [2,6,0,7]
 -- (4,0)
 
-module Mastermind
-  ( mastermind
-  , verifica_mastermind
-  ) where
+module Mastermind where
 
 import Data.List (nub)
 import Test.QuickCheck
 
+-- | 1ª definición
 mastermind :: [Int] -> [Int] -> (Int,Int)
 mastermind xs ys = 
   ( length (aciertos xs ys)
@@ -80,7 +78,7 @@ coincidencias xs ys =
      , x `notElem` zs]
   where zs = aciertos xs ys
 
--- | 2ª solución (por recursión):
+-- | 2ª definición (por recursión):
 mastermind2 :: [Int] -> [Int] -> (Int,Int)
 mastermind2 xs ys = aux xs ys 
   where aux (u:us) (z:zs) 
@@ -90,7 +88,7 @@ mastermind2 xs ys = aux xs ys
           where (a,b) = aux us zs
         aux _ _         = (0,0)
         
--- | 3ª solución:
+-- | 3ª definición:
 mastermind3 :: [Int] -> [Int] -> (Int,Int)
 mastermind3 xs ys = (nAciertos,nCoincidencias)
   where
@@ -126,7 +124,3 @@ prop_mastermind xs ys =
 verifica_mastermind :: IO ()
 verifica_mastermind = 
   quickCheck prop_mastermind 
-
--- Comprobación
---    > stack exec doctest src/Mastermind.hs 
---    Examples: 11  Tried: 11  Errors: 0  Failures: 0

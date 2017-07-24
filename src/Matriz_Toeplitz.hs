@@ -37,18 +37,14 @@ module Matriz_Toeplitz where
 
 import Data.Array
 
--- Ejemplos
+-- | Ejemplos de matrices
 ej1, ej2 :: Array (Int,Int) Int
 ej1 = listArray ((1,1),(4,4)) [2,5,1,6,4,2,5,1,7,4,2,5,9,7,4,2]
 ej2 = listArray ((1,1),(4,4)) [2,5,1,6,4,2,6,1,7,4,2,5,9,7,4,2]
 
--- |
+-- | Definición
 esToeplitz :: Eq a => Array (Int,Int) a -> Bool
 esToeplitz p = m == n && 
                and [p!(i,j) == p!(i+1,j+1) | 
                     i <- [1..n-1], j <- [1..n-1]]
     where (_,(m,n)) = bounds p
-
--- Comprobación
---    > stack exec doctest src/Matriz_Toeplitz.hs 
---    Examples: 2  Tried: 2  Errors: 0  Failures: 0

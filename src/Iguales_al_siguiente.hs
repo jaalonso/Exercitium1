@@ -16,14 +16,12 @@
 -- >>> igualesAlSiguiente [1..10::Int]
 -- []
 
-module Iguales_al_siguiente
-  ( igualesAlSiguiente
-  , verificaIgualesAlSiguiente
-  ) where
+module Iguales_al_siguiente where
 
 import Data.List (group)
 import Test.QuickCheck
 
+-- | 1ª definición (con zip)
 igualesAlSiguiente :: Eq a => [a] -> [a]
 igualesAlSiguiente xs =
   [x | (x,y) <- zip xs (tail xs), x == y]
@@ -64,14 +62,11 @@ prop_igualesAlSiguiente xs =
 
 -- | Comprueba la equivalencia de las definiciones
 --
--- >>> verificaIgualesAlSiguiente
+-- > verificaIgualesAlSiguiente
 -- +++ OK, passed 100 tests.
-verificaIgualesAlSiguiente :: IO ()
-verificaIgualesAlSiguiente = 
+verifica_igualesAlSiguiente :: IO ()
+verifica_igualesAlSiguiente = 
   quickCheck prop_igualesAlSiguiente
 
--- Comprobación
---    > stack exec doctest src/Iguales_al_siguiente.hs 
---    Examples: 5  Tried: 5  Errors: 0  Failures: 0
 
 

@@ -26,15 +26,11 @@
 -- 20
 
 
-module Primos_consecutivos_con_media_capicua
-  ( primosConsecutivosConMediaCapicua
-  , nPrimosConsecutivosConMediaCapicua
-  , verifica_primosConsecutivosConMediaCapicua
-  ) where
+module Primos_consecutivos_con_media_capicua where
 
 import Data.Numbers.Primes (primes)
 
--- Definición de primosConsecutivosConMediaCapicua
+-- | 1ª definición (definiendo los primos)
 primosConsecutivosConMediaCapicua :: [(Int,Int,Int)]
 primosConsecutivosConMediaCapicua =
   [(x,y,z) | (x,y) <- zip primos (tail primos)
@@ -69,7 +65,7 @@ capicua :: Int -> Bool
 capicua x = ys == reverse ys
   where ys = show x
 
--- | 2ª definición
+-- | 2ª definición (con primes)
 primosConsecutivosConMediaCapicua2 :: [(Int,Int,Int)]
 primosConsecutivosConMediaCapicua2 =
   [(x,y,z) | (x,y) <- zip primos3 (tail primos3)
@@ -95,12 +91,4 @@ verifica_primosConsecutivosConMediaCapicua n =
 --    λ> primosConsecutivosConMediaCapicua2 !! 30
 --    (12919,12923,12921)
 --    (0.01 secs, 0 bytes)
-
--- Definición de nPrimosConsecutivosConMediaCapicua
-nPrimosConsecutivosConMediaCapicua :: Int -> Int
-nPrimosConsecutivosConMediaCapicua n = 
-  length (takeWhile (\(_,y,_) -> y < n)
-                    primosConsecutivosConMediaCapicua)
-
--- Comprobación
 
