@@ -1,7 +1,7 @@
 -- |
 -- Module      : Valor_de_un_polinomio
 -- Description : Valores de polinomios representados con vectores.
--- Copyright   : J.A. Alonso 
+-- Copyright   : J.A. Alonso (07-05-14)
 -- License     : GPL-3
 -- 
 -- Los polinomios se pueden representar mediante vectores usando la
