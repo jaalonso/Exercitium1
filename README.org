@@ -22,3 +22,5 @@ durante el curso 2013-14.
 + 02: [[./src/Matriz_Toeplitz.hs][Matrices de Toeplitz]].                            
 + 05: [[./src/MaximosLocales.hs][Máximos locales]].
 + 06: [[./src/Lista_cuadrada.hs][Lista cuadrada]].
++ 07: [[./src/Segmentos_consecutivos.hs][Segmentos de elementos consecutivos]].
++ 08: [[./src/Valor_de_un_polinomio.hs][Valor de un polinomio mediante vectores]].         

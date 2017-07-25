@@ -47,6 +47,88 @@ verifica_sumaSiTodosJustos :: IO ()
 -- | Definir la función
 --   
 --   <pre>
+--   segmentos :: (Enum a, Eq a) =&gt; [a] -&gt; [[a]]
+--   </pre>
+--   
+--   tal que <b>(segmentos xss)</b> es la lista de los segmentos de xss
+--   formados por elementos consecutivos. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; segmentos [1,2,5,6,4]
+--   [[1,2],[5,6],[4]]
+--   
+--   &gt;&gt;&gt; segmentos [1,2,3,4,7,8,9]
+--   [[1,2,3,4],[7,8,9]]
+--   
+--   &gt;&gt;&gt; segmentos "abbccddeeebc"
+--   ["ab","bc","cd","de","e","e","bc"]
+--   </pre>
+--   
+--   Nota: Se puede usar la función succ tal que (succ x) es el sucesor de
+--   x. Por ejemplo,
+--   
+--   <pre>
+--   succ 3    ==  4
+--   succ 'c'  ==  'd'
+--   </pre>
+module Segmentos_consecutivos
+
+-- | 1ª definición (por recursión).
+segmentos :: (Enum a, Eq a) => [a] -> [[a]]
+
+-- | 2ª definición.
+segmentos2 :: (Enum a, Eq a) => [a] -> [[a]]
+
+-- | (inicial xs) es el segmento inicial de xs formado por elementos
+--   consecutivos. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; inicial [1,2,5,6,4]
+--   [1,2]
+--   
+--   &gt;&gt;&gt; inicial "abccddeeebc"
+--   "abc"
+--   </pre>
+inicial :: (Enum a, Eq a) => [a] -> [a]
+
+-- | 2ª definición de inicial (con uncurry)
+--   
+--   <pre>
+--   &gt;&gt;&gt; inicial2 [1,2,5,6,4]
+--   [1,2]
+--   
+--   &gt;&gt;&gt; inicial2 "abccddeeebc"
+--   "abc"
+--   </pre>
+inicial2 :: (Enum a, Eq a) => [a] -> [a]
+
+-- | (prop_segmentos xs) se verifica si las definiciones de segmentos son
+--   equivalentes sobre xs. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; prop_segmentos [1,2,5,6,4]
+--   True
+--   
+--   &gt;&gt;&gt; prop_segmentos [1,2,3,4,7,8,9]
+--   True
+--   
+--   &gt;&gt;&gt; prop_segmentos "abbccddeeebc"
+--   True
+--   </pre>
+prop_segmentos :: (Enum a, Eq a) => [a] -> Bool
+
+-- | Comprueba la equivalencia de las definiciones de segmentos.
+--   
+--   <pre>
+--   &gt;&gt;&gt; verifica_segmentos
+--   +++ OK, passed 100 tests.
+--   </pre>
+verifica_segmentos :: IO ()
+
+
+-- | Definir la función
+--   
+--   <pre>
 --   primosEquidistantes :: Integer -&gt; [(Integer,Integer)]
 --   </pre>
 --   

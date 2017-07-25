@@ -59,6 +59,7 @@ library
       Ordenados_por_maximo
       Primos_consecutivos_con_media_capicua
       Primos_equidistantes
+      Segmentos_consecutivos
       Suma_si_todos_justos
   default-language: Haskell2010
 
