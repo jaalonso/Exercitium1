@@ -462,6 +462,63 @@ prop_ordenadosPorMaximo :: Ord a => [[a]] -> Bool
 verificaOrdenadosPorMaximo :: IO ()
 
 
+-- | Las notas de los dos primeros exámenes se pueden representar mediante
+--   el siguiente tipo de dato
+--   
+--   <pre>
+--   data Notas = Notas String Int Int
+--                deriving (Read, Show, Eq)
+--   </pre>
+--   
+--   Por ejemplo, (Notas <a>Juan</a> 6 5) representar las notas de un
+--   alumno cuyo nombre es Juan, la nota del primer examen es 6 y la del
+--   segundo es 5.
+--   
+--   Definir la función
+--   
+--   <pre>
+--   ordenadas :: [Notas] -&gt; [Notas]
+--   </pre>
+--   
+--   tal que <b>(ordenadas ns)</b> es la lista de las notas ns ordenadas
+--   considerando primero la nota del examen 2, a continuación la del
+--   examen 1 y finalmente el nombre. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; ordenadas [Notas "Juan" 6 5, Notas "Luis" 3 7]
+--   [Notas "Juan" 6 5,Notas "Luis" 3 7]
+--   
+--   &gt;&gt;&gt; ordenadas [Notas "Juan" 6 5, Notas "Luis" 3 4]
+--   [Notas "Luis" 3 4,Notas "Juan" 6 5]
+--   
+--   &gt;&gt;&gt; ordenadas [Notas "Juan" 6 5, Notas "Luis" 7 4]
+--   [Notas "Luis" 7 4,Notas "Juan" 6 5]
+--   
+--   &gt;&gt;&gt; ordenadas [Notas "Juan" 6 4, Notas "Luis" 7 4]
+--   [Notas "Juan" 6 4,Notas "Luis" 7 4]
+--   
+--   &gt;&gt;&gt; ordenadas [Notas "Juan" 6 4, Notas "Luis" 5 4]
+--   [Notas "Luis" 5 4,Notas "Juan" 6 4]
+--   
+--   &gt;&gt;&gt; ordenadas [Notas "Juan" 5 4, Notas "Luis" 5 4]
+--   [Notas "Juan" 5 4,Notas "Luis" 5 4]
+--   
+--   &gt;&gt;&gt; ordenadas [Notas "Juan" 5 4, Notas "Eva" 5 4]
+--   [Notas "Eva" 5 4,Notas "Juan" 5 4]
+--   </pre>
+module Ordenacion_de_estructuras
+
+-- | Tipo se las notas.
+data Notas
+Notas :: String -> Int -> Int -> Notas
+
+-- | Definición.
+ordenadas :: [Notas] -> [Notas]
+instance GHC.Classes.Eq Ordenacion_de_estructuras.Notas
+instance GHC.Show.Show Ordenacion_de_estructuras.Notas
+instance GHC.Read.Read Ordenacion_de_estructuras.Notas
+
+
 -- | Las ternas de números naturales se pueden ordenar como sigue
 --   
 --   <pre>

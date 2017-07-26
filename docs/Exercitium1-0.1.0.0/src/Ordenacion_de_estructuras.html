@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><link rel="stylesheet" type="text/css" href="style.css" /><script type="text/javascript" src="highlight.js"></script></head><body><pre><span class="hs-comment">-- |</span><span>
+</span><a name="line-2"></a><span class="hs-comment">-- Module      : Ordenacion_de_estructuras</span><span>
+</span><a name="line-3"></a><span class="hs-comment">-- Description : Ordenaci&#243;n de estructuras.</span><span>
+</span><a name="line-4"></a><span class="hs-comment">-- Copyright   : Exercitium (14-05-14)</span><span>
+</span><a name="line-5"></a><span class="hs-comment">-- License     : GPL-3</span><span>
+</span><a name="line-6"></a><span class="hs-comment">-- Maintainer  : JoseA.Alonso@gmail.com</span><span>
+</span><a name="line-7"></a><span class="hs-comment">-- </span><span>
+</span><a name="line-8"></a><span class="hs-comment">-- Las notas de los dos primeros ex&#225;menes se pueden representar mediante</span><span>
+</span><a name="line-9"></a><span class="hs-comment">-- el siguiente tipo de dato</span><span>
+</span><a name="line-10"></a><span class="hs-comment">--</span><span>
+</span><a name="line-11"></a><span class="hs-comment">-- &gt; data Notas = Notas String Int Int</span><span>
+</span><a name="line-12"></a><span class="hs-comment">-- &gt;              deriving (Read, Show, Eq)</span><span>
+</span><a name="line-13"></a><span class="hs-comment">-- </span><span>
+</span><a name="line-14"></a><span class="hs-comment">-- Por ejemplo, (Notas &quot;Juan&quot; 6 5) representar las notas de un alumno</span><span>
+</span><a name="line-15"></a><span class="hs-comment">-- cuyo nombre es Juan, la nota del primer examen es 6 y la del segundo</span><span>
+</span><a name="line-16"></a><span class="hs-comment">-- es 5.</span><span>
+</span><a name="line-17"></a><span class="hs-comment">-- </span><span>
+</span><a name="line-18"></a><span class="hs-comment">-- Definir la funci&#243;n</span><span>
+</span><a name="line-19"></a><span class="hs-comment">-- </span><span>
+</span><a name="line-20"></a><span class="hs-comment">-- &gt; ordenadas :: [Notas] -&gt; [Notas]</span><span>
+</span><a name="line-21"></a><span class="hs-comment">-- </span><span>
+</span><a name="line-22"></a><span class="hs-comment">-- tal que __(ordenadas ns)__ es la lista de las notas ns ordenadas</span><span>
+</span><a name="line-23"></a><span class="hs-comment">-- considerando primero la nota del examen 2, a continuaci&#243;n la del</span><span>
+</span><a name="line-24"></a><span class="hs-comment">-- examen 1 y finalmente el nombre. Por ejemplo,</span><span>
+</span><a name="line-25"></a><span class="hs-comment">-- </span><span>
+</span><a name="line-26"></a><span class="hs-comment">-- &gt;&gt;&gt; ordenadas [Notas &quot;Juan&quot; 6 5, Notas &quot;Luis&quot; 3 7] </span><span>
+</span><a name="line-27"></a><span class="hs-comment">-- [Notas &quot;Juan&quot; 6 5,Notas &quot;Luis&quot; 3 7]</span><span>
+</span><a name="line-28"></a><span class="hs-comment">-- &gt;&gt;&gt; ordenadas [Notas &quot;Juan&quot; 6 5, Notas &quot;Luis&quot; 3 4] </span><span>
+</span><a name="line-29"></a><span class="hs-comment">-- [Notas &quot;Luis&quot; 3 4,Notas &quot;Juan&quot; 6 5]</span><span>
+</span><a name="line-30"></a><span class="hs-comment">-- &gt;&gt;&gt; ordenadas [Notas &quot;Juan&quot; 6 5, Notas &quot;Luis&quot; 7 4] </span><span>
+</span><a name="line-31"></a><span class="hs-comment">-- [Notas &quot;Luis&quot; 7 4,Notas &quot;Juan&quot; 6 5]</span><span>
+</span><a name="line-32"></a><span class="hs-comment">-- &gt;&gt;&gt; ordenadas [Notas &quot;Juan&quot; 6 4, Notas &quot;Luis&quot; 7 4] </span><span>
+</span><a name="line-33"></a><span class="hs-comment">-- [Notas &quot;Juan&quot; 6 4,Notas &quot;Luis&quot; 7 4]</span><span>
+</span><a name="line-34"></a><span class="hs-comment">-- &gt;&gt;&gt; ordenadas [Notas &quot;Juan&quot; 6 4, Notas &quot;Luis&quot; 5 4] </span><span>
+</span><a name="line-35"></a><span class="hs-comment">-- [Notas &quot;Luis&quot; 5 4,Notas &quot;Juan&quot; 6 4]</span><span>
+</span><a name="line-36"></a><span class="hs-comment">-- &gt;&gt;&gt; ordenadas [Notas &quot;Juan&quot; 5 4, Notas &quot;Luis&quot; 5 4] </span><span>
+</span><a name="line-37"></a><span class="hs-comment">-- [Notas &quot;Juan&quot; 5 4,Notas &quot;Luis&quot; 5 4]</span><span>
+</span><a name="line-38"></a><span class="hs-comment">-- &gt;&gt;&gt; ordenadas [Notas &quot;Juan&quot; 5 4, Notas &quot;Eva&quot; 5 4] </span><span>
+</span><a name="line-39"></a><span class="hs-comment">-- [Notas &quot;Eva&quot; 5 4,Notas &quot;Juan&quot; 5 4]</span><span>
+</span><a name="line-40"></a><span>
+</span><a name="line-41"></a><span class="hs-keyword">module</span><span> </span><span class="hs-identifier">Ordenacion_de_estructuras</span><span> </span><span class="hs-keyword">where</span><span>
+</span><a name="line-42"></a><span>
+</span><a name="line-43"></a><span class="hs-keyword">import</span><span> </span><span class="hs-identifier">Data</span><span class="hs-operator">.</span><span class="hs-identifier">List</span><span> </span><span class="hs-special">(</span><span class="hs-identifier hs-var">sort</span><span class="hs-special">)</span><span>
+</span><a name="line-44"></a><span>
+</span><a name="line-45"></a><span class="hs-comment">-- | Tipo se las notas.</span><span>
+</span><a name="line-46"></a><span class="hs-keyword">data</span><span> </span><a name="Notas"><a href="Ordenacion_de_estructuras.html#Notas"><span class="hs-identifier">Notas</span></a></a><span> </span><span class="hs-glyph">=</span><span> </span><a name="Notas"><a href="Ordenacion_de_estructuras.html#Notas"><span class="hs-identifier">Notas</span></a></a><span> </span><span class="hs-identifier hs-type">String</span><span> </span><span class="hs-identifier hs-type">Int</span><span> </span><span class="hs-identifier hs-type">Int</span><span>
+</span><a name="line-47"></a><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span class="hs-identifier hs-type">Read</span><span class="hs-special">,</span><span> </span><span class="hs-identifier hs-type">Show</span><span class="hs-special">,</span><span> </span><span class="hs-identifier hs-type">Eq</span><span class="hs-special">)</span><span>
+</span><a name="line-48"></a><span>
+</span><a name="line-49"></a><span class="hs-comment">-- | Definici&#243;n.</span><span>
+</span><a name="line-50"></a><span class="hs-identifier">ordenadas</span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">[</span><a href="Ordenacion_de_estructuras.html#Notas"><span class="hs-identifier hs-type">Notas</span></a><span class="hs-special">]</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">[</span><a href="Ordenacion_de_estructuras.html#Notas"><span class="hs-identifier hs-type">Notas</span></a><span class="hs-special">]</span><span>
+</span><a name="line-51"></a><a name="ordenadas"><a href="Ordenacion_de_estructuras.html#ordenadas"><span class="hs-identifier">ordenadas</span></a></a><span> </span><a name="local-6989586621679045884"><a href="#local-6989586621679045884"><span class="hs-identifier">ns</span></a></a><span> </span><span class="hs-glyph">=</span><span>
+</span><a name="line-52"></a><span>  </span><span class="hs-special">[</span><a href="Ordenacion_de_estructuras.html#Notas"><span class="hs-identifier hs-var">Notas</span></a><span> </span><a href="#local-6989586621679045890"><span class="hs-identifier hs-var">n</span></a><span> </span><a href="#local-6989586621679045889"><span class="hs-identifier hs-var">x</span></a><span> </span><a href="#local-6989586621679045888"><span class="hs-identifier hs-var">y</span></a><span> </span><span class="hs-glyph">|</span><span> </span><span class="hs-special">(</span><a name="local-6989586621679045888"><a href="#local-6989586621679045888"><span class="hs-identifier">y</span></a></a><span class="hs-special">,</span><a name="local-6989586621679045889"><a href="#local-6989586621679045889"><span class="hs-identifier">x</span></a></a><span class="hs-special">,</span><a name="local-6989586621679045890"><a href="#local-6989586621679045890"><span class="hs-identifier">n</span></a></a><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="hs-identifier hs-var">sort</span><span> </span><span class="hs-special">[</span><span class="hs-special">(</span><a href="#local-6989586621679045887"><span class="hs-identifier hs-var">y1</span></a><span class="hs-special">,</span><a href="#local-6989586621679045886"><span class="hs-identifier hs-var">x1</span></a><span class="hs-special">,</span><a href="#local-6989586621679045885"><span class="hs-identifier hs-var">n1</span></a><span class="hs-special">)</span><span> </span><span class="hs-glyph">|</span><span> </span><span class="hs-special">(</span><a href="Ordenacion_de_estructuras.html#Notas"><span class="hs-identifier hs-var">Notas</span></a><span> </span><a name="local-6989586621679045885"><a href="#local-6989586621679045885"><span class="hs-identifier">n1</span></a></a><span> </span><a name="local-6989586621679045886"><a href="#local-6989586621679045886"><span class="hs-identifier">x1</span></a></a><span> </span><a name="local-6989586621679045887"><a href="#local-6989586621679045887"><span class="hs-identifier">y1</span></a></a><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><a href="#local-6989586621679045884"><span class="hs-identifier hs-var">ns</span></a><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span>
+</span><a name="line-53"></a></pre></body></html>
