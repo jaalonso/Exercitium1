@@ -243,7 +243,9 @@ primosEquidistantes :: Integer -> [(Integer, Integer)]
 primosEquidistantes2 :: Integer -> [(Integer, Integer)]
 
 
--- | Definir las funciones
+-- | License : GPL-3
+--   
+--   Definir las funciones
 --   
 --   <pre>
 --   primosConsecutivosConMediaCapicua :: [(Int,Int,Int)]
@@ -318,7 +320,9 @@ verifica_primosConsecutivosConMediaCapicua :: Int -> Bool
 nPrimosConsecutivosConMediaCapicua :: Int -> Int
 
 
--- | Definir la función
+-- | License : GPL-3
+--   
+--   Definir la función
 --   
 --   <pre>
 --   ordenadosPorMaximo :: Ord a =&gt; [[a]] -&gt; [[a]]
@@ -363,7 +367,9 @@ prop_ordenadosPorMaximo :: Ord a => [[a]] -> Bool
 verificaOrdenadosPorMaximo :: IO ()
 
 
--- | Un máximo local de una lista es un elemento de la lista que es mayor
+-- | License : GPL-3
+--   
+--   Un máximo local de una lista es un elemento de la lista que es mayor
 --   que su predecesor y que su sucesor en la lista. Por ejemplo, 5 es un
 --   máximo local de [3,2,5,3,7,7,1,6,2] ya que es mayor que 2 (su
 --   predecesor) y que 3 (su sucesor).
@@ -419,7 +425,9 @@ prop_maximosLocales :: Ord a => [a] -> Bool
 verifica_maximosLocales :: IO ()
 
 
--- | Una matriz de Toeplitz es una matriz cuadrada que es constante a lo
+-- | License : GPL-3
+--   
+--   Una matriz de Toeplitz es una matriz cuadrada que es constante a lo
 --   largo de las diagonales paralelas a la diagonal principal. Por
 --   ejemplo,
 --   
@@ -468,7 +476,9 @@ ej2 :: Array (Int, Int) Int
 esToeplitz :: Eq a => Array (Int, Int) a -> Bool
 
 
--- | El Mastermind es un juego que consiste en deducir un código numérico
+-- | License : GPL-3
+--   
+--   El Mastermind es un juego que consiste en deducir un código numérico
 --   formado por una lista de números distintos. Cada vez que se empieza un
 --   partido, el programa debe elegir un código, que será lo que el jugador
 --   debe adivinar en la menor cantidad de intentos posibles. Cada intento
@@ -570,7 +580,9 @@ prop_mastermind :: [Int] -> [Int] -> Bool
 verifica_mastermind :: IO ()
 
 
--- | Definir la función
+-- | License : GPL-3
+--   
+--   Definir la función
 --   
 --   <pre>
 --   listaCuadrada :: Int -&gt; a -&gt; [a] -&gt; [[a]]
@@ -644,7 +656,9 @@ prop_listaCuadrada :: NonNegative Int -> Int -> [Int] -> Bool
 verifica_listaCuadrada :: IO ()
 
 
--- | Definir la función
+-- | License : GPL-3
+--   
+--   Definir la función
 --   
 --   <pre>
 --   igualesAlSiguiente :: Eq a =&gt; [a] -&gt; [a]
@@ -699,7 +713,9 @@ prop_igualesAlSiguiente :: [Int] -> Bool
 verifica_igualesAlSiguiente :: IO ()
 
 
--- | Definir la función
+-- | License : GPL-3
+--   
+--   Definir la función
 --   
 --   <pre>
 --   minimales :: Eq a =&gt; [[a]] -&gt; [[a]]
@@ -733,7 +749,9 @@ minimales :: Eq a => [[a]] -> [[a]]
 subconjuntoPropio :: Eq a => [a] -> [a] -> Bool
 
 
--- | El problema de la bandera tricolor consiste en lo siguiente: Dada un
+-- | License : GPL-3
+--   
+--   El problema de la bandera tricolor consiste en lo siguiente: Dada un
 --   lista de objetos xs que pueden ser rojos, amarillos o morados, se pide
 --   devolver una lista ys que contiene los elementos de xs, primero los
 --   rojos, luego los amarillos y por último los morados.
@@ -807,7 +825,9 @@ instance GHC.Show.Show Bandera_tricolor.Color
 instance Test.QuickCheck.Arbitrary.Arbitrary Bandera_tricolor.Color
 
 
--- | Una palabra es una anagrama de otra si se puede obtener permutando sus
+-- | License : GPL-3
+--   
+--   Una palabra es una anagrama de otra si se puede obtener permutando sus
 --   letras. Por ejemplo, "mora" y "roma" son anagramas de "amor".
 --   
 --   Definir la función
