@@ -1,8 +1,9 @@
 -- |
 -- Module      : Segmentos_consecutivos.hs
 -- Description : Segmentos de elementos consecutivos.
--- Copyright   : J.A. Alonso (07-05-14)
+-- Copyright   : Exercitium (07-05-14)
 -- License     : GPL-3
+-- Maintainer  : JoseA.Alonso@gmail.com
 -- 
 -- Definir la función
 -- 

@@ -1,8 +1,9 @@
 -- |
 -- Module      : Valor_de_un_polinomio
 -- Description : Valores de polinomios representados con vectores.
--- Copyright   : J.A. Alonso (07-05-14)
+-- Copyright   : Exercitium (07-05-14)
 -- License     : GPL-3
+-- Maintainer  : JoseA.Alonso@gmail.com
 -- 
 -- Los polinomios se pueden representar mediante vectores usando la
 -- librería Data.Array. En primer lugar, se define el tipo de los

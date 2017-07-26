@@ -1,8 +1,9 @@
 -- |
 -- Module      : Suma_si_todos_justos
 -- Description : Suma si todos los valores son justos.
--- Copyright   : José A. Alonso (01-05-14)
+-- Copyright   : Exercitium (01-05-14)
 -- License     : GPL-3
+-- Maintainer  : JoseA.Alonso@gmail.com
 -- 
 -- Definir la función
 -- 
