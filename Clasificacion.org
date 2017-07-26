@@ -79,6 +79,9 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 * Funciones con tipos opcionales (Maybe)
 + [[./src/Suma_si_todos_justos.hs][Suma si todos los valores son justos]].            
 * Tipos definidos y tipos de datos algebraicos.
+** Tipos no recursivos
++ [[./src/Ordenacion_de_estructuras.hs][Ordenación de estructuras]].
+
 ** Árboles binarios.
 ** Árboles generales.
 + [[./src/Ramas_de_un_arbol.hs][Ramas de un árbol]].                               

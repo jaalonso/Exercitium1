@@ -27,3 +27,4 @@ durante el curso 2013-14.
 + 09: [[./src/Ramas_de_un_arbol.hs][Ramas de un árbol]].                               
 + 12: [[./src/Alfabeto_desde.hs][Alfabeto comenzado en un carácter]].               
 + 13: [[./src/Numeracion_de_ternas.hs][Numeración de ternas de naturales]].               
++ 14: [[./src/Ordenacion_de_estructuras.hs][Ordenación de estructuras]].                       
