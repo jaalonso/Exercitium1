@@ -64,12 +64,12 @@ ramas3 :: Arbol b -> [[b]]
 ramas3 (N x []) = [[x]]
 ramas3 (N x as) = concatMap (map (x:)) (map ramas3 as)
 
--- | 4ª solución (por recursión con 'concatMap' y '(.)').
+-- | 4ª solución (por recursión con 'concatMap' y '.'
 ramas4 :: Arbol b -> [[b]]
 ramas4 (N x []) = [[x]]
 ramas4 (N x as) = concatMap (map (x :) . ramas4) as
 
--- | 5ª solución (por recursión con 'map' y '>>=").
+-- | 5ª solución (por recursión con 'map' y '>>='
 ramas5 :: Arbol a -> [[a]]
 ramas5 (N x []) = [[x]]
 ramas5 (N x xs) = map ramas5 xs >>= map (x:)
