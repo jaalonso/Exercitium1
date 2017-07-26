@@ -204,6 +204,105 @@ prop_segmentos :: (Enum a, Eq a) => [a] -> Bool
 verifica_segmentos :: IO ()
 
 
+-- | Los árboles se pueden representar mediante el siguiente tipo de datos
+--   
+--   <pre>
+--   data Arbol a = N a [Arbol a]
+--                  deriving Show
+--   </pre>
+--   
+--   Por ejemplo, los árboles
+--   
+--   <pre>
+--     1               3
+--    / \             /|\ 
+--   2  3            / | \
+--      |           5  4  7
+--      4           |     /\ 
+--                  6    2  1
+--   </pre>
+--   
+--   se representan por
+--   
+--   <pre>
+--   ej1, ej2 :: Arbol Int
+--   ej1 = N 1 [N 2 [],N 3 [N 4 []]]
+--   ej2 = N 3 [N 5 [N 6 []], N 4 [], N 7 [N 2 [], N 1 []]
+--   </pre>
+--   
+--   Definir la función
+--   
+--   <pre>
+--   ramas :: Arbol b -&gt; [[b]]
+--   </pre>
+--   
+--   tal que (ramas a) es la lista de las ramas del árbol a. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; ramas ej1
+--   [[1,2],[1,3,4]]
+--   
+--   &gt;&gt;&gt; ramas ej2
+--   [[3,5,6],[3,4],[3,7,2],[3,7,1]]
+--   </pre>
+module Ramas_de_un_arbol
+
+-- | Tipo de los árboles.
+data Arbol a
+N :: a -> [Arbol a] -> Arbol a
+
+-- | Ejemplo de árbol.
+ej1 :: Arbol Int
+
+-- | Ejemplo de árbol.
+ej2 :: Arbol Int
+
+-- | 1ª solución (por recursión y comprensión).
+ramas :: Arbol b -> [[b]]
+
+-- | 2ª solución (por recursión con <a>map</a> y <a>concat</a>).
+ramas2 :: Arbol b -> [[b]]
+
+-- | 3ª solución (por recursión con <a>concatMap</a>).
+ramas3 :: Arbol b -> [[b]]
+
+-- | 4ª solución (por recursión con <a>concatMap</a> y '(.)').
+ramas4 :: Arbol b -> [[b]]
+
+-- | 5ª solución (por recursión con <a>map</a> y '&gt;&gt;=").
+ramas5 :: Arbol a -> [[a]]
+
+-- | Generador de árboles.
+--   
+--   <pre>
+--   &gt; sample ((gen_Arbol 5) :: Gen (Arbol Int))
+--   N 0 [N 0 []]
+--   N (-2) []
+--   N 4 []
+--   N 2 [N 4 []]
+--   N 8 []
+--   N (-2) [N (-9) [],N 7 []]
+--   N 11 []
+--   N (-11) [N 4 [],N 14 []]
+--   N 10 [N (-3) [],N 13 []]
+--   N 12 [N 11 []]
+--   N 20 [N (-18) [],N (-13) []]
+--   </pre>
+gen_Arbol :: Arbitrary a => Int -> Gen (Arbol a)
+
+-- | Incluye los árboles en Arbitrary.
+
+-- | Comprueba la equivalencia de las definiciones de ramas.
+--   
+--   <pre>
+--   &gt;&gt;&gt; quickCheck prop_ramas
+--   +++ OK, passed 100 tests.
+--   </pre>
+prop_ramas :: Arbol Int -> Bool
+instance GHC.Show.Show a => GHC.Show.Show (Ramas_de_un_arbol.Arbol a)
+instance Test.QuickCheck.Arbitrary.Arbitrary a => Test.QuickCheck.Arbitrary.Arbitrary (Ramas_de_un_arbol.Arbol a)
+
+
 -- | Definir la función
 --   
 --   <pre>
