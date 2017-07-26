@@ -56,6 +56,7 @@ library
       Mastermind
       Matriz_Toeplitz
       MaximosLocales
+      Numeracion_de_ternas
       Ordenados_por_maximo
       Primos_consecutivos_con_media_capicua
       Primos_equidistantes
