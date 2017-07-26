@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><link rel="stylesheet" type="text/css" href="style.css" /><script type="text/javascript" src="highlight.js"></script></head><body><pre><span class="hs-comment">-- |</span><span>
+</span><a name="line-2"></a><span class="hs-comment">-- Module      : Numeracion_de_ternas</span><span>
+</span><a name="line-3"></a><span class="hs-comment">-- Description : Numeraci&#243;n de las ternas de n&#250;meros naturales.</span><span>
+</span><a name="line-4"></a><span class="hs-comment">-- Copyright   : Exercitium (13-05-14)</span><span>
+</span><a name="line-5"></a><span class="hs-comment">-- License     : GPL-3</span><span>
+</span><a name="line-6"></a><span class="hs-comment">-- Maintainer  : JoseA.Alonso@gmail.com</span><span>
+</span><a name="line-7"></a><span class="hs-comment">-- </span><span>
+</span><a name="line-8"></a><span class="hs-comment">-- Las ternas de n&#250;meros naturales se pueden ordenar como sigue</span><span>
+</span><a name="line-9"></a><span class="hs-comment">-- </span><span>
+</span><a name="line-10"></a><span class="hs-comment">-- &gt; (0,0,0), </span><span>
+</span><a name="line-11"></a><span class="hs-comment">-- &gt; (0,0,1),(0,1,0),(1,0,0),</span><span>
+</span><a name="line-12"></a><span class="hs-comment">-- &gt; (0,0,2),(0,1,1),(0,2,0),(1,0,1),(1,1,0),(2,0,0),</span><span>
+</span><a name="line-13"></a><span class="hs-comment">-- &gt; (0,0,3),(0,1,2),(0,2,1),(0,3,0),(1,0,2),(1,1,1),(1,2,0),(2,0,1),(2,1,0),(3,0,0),</span><span>
+</span><a name="line-14"></a><span class="hs-comment">-- &gt; ...</span><span>
+</span><a name="line-15"></a><span class="hs-comment">-- </span><span>
+</span><a name="line-16"></a><span class="hs-comment">-- Definir la funci&#243;n</span><span>
+</span><a name="line-17"></a><span class="hs-comment">-- </span><span>
+</span><a name="line-18"></a><span class="hs-comment">-- &gt; posicion :: (Int,Int,Int) -&gt; Int</span><span>
+</span><a name="line-19"></a><span class="hs-comment">-- </span><span>
+</span><a name="line-20"></a><span class="hs-comment">-- tal que __(posicion t)__ es la posici&#243;n de la terna de n&#250;meros</span><span>
+</span><a name="line-21"></a><span class="hs-comment">-- naturales t en la ordenaci&#243;n anterior. Por ejemplo,</span><span>
+</span><a name="line-22"></a><span class="hs-comment">-- </span><span>
+</span><a name="line-23"></a><span class="hs-comment">-- &gt;&gt;&gt; posicion (0,1,0)</span><span>
+</span><a name="line-24"></a><span class="hs-comment">-- 2</span><span>
+</span><a name="line-25"></a><span class="hs-comment">-- &gt;&gt;&gt; posicion (0,0,2)</span><span>
+</span><a name="line-26"></a><span class="hs-comment">-- 4</span><span>
+</span><a name="line-27"></a><span class="hs-comment">-- &gt;&gt;&gt; posicion (0,1,1)</span><span>
+</span><a name="line-28"></a><span class="hs-comment">-- 5</span><span>
+</span><a name="line-29"></a><span>
+</span><a name="line-30"></a><span class="hs-keyword">module</span><span> </span><span class="hs-identifier">Numeracion_de_ternas</span><span> </span><span class="hs-keyword">where</span><span>
+</span><a name="line-31"></a><span>
+</span><a name="line-32"></a><span class="hs-comment">-- | Definici&#243;n.</span><span>
+</span><a name="line-33"></a><span class="hs-identifier">posicion</span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">(</span><span class="hs-identifier hs-type">Int</span><span class="hs-special">,</span><span class="hs-identifier hs-type">Int</span><span class="hs-special">,</span><span class="hs-identifier hs-type">Int</span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-identifier hs-type">Int</span><span>
+</span><a name="line-34"></a><a name="posicion"><a href="Numeracion_de_ternas.html#posicion"><span class="hs-identifier">posicion</span></a></a><span> </span><span class="hs-special">(</span><a name="local-6989586621679045213"><a href="#local-6989586621679045213"><span class="hs-identifier">x</span></a></a><span class="hs-special">,</span><a name="local-6989586621679045214"><a href="#local-6989586621679045214"><span class="hs-identifier">y</span></a></a><span class="hs-special">,</span><a name="local-6989586621679045215"><a href="#local-6989586621679045215"><span class="hs-identifier">z</span></a></a><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
+</span><a name="line-35"></a><span>  </span><span class="hs-identifier hs-var">length</span><span> </span><span class="hs-special">(</span><span class="hs-identifier hs-var">takeWhile</span><span> </span><span class="hs-special">(</span><span class="hs-operator hs-var">/=</span><span> </span><span class="hs-special">(</span><a href="#local-6989586621679045213"><span class="hs-identifier hs-var">x</span></a><span class="hs-special">,</span><a href="#local-6989586621679045214"><span class="hs-identifier hs-var">y</span></a><span class="hs-special">,</span><a href="#local-6989586621679045215"><span class="hs-identifier hs-var">z</span></a><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><a href="Numeracion_de_ternas.html#ternas"><span class="hs-identifier hs-var">ternas</span></a><span class="hs-special">)</span><span>
+</span><a name="line-36"></a><span>
+</span><a name="line-37"></a><span class="hs-comment">-- | ternas es la lista ordenada de las ternas de n&#250;meros naturales. Por</span><span>
+</span><a name="line-38"></a><span class="hs-comment">-- ejemplo,</span><span>
+</span><a name="line-39"></a><span class="hs-comment">-- </span><span>
+</span><a name="line-40"></a><span class="hs-comment">-- &gt;&gt;&gt; take 10 ternas</span><span>
+</span><a name="line-41"></a><span class="hs-comment">-- [(0,0,0),(0,0,1),(0,1,0),(1,0,0),(0,0,2),(0,1,1),(0,2,0),(1,0,1),(1,1,0),(2,0,0)]</span><span>
+</span><a name="line-42"></a><span class="hs-identifier">ternas</span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">[</span><span class="hs-special">(</span><span class="hs-identifier hs-type">Int</span><span class="hs-special">,</span><span class="hs-identifier hs-type">Int</span><span class="hs-special">,</span><span class="hs-identifier hs-type">Int</span><span class="hs-special">)</span><span class="hs-special">]</span><span>
+</span><a name="line-43"></a><a name="ternas"><a href="Numeracion_de_ternas.html#ternas"><span class="hs-identifier">ternas</span></a></a><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">[</span><span class="hs-special">(</span><a href="#local-6989586621679045217"><span class="hs-identifier hs-var">x</span></a><span class="hs-special">,</span><a href="#local-6989586621679045218"><span class="hs-identifier hs-var">y</span></a><span class="hs-special">,</span><a href="#local-6989586621679045216"><span class="hs-identifier hs-var">n</span></a><span class="hs-glyph">-</span><a href="#local-6989586621679045217"><span class="hs-identifier hs-var">x</span></a><span class="hs-glyph">-</span><a href="#local-6989586621679045218"><span class="hs-identifier hs-var">y</span></a><span class="hs-special">)</span><span> </span><span class="hs-glyph">|</span><span> </span><a name="local-6989586621679045216"><a href="#local-6989586621679045216"><span class="hs-identifier">n</span></a></a><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="hs-special">[</span><span class="hs-number">0</span><span class="hs-glyph">..</span><span class="hs-special">]</span><span class="hs-special">,</span><span> </span><a name="local-6989586621679045217"><a href="#local-6989586621679045217"><span class="hs-identifier">x</span></a></a><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="hs-special">[</span><span class="hs-number">0</span><span class="hs-glyph">..</span><a href="#local-6989586621679045216"><span class="hs-identifier hs-var">n</span></a><span class="hs-special">]</span><span class="hs-special">,</span><span> </span><a name="local-6989586621679045218"><a href="#local-6989586621679045218"><span class="hs-identifier">y</span></a></a><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="hs-special">[</span><span class="hs-number">0</span><span class="hs-glyph">..</span><a href="#local-6989586621679045216"><span class="hs-identifier hs-var">n</span></a><span class="hs-glyph">-</span><a href="#local-6989586621679045217"><span class="hs-identifier hs-var">x</span></a><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span>
+</span><a name="line-44"></a></pre></body></html>

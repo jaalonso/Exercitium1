@@ -462,6 +462,50 @@ prop_ordenadosPorMaximo :: Ord a => [[a]] -> Bool
 verificaOrdenadosPorMaximo :: IO ()
 
 
+-- | Las ternas de números naturales se pueden ordenar como sigue
+--   
+--   <pre>
+--   (0,0,0), 
+--   (0,0,1),(0,1,0),(1,0,0),
+--   (0,0,2),(0,1,1),(0,2,0),(1,0,1),(1,1,0),(2,0,0),
+--   (0,0,3),(0,1,2),(0,2,1),(0,3,0),(1,0,2),(1,1,1),(1,2,0),(2,0,1),(2,1,0),(3,0,0),
+--   ...
+--   </pre>
+--   
+--   Definir la función
+--   
+--   <pre>
+--   posicion :: (Int,Int,Int) -&gt; Int
+--   </pre>
+--   
+--   tal que <b>(posicion t)</b> es la posición de la terna de números
+--   naturales t en la ordenación anterior. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; posicion (0,1,0)
+--   2
+--   
+--   &gt;&gt;&gt; posicion (0,0,2)
+--   4
+--   
+--   &gt;&gt;&gt; posicion (0,1,1)
+--   5
+--   </pre>
+module Numeracion_de_ternas
+
+-- | Definición.
+posicion :: (Int, Int, Int) -> Int
+
+-- | ternas es la lista ordenada de las ternas de números naturales. Por
+--   ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; take 10 ternas
+--   [(0,0,0),(0,0,1),(0,1,0),(1,0,0),(0,0,2),(0,1,1),(0,2,0),(1,0,1),(1,1,0),(2,0,0)]
+--   </pre>
+ternas :: [(Int, Int, Int)]
+
+
 -- | Un máximo local de una lista es un elemento de la lista que es mayor
 --   que su predecesor y que su sucesor en la lista. Por ejemplo, 5 es un
 --   máximo local de [3,2,5,3,7,7,1,6,2] ya que es mayor que 2 (su
