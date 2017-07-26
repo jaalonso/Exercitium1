@@ -1,0 +1,91 @@
+#+TITLE: Clasificación de los problemas
+
+Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/publicaciones/Piensa_en_Haskell.pdf][Piensa en Haskell]].
+
+* Definiciones elementales de funciones.
+** Definiciones por composición de funciones sobre listas y booleanos      
+** Definiciones por composición de funciones aritméticas                   
+** Definiciones con condicionales                                          
+** Definiciones con ecuaciones con guardas                                 
+** Definiciones con equiparación de patrones                                
+*** Constantes como patrones                                               
+*** Variables como patrones                                                
+*** Tuplas como patrones                                                   
+*** Listas como patrones                                                   
+*** Funciones auxiliares                                                   
+
+* Definiciones por comprensión.
+** Con un generador                                                        
+** Con varios generadores                                                  
+** Con generadores dependientes                                            
+** Con guardas                                                             
++ [[./src/Bandera_tricolor.hs][La bandera tricolor]].
+** Con igualdad                                                            
+** Con la función zip
++ [[./src/Iguales_al_siguiente.hs][Iguales al siguiente]] (S1, S3).
++ [[./src/Mastermind.hs][Mastermind]].
++ [[./src/Primos_consecutivos_con_media_capicua.hs][Primos consecutivos con media capicúa]].
++ [[./src/MaximosLocales.hs][Máximos locales]] (S2).
+** Con generadores anidados
++ [[./src/Ordenados_por_maximo.hs][Ordenación por el máximo]].
+** Con cadenas                                                             
+
+* Definiciones por recursión.
+** Recursión numérica.
+** Rescursión simple sobre listas
+** Recursión sobre listas
++ [[./src/Iguales_al_siguiente.hs][Iguales al siguiente]] (S2).
++ [[./src/Primos_equidistantes.hs][Primos equidistantes]].
++ [[./src/MaximosLocales.hs][Máximos locales]] (S1).
++ [[./src/Segmentos_consecutivos.hs][Segmentos de elementos consecutivos]] (S1).
+
+** Recursión sobre listas de listas.
+** Recursión en los dos argumentos.
++ [[./src/ElementosMinimales.hs][Determinación de los elementos minimales]].
++ [[./src/Mastermind.hs][Mastermind]].
+** Recursión cruzada
+** Recursión con acumuladores
++ [[./src/Bandera_tricolor.hs][La bandera tricolor]].
+
+* Definiciones por recursión y por comprensión.
++ [[./src/ElementosMinimales.hs][Determinación de los elementos minimales]].
++ [[./src/Segmentos_consecutivos.hs][Segmentos de elementos consecutivos]] (S2).
+
+* Funciones sobre cadenas.
++ [[./src/Anagramas.hs][Anagramas]].
+
+* Funciones de orden superior.
+** Con map 
++ [[./src/Ordenados_por_maximo.hs][Ordenación por el máximo]].
++ [[./src/Anagramas.hs][Anagramas]].
+** Con concatMap
++ [[./src/Iguales_al_siguiente.hs][Iguales al siguiente]] (S4 y S5).
+** Con filter
+** Con plegado
+** Con takeWhile o dropWhile
+** Con iterate
++ [[./src/Lista_cuadrada.hs][Lista cuadrada]] (S3 y S4).
+** Con until
+** Con otras funciones de orden superior
+
+* Listas infinitas.
++ [[./src/Lista_cuadrada.hs][Lista cuadrada]] (S1 y S2).
+* Funciones con tipos opcionales (Maybe)
++ [[./src/Suma_si_todos_justos.hs][Suma si todos los valores son justos]].            
+* Tipos definidos y tipos de datos algebraicos.
+** Árboles binarios.
+** Árboles generales.
++ [[./src/Ramas_de_un_arbol.hs][Ramas de un árbol]].                               
+
+** Expresiones aritméticas.
+
+* Polinomios.
+
+* Vectores y matrices.
++ [[./src/Valor_de_un_polinomio.hs][Valor de un polinomio mediante vectores]].         
+
+* Relaciones binarias homogéneas.
+
+* Operaciones con conjuntos.
+
+* Grafos.
