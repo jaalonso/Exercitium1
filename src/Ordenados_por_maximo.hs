@@ -2,8 +2,8 @@
 -- Module      : Ordenados_por_maximo.hs
 -- Description : Ordenación por el máximo.
 -- Copyright   : Exercitium (22-04-14)
--- Maintainer  : JoseA.Alonso@gmail.com
 -- License     : GPL-3
+-- Maintainer  : JoseA.Alonso@gmail.com
 --
 -- Definir la función
 --

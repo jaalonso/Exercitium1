@@ -2,8 +2,8 @@
 -- Module      : Lista_cuadrada
 -- Description : Lista cuadrada.
 -- Copyright   : Exercitium (06-05-14)
--- Maintainer  : JoseA.Alonso@gmail.com
 -- License     : GPL-3
+-- Maintainer  : JoseA.Alonso@gmail.com
 -- 
 -- Definir la función
 -- 

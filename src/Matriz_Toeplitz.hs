@@ -2,8 +2,8 @@
 -- Module      : Matriz_Toeplitz
 -- Description : Determinación de matrices de Toepliz
 -- Copyright   : Exercitium (01-07-14)
--- Maintainer  : JoseA.Alonso@gmail.com
 -- License     : GPL-3
+-- Maintainer  : JoseA.Alonso@gmail.com
 -- 
 -- Una matriz de Toeplitz es una matriz cuadrada que es constante a lo
 -- largo de las diagonales paralelas a la diagonal principal. Por

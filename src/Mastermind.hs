@@ -2,8 +2,8 @@
 -- Module      : Mastermind
 -- Description : Puntuación del mastermind.
 -- Copyright   : Exercitium (25-04-14)
--- Maintainer  : JoseA.Alonso@gmail.com
 -- License     : GPL-3
+-- Maintainer  : JoseA.Alonso@gmail.com
 -- 
 -- El Mastermind es un juego que consiste en deducir un código
 -- numérico formado por una lista de números distintos. Cada vez que se

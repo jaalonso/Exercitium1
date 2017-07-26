@@ -2,8 +2,8 @@
 -- Module      : Anagramas
 -- Description : Selección de anagramas.
 -- Copyright   : Exercitium (29-04-17)
--- Maintainer  : JoseA.Alonso@gmail.com
 -- License     : GPL-3
+-- Maintainer  : JoseA.Alonso@gmail.com
 -- 
 -- Una palabra es una anagrama de otra si se puede obtener permutando
 -- sus letras. Por ejemplo, "mora" y "roma" son anagramas de "amor". 
