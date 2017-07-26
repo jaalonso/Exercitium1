@@ -972,3 +972,77 @@ anagramas4 :: String -> [String] -> [String]
 --   True
 --   </pre>
 verifica_anagramas :: Bool
+
+
+-- | Definir la función
+--   
+--   <pre>
+--   alfabetoDesde :: Char -&gt; String
+--   </pre>
+--   
+--   tal que <b>(alfabetoDesde c)</b> es el alfabeto, en minúscula,
+--   comenzando en el carácter c, si c es una letra minúscula y comenzando
+--   en <tt>a</tt>, en caso contrario. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; alfabetoDesde 'e'
+--   "efghijklmnopqrstuvwxyzabcd"
+--   
+--   &gt;&gt;&gt; alfabetoDesde 'a'
+--   "abcdefghijklmnopqrstuvwxyz"
+--   
+--   &gt;&gt;&gt; alfabetoDesde '7'
+--   "abcdefghijklmnopqrstuvwxyz"
+--   
+--   &gt;&gt;&gt; alfabetoDesde '{'
+--   "abcdefghijklmnopqrstuvwxyz"
+--   
+--   &gt;&gt;&gt; alfabetoDesde 'B'
+--   "abcdefghijklmnopqrstuvwxyz"
+--   </pre>
+module Alfabeto_desde
+
+-- | 1ª definición (con <a>dropWhile</a> y <a>takeWhile</a>).
+alfabetoDesde :: Char -> String
+
+-- | 2ª definición (con <a>span</a>).
+alfabetoDesde2 :: Char -> String
+
+-- | 3ª definición (con <a>break</a>).
+alfabetoDesde3 :: Char -> String
+
+-- | 4ª definición (sin argumentos):
+alfabetoDesde4 :: Char -> String
+
+-- | 5ª definición (sin argumentos).
+alfabetoDesde5 :: Char -> String
+
+-- | 6ª definición (por comprensión).
+alfabetoDesde6 :: Char -> String
+
+-- | 7ª definición (por comprensión con <a>isAsciiLower</a>).
+alfabetoDesde7 :: Char -> String
+
+-- | (prop_alfabetoDesde c) se verifica si las definiciones de
+--   alfabetoDesde sobre c. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; :{
+--    and [ prop_alfabetoDesde 'e'
+--        , prop_alfabetoDesde 'a'
+--        , prop_alfabetoDesde '7'
+--        , prop_alfabetoDesde '{'
+--        , prop_alfabetoDesde 'B'
+--        ]
+--   :}
+--   True
+--   </pre>
+prop_alfabetoDesde :: Char -> Bool
+
+-- | Comprueba la equivalencia de las definiciones.
+--   
+--   <pre>
+--   &gt;&gt;&gt; verifica_alfabetoDesde
+--   +++ OK, passed 100 tests.
+--   </pre>
+verifica_alfabetoDesde :: IO ()
