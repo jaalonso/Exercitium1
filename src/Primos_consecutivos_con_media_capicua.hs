@@ -1,7 +1,8 @@
 -- |
 -- Module      : Primos_consecutivos_con_media_capicua
 -- Description : Primos consecutivos con media capicúa.
--- Copyright   : José A. Alonso (28-04-14)
+-- Copyright   : Exercitium (28-04-14)
+-- Maintainer  : JoseA.Alonso@gmail.com
 -- License     : GPL-3
 -- 
 -- Definir las funciones

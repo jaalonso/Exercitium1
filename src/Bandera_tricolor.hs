@@ -1,7 +1,8 @@
 -- |
 -- Module      : Bandera_tricolor.hs 
 -- Description : Ordenación como bandera tricolor.
--- Copyright   : José A. Alonso (23-04-14)
+-- Copyright   : Exercitium (23-04-14)
+-- Maintainer  : JoseA.Alonso@gmail.com
 -- License     : GPL-3
 -- 
 -- El problema de la bandera tricolor consiste en lo siguiente: Dada un

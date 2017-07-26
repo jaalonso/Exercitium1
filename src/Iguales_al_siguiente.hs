@@ -1,7 +1,8 @@
 -- |
 -- Module      : Iguales_al_siguiente.hs
 -- Description : Elementos iguales a su siguiente.
--- Copyright   : José A. Alonso (21-04-14)
+-- Copyright   : Exercitium (21-04-14)
+-- Maintainer  : JoseA.Alonso@gmail.com
 -- License     : GPL-3
 -- 
 -- Definir la función

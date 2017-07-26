@@ -1,7 +1,8 @@
 -- |
 -- Module      : Matriz_Toeplitz
 -- Description : Determinación de matrices de Toepliz
--- Copyright   : José A. Alonso (01-07-14)
+-- Copyright   : Exercitium (01-07-14)
+-- Maintainer  : JoseA.Alonso@gmail.com
 -- License     : GPL-3
 -- 
 -- Una matriz de Toeplitz es una matriz cuadrada que es constante a lo

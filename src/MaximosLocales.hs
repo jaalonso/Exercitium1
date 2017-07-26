@@ -1,7 +1,8 @@
 -- |
 -- Module      : MaximosLocales
 -- Description : Máximos locales.
--- Copyright   : J.A. Alonso (05-05-14)
+-- Copyright   : Exercitium (05-05-14)
+-- Maintainer  : JoseA.Alonso@gmail.com
 -- License     : GPL-3
 -- 
 -- Un máximo local de una lista es un elemento de la lista que es mayor

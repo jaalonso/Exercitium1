@@ -1,7 +1,8 @@
 -- |
 -- Module      : ElementosMinimales
 -- Description : Determinación de los elementos minimales.
--- Copyright   : José A. Alonso (24-04-14)
+-- Copyright   : Exercitium (24-04-14)
+-- Maintainer  : JoseA.Alonso@gmail.com
 -- License     : GPL-3
 -- 
 -- Definir la función

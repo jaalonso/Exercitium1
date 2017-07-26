@@ -1,7 +1,8 @@
 -- |
 -- Module      : Lista_cuadrada
 -- Description : Lista cuadrada.
--- Copyright   : J.A. Alonso (06-05-14)
+-- Copyright   : Exercitium (06-05-14)
+-- Maintainer  : JoseA.Alonso@gmail.com
 -- License     : GPL-3
 -- 
 -- Definir la función

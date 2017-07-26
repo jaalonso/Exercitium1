@@ -1,7 +1,8 @@
 -- |
 -- Module      : Anagramas
 -- Description : Selección de anagramas.
--- Copyright   : José A. Alonso (29-04-17)
+-- Copyright   : Exercitium (29-04-17)
+-- Maintainer  : JoseA.Alonso@gmail.com
 -- License     : GPL-3
 -- 
 -- Una palabra es una anagrama de otra si se puede obtener permutando
