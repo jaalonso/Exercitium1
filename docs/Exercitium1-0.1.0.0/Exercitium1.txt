@@ -266,10 +266,10 @@ ramas2 :: Arbol b -> [[b]]
 -- | 3ª solución (por recursión con <a>concatMap</a>).
 ramas3 :: Arbol b -> [[b]]
 
--- | 4ª solución (por recursión con <a>concatMap</a> y '(.)').
+-- | 4ª solución (por recursión con <a>concatMap</a> y <a>.</a>
 ramas4 :: Arbol b -> [[b]]
 
--- | 5ª solución (por recursión con <a>map</a> y '&gt;&gt;=").
+-- | 5ª solución (por recursión con <a>map</a> y <a>&gt;&gt;=</a>
 ramas5 :: Arbol a -> [[a]]
 
 -- | Generador de árboles.
