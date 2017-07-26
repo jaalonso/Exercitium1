@@ -29,15 +29,15 @@ dependencies:
 - QuickCheck
 - array
 - base >=4.7 && <5
-- doctest
 - primes
 library:
   source-dirs: src
   ghc-options: -Wall
 tests:
   doctests:
-    main: Doctest.hs
+    main: Main.hs
     source-dirs: test
     ghc-options: -threaded
     dependencies:
-    - doctest-discover
+    - Glob
+    - doctest
