@@ -53,6 +53,7 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 
 * Funciones sobre cadenas.
 + [[./src/Anagramas.hs][Anagramas]].
++ [[./src/Alfabeto_desde.hs][Alfabeto comenzado en un carácter]] (S6, S7).
 
 * Funciones de orden superior.
 ** Con map 
@@ -63,10 +64,13 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 ** Con filter
 ** Con plegado
 ** Con takeWhile o dropWhile
++ [[./src/Alfabeto_desde.hs][Alfabeto comenzado en un carácter]] (S1).
+
 ** Con iterate
 + [[./src/Lista_cuadrada.hs][Lista cuadrada]] (S3 y S4).
 ** Con until
 ** Con otras funciones de orden superior
++ [[./src/Alfabeto_desde.hs][Alfabeto comenzado en un carácter]] (S2, S3).
 
 * Listas infinitas.
 + [[./src/Lista_cuadrada.hs][Lista cuadrada]] (S1 y S2).
