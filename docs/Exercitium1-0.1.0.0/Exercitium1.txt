@@ -1128,6 +1128,51 @@ anagramas4 :: String -> [String] -> [String]
 verifica_anagramas :: Bool
 
 
+-- | Las matrices enteras se pueden representar mediante tablas con índices
+--   enteros:
+--   
+--   <pre>
+--   type Matriz = Array (Int,Int) Int
+--   </pre>
+--   
+--   Definir la función
+--   
+--   <pre>
+--   ampliaColumnas :: Matriz -&gt; Matriz -&gt; Matriz
+--   </pre>
+--   
+--   tal que <b>(ampliaColumnas p q)</b> es la matriz construida añadiendo
+--   las columnas de la matriz q a continuación de las de p (se supone que
+--   tienen el mismo número de filas). Por ejemplo, si p y q representan
+--   las dos primeras matrices, entonces (ampliaColumnas p q) es la tercera
+--   
+--   <pre>
+--   |0 1|    |4 5 6|    |0 1 4 5 6| 
+--   |2 3|    |7 8 9|    |2 3 7 8 9|
+--   </pre>
+--   
+--   En Haskell,
+--   
+--   <pre>
+--   &gt;&gt;&gt; let p = listArray ((1,1),(2,2)) [0..3]
+--   
+--   &gt;&gt;&gt; let q = listArray ((1,1),(2,3)) [4..9]
+--   
+--   &gt;&gt;&gt; elems (ampliaColumnas p q)
+--   [0,1,4,5,6,2,3,7,8,9]
+--   
+--   &gt;&gt;&gt; bounds (ampliaColumnas p q)
+--   ((1,1),(2,5))
+--   </pre>
+module Amplia_columnas
+
+-- | Tipo de las matrices.
+type Matriz = Array (Int, Int) Int
+
+-- | Definición.
+ampliaColumnas :: Matriz -> Matriz -> Matriz
+
+
 -- | Definir la función
 --   
 --   <pre>
