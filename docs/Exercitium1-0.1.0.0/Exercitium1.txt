@@ -902,6 +902,59 @@ verifica_igualesAlSiguiente :: IO ()
 -- | Definir la función
 --   
 --   <pre>
+--   zipBinario :: [a -&gt; b -&gt; c] -&gt; [a] -&gt; [b] -&gt; [c]
+--   </pre>
+--   
+--   tal que <b>(zipBinario fs xs ys)</b> es la lista obtenida aplicando
+--   cada una de las operaciones binarias de fs a los correspondientes
+--   elementos de xs e ys. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; zipBinario [(+), (*), (^)] [2,2,2] [4,4,4]
+--   [6,8,16]
+--   
+--   &gt;&gt;&gt; zipBinario [(+)] [2,2,2] [4,4,4]
+--   [6]
+--   
+--   &gt;&gt;&gt; zipBinario (cycle [(+), (*)]) [1 .. 4] [2..5]
+--   [3,6,7,20]
+--   </pre>
+module Emparejamiento_binario
+
+-- | 1ª definición (por recursión).
+zipBinario :: [a -> b -> c] -> [a] -> [b] -> [c]
+
+-- | 2ª definición (con <a>zip</a>).
+zipBinario2 :: [a -> b -> c] -> [a] -> [b] -> [c]
+
+-- | 3ª definición (con <a>zip3</a>).
+zipBinario3 :: [a -> b -> c] -> [a] -> [b] -> [c]
+
+-- | 4ª definición (con <a>zipWith3</a>).
+zipBinario4 :: [a -> b -> c] -> [a] -> [b] -> [c]
+
+-- | Tipo de operaciones para la verificación.
+newtype Operacion
+O :: (Int -> Int -> Int) -> Operacion
+
+-- | Escritura de operaciones.
+
+-- | Generador de operaciones.
+gen_operaciones :: Gen [Operacion]
+
+-- | Comprueba la equivalencia de las definiciones de zipBinario.
+--   
+--   <pre>
+--   &gt;&gt;&gt; quickCheck prop_zipBinario
+--   +++ OK, passed 100 tests.
+--   </pre>
+prop_zipBinario :: [Int] -> [Int] -> Property
+instance GHC.Show.Show Emparejamiento_binario.Operacion
+
+
+-- | Definir la función
+--   
+--   <pre>
 --   minimales :: Eq a =&gt; [[a]] -&gt; [[a]]
 --   </pre>
 --   
