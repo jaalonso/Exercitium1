@@ -28,3 +28,4 @@ durante el curso 2013-14.
 + 12: [[./src/Alfabeto_desde.hs][Alfabeto comenzado en un carácter]].               
 + 13: [[./src/Numeracion_de_ternas.hs][Numeración de ternas de naturales]].               
 + 14: [[./src/Ordenacion_de_estructuras.hs][Ordenación de estructuras]].                       
++ 15: [[./src/Emparejamiento_binario.hs][Emparejamiento binario]].                          

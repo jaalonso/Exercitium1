@@ -51,6 +51,7 @@ library
       Anagramas
       Bandera_tricolor
       ElementosMinimales
+      Emparejamiento_binario
       Iguales_al_siguiente
       Lista_cuadrada
       Mastermind

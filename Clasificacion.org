@@ -71,6 +71,7 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 ** Con until
 ** Con otras funciones de orden superior
 + [[./src/Alfabeto_desde.hs][Alfabeto comenzado en un carácter]] (S2, S3).
++ [[./src/Emparejamiento_binario.hs][Emparejamiento binario]].                          
 
 * Listas infinitas.
 + [[./src/Lista_cuadrada.hs][Lista cuadrada]] (S1 y S2).
