@@ -92,7 +92,11 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 * Polinomios.
 
 * Vectores y matrices.
+** Vectores
 + [[./src/Valor_de_un_polinomio.hs][Valor de un polinomio mediante vectores]].         
+
+** Matrices
++ [[./src/Amplia_columnas.hs][Ampliación de columnas de una matriz]].             
 
 * Relaciones binarias homogéneas.
 

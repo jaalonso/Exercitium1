@@ -29,3 +29,4 @@ durante el curso 2013-14.
 + 13: [[./src/Numeracion_de_ternas.hs][Numeración de ternas de naturales]].               
 + 14: [[./src/Ordenacion_de_estructuras.hs][Ordenación de estructuras]].                       
 + 15: [[./src/Emparejamiento_binario.hs][Emparejamiento binario]].                          
++ 16: [[./src/Amplia_columnas.hs][Ampliación de columnas de una matriz]].             
