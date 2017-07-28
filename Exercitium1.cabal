@@ -40,7 +40,7 @@ source-repository head
 library
   hs-source-dirs:
       src
-  ghc-options: -Wall
+  ghc-options: -Wall -fno-warn-type-defaults
   build-depends:
       QuickCheck
     , array
@@ -59,6 +59,7 @@ library
       Mastermind
       Matriz_Toeplitz
       MaximosLocales
+      Mayor_producto_de_las_ramas_de_un_arbol
       Numeracion_de_ternas
       Ordenacion_de_estructuras
       Ordenados_por_maximo

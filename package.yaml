@@ -32,7 +32,7 @@ dependencies:
 - primes
 library:
   source-dirs: src
-  ghc-options: -Wall
+  ghc-options: -Wall -fno-warn-type-defaults
 tests:
   doctests:
     main: Main.hs
