@@ -31,3 +31,4 @@ durante el curso 2013-14.
 + 15: [[./src/Emparejamiento_binario.hs][Emparejamiento binario]].                          
 + 16: [[./src/Amplia_columnas.hs][Ampliación de columnas de una matriz]].             
 + 19: [[./src/Regiones.hs][Regiones en el plano]].                            
++ 20: [[./src/Mas_repetido.hs][Elemento con más repeticiones consecutivas]].                           

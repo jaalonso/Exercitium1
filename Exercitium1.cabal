@@ -55,6 +55,7 @@ library
       Emparejamiento_binario
       Iguales_al_siguiente
       Lista_cuadrada
+      Mas_repetido
       Mastermind
       Matriz_Toeplitz
       MaximosLocales
