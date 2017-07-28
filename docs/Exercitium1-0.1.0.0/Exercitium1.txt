@@ -828,6 +828,60 @@ verifica_mastermind :: IO ()
 -- | Definir la función
 --   
 --   <pre>
+--   masRepetido :: Ord a =&gt; [a] -&gt; (a,Int)
+--   </pre>
+--   
+--   tal que <b>(masRepetido xs)</b> es el mayor elemento de xs que aparece
+--   más veces de manera consecutiva en la lista junto con el número de sus
+--   apariciones consecutivas. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; masRepetido [1,1,4,4,1]
+--   (4,2)
+--   
+--   &gt;&gt;&gt; masRepetido [4,4,1,1,4]
+--   (4,2)
+--   
+--   &gt;&gt;&gt; masRepetido "aadda"
+--   ('d',2)
+--   
+--   &gt;&gt;&gt; masRepetido "a"
+--   ('a',1)
+--   
+--   &gt;&gt;&gt; masRepetido "ba"
+--   ('b',1)
+--   </pre>
+module Mas_repetido
+
+-- | 1ª definición (por recursión)
+masRepetido :: Ord a => [a] -> (a, Int)
+masRepetidos :: Ord a => [a] -> [(a, Int)]
+
+-- | 2ª definición (con <a>group</a> y <a>maximum</a>).
+masRepetido2 :: Ord a => [a] -> (a, Int)
+
+-- | 3ª definición (con <a>group</a>, <a>maximum</a> y <a>swap</a>).
+masRepetido3 :: Ord a => [a] -> (a, Int)
+
+-- | 4ª definición (con <a>group</a> y <a>maximumBy</a>).
+masRepetido4 :: Ord a => [a] -> (a, Int)
+
+-- | 5ª definición (sin argumentos)
+masRepetido5 :: Ord a => [a] -> (a, Int)
+
+-- | <b>(prop_masRepetido xs)</b> se verifica si las definiciones de
+--   masRepetido son equivalentes sobre xs. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; quickCheck prop_masRepetido
+--   +++ OK, passed 100 tests.
+--   </pre>
+prop_masRepetido :: (NonEmptyList Int) -> Bool
+
+
+-- | Definir la función
+--   
+--   <pre>
 --   listaCuadrada :: Int -&gt; a -&gt; [a] -&gt; [[a]]
 --   </pre>
 --   
