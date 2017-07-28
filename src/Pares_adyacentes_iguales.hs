@@ -39,8 +39,8 @@ import Test.QuickCheck
 -- | 1ª definición (Por comprensión).
 numeroParesAdyacentesIguales :: Eq a => [[a]] -> Int
 numeroParesAdyacentesIguales xss =
-    numeroParesAdyacentesIgualesFilas xss +
-    numeroParesAdyacentesIgualesFilas (transpose xss)
+  numeroParesAdyacentesIgualesFilas xss +
+  numeroParesAdyacentesIgualesFilas (transpose xss)
 
 -- | __(numeroParesAdyacentesIgualesFilas xss)__ es el número de pares de
 -- elementos consecutivos (en la misma fila) iguales de la matriz
@@ -52,7 +52,7 @@ numeroParesAdyacentesIguales xss =
 -- 2
 numeroParesAdyacentesIgualesFilas :: Eq a => [[a]] -> Int
 numeroParesAdyacentesIgualesFilas xss =
-    sum [numeroParesAdyacentesIgualesFila xs | xs <- xss]
+  sum [numeroParesAdyacentesIgualesFila xs | xs <- xss]
 
 -- | __(numeroParesAdyacentesIgualesFila xs)__ es el número de pares de
 -- elementos consecutivos de la lista xs. Por ejemplo,
@@ -65,17 +65,17 @@ numeroParesAdyacentesIgualesFilas xss =
 -- 0
 numeroParesAdyacentesIgualesFila :: Eq a => [a] -> Int
 numeroParesAdyacentesIgualesFila xs =
-    length [(x,y) | (x,y) <- zip xs (tail xs), x == y]
+  length [(x,y) | (x,y) <- zip xs (tail xs), x == y]
 
 -- | 2ª definición de 'numeroParesAdyacentesIgualesFilas' (con 'map').
 numeroParesAdyacentesIgualesFilas2 :: Eq a => [[a]] -> Int
 numeroParesAdyacentesIgualesFilas2 xss =
-    sum (map numeroParesAdyacentesIgualesFila xss)
+  sum (map numeroParesAdyacentesIgualesFila xss)
 
 -- | 3ª definición de 'numeroParesAdyacentesIgualesFilas' (sin argumentos).
 numeroParesAdyacentesIgualesFilas3 :: Eq a => [[a]] -> Int
 numeroParesAdyacentesIgualesFilas3 =
-    sum . (map numeroParesAdyacentesIgualesFila)
+  sum . (map numeroParesAdyacentesIgualesFila)
 
 -- | Comprobación de la equivalencia de las definiciones de
 -- numeroParesAdyacentesIgualesFilas.
@@ -92,7 +92,7 @@ prop_numeroParesAdyacentesIgualesFilas xss =
 -- | 2ª definición de 'numeroParesAdyacentesIguales' (Por composición).
 numeroParesAdyacentesIguales2 :: Eq a => [[a]] -> Int
 numeroParesAdyacentesIguales2 xss =
-    length (concatMap tail (concatMap group (xss ++ transpose xss)))
+  length (concatMap tail (concatMap group (xss ++ transpose xss)))
 
 -- | 3ª definición de 'numeroParesAdyacentesIguales' (con matrices)
 numeroParesAdyacentesIguales3 :: Eq a => [[a]] -> Int

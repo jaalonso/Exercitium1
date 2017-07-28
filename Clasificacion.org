@@ -28,6 +28,8 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 + [[./src/Mastermind.hs][Mastermind]].
 + [[./src/Primos_consecutivos_con_media_capicua.hs][Primos consecutivos con media capicúa]].
 + [[./src/MaximosLocales.hs][Máximos locales]] (S2).
++ [[./src/Pares_adyacentes_iguales.hs][Número de pares de elementos adyacentes iguales]] (S1).
+
 ** Con generadores anidados
 + [[./src/Ordenados_por_maximo.hs][Ordenación por el máximo]].
 ** Con cadenas                                                             
@@ -65,6 +67,8 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 + [[./src/Anagramas.hs][Anagramas]].
 ** Con concatMap
 + [[./src/Iguales_al_siguiente.hs][Iguales al siguiente]] (S4 y S5).
++ [[./src/Pares_adyacentes_iguales.hs][Número de pares de elementos adyacentes iguales]] (S2).
+
 ** Con filter
 ** Con plegado
 ** Con takeWhile o dropWhile
@@ -102,6 +106,7 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 
 ** Matrices
 + [[./src/Amplia_columnas.hs][Ampliación de columnas de una matriz]].             
++ [[./src/Pares_adyacentes_iguales.hs][Número de pares de elementos adyacentes iguales]] (S3).
 
 * Relaciones binarias homogéneas.
 
