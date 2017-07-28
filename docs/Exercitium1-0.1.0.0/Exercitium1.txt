@@ -475,6 +475,162 @@ nPrimosConsecutivosConMediaCapicua :: Int -> Int
 -- | Definir la función
 --   
 --   <pre>
+--   numeroParesAdyacentesIguales :: Eq a =&gt; [[a]] -&gt; Int
+--   </pre>
+--   
+--   tal que <b>(numeroParesAdyacentesIguales xss)</b> es el número de
+--   pares de elementos consecutivos (en la misma fila o columna) iguales
+--   de la matriz xss. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; numeroParesAdyacentesIguales [[0,1],[0,2]]
+--   1
+--   
+--   &gt;&gt;&gt; numeroParesAdyacentesIguales [[0,0],[1,2]]
+--   1
+--   
+--   &gt;&gt;&gt; numeroParesAdyacentesIguales [[0,1],[0,0]]
+--   2
+--   
+--   &gt;&gt;&gt; numeroParesAdyacentesIguales [[1,2],[1,4],[4,4]]
+--   3
+--   
+--   &gt;&gt;&gt; numeroParesAdyacentesIguales ["ab","aa"]
+--   2
+--   
+--   &gt;&gt;&gt; numeroParesAdyacentesIguales [[0,0,0],[0,0,0],[0,0,0]]
+--   12
+--   
+--   &gt;&gt;&gt; numeroParesAdyacentesIguales [[0,0,0],[0,1,0],[0,0,0]]
+--   8
+--   
+--   &gt;&gt;&gt; numeroParesAdyacentesIguales [[0,0,0,0],[0,0,0,0],[0,0,0,0::Int]]
+--   17
+--   </pre>
+module Pares_adyacentes_iguales
+
+-- | 1ª definición (Por comprensión).
+numeroParesAdyacentesIguales :: Eq a => [[a]] -> Int
+
+-- | <b>(numeroParesAdyacentesIgualesFilas xss)</b> es el número de pares
+--   de elementos consecutivos (en la misma fila) iguales de la matriz xss.
+--   Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; numeroParesAdyacentesIgualesFilas [[0,0,1,0],[0,1,1,0],[0,1,0,1]]
+--   2
+--   
+--   &gt;&gt;&gt; numeroParesAdyacentesIgualesFilas ["0010","0110","0101"]
+--   2
+--   </pre>
+numeroParesAdyacentesIgualesFilas :: Eq a => [[a]] -> Int
+
+-- | <b>(numeroParesAdyacentesIgualesFila xs)</b> es el número de pares de
+--   elementos consecutivos de la lista xs. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; numeroParesAdyacentesIgualesFila "0010"
+--   1
+--   
+--   &gt;&gt;&gt; numeroParesAdyacentesIgualesFila "0110"
+--   1
+--   
+--   &gt;&gt;&gt; numeroParesAdyacentesIgualesFila "0101"
+--   0
+--   </pre>
+numeroParesAdyacentesIgualesFila :: Eq a => [a] -> Int
+
+-- | 2ª definición de <a>numeroParesAdyacentesIgualesFilas</a> (con
+--   <a>map</a>).
+numeroParesAdyacentesIgualesFilas2 :: Eq a => [[a]] -> Int
+
+-- | 3ª definición de <a>numeroParesAdyacentesIgualesFilas</a> (sin
+--   argumentos).
+numeroParesAdyacentesIgualesFilas3 :: Eq a => [[a]] -> Int
+
+-- | Comprobación de la equivalencia de las definiciones de
+--   numeroParesAdyacentesIgualesFilas.
+--   
+--   <pre>
+--   &gt;&gt;&gt; quickCheck prop_numeroParesAdyacentesIgualesFilas
+--   +++ OK, passed 100 tests.
+--   </pre>
+prop_numeroParesAdyacentesIgualesFilas :: [[Int]] -> Bool
+
+-- | 2ª definición de <a>numeroParesAdyacentesIguales</a> (Por
+--   composición).
+numeroParesAdyacentesIguales2 :: Eq a => [[a]] -> Int
+
+-- | 3ª definición de <a>numeroParesAdyacentesIguales</a> (con matrices)
+numeroParesAdyacentesIguales3 :: Eq a => [[a]] -> Int
+
+-- | 4ª definición de <a>numeroParesAdyacentesIguales</a> (sin argumentos)
+numeroParesAdyacentesIguales4 :: Eq a => [[a]] -> Int
+
+-- | Tipo de matrices.
+newtype Matriz
+M :: [[Int]] -> Matriz
+
+-- | <b>matriz</b> es un generador de matrices. Por ejemplo,
+--   
+--   <pre>
+--   &gt; sample matriz
+--   M [[0,0]]
+--   M [[1,-2,-2],[-2,2,0],[2,-1,-2],[-2,0,-2]]
+--   M [[3,-4,0,0,2],[2,2,0,-2,2],[-1,-4,2,-3,0],[0,4,-1,-2,-3],[-3,-4,0,-4,-2]]
+--   M [[1,3],[2,-3],[0,3],[-3,2]]
+--   M [[-3,-3,-4,2,-6,0],[5,-6,3,-2,2,-8],[-6,8,5,1,0,-7],[7,3,7,-8,-3,-2]]
+--   M [[-9,7,0]]
+--   M [[8,-1,11,8,-13,9],[12,13,12,1,0,-9],[3,-4,7,-1,5,-2]]
+--   M [[-3,16,-9,-14,15,-6],[7,-14,8,-10,7,2]]
+--   </pre>
+matriz :: Gen Matriz
+
+-- | <b>(listaAmatriz m xs)</b> es la matriz con m columnas cuyos elementos
+--   son los de xs. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; listaAmatriz 3 [2,1,5,4,7,9]
+--   [[2,1,5],[4,7,9]]
+--   
+--   &gt;&gt;&gt; listaAmatriz 2 [2,1,5,4,7,9]
+--   [[2,1],[5,4],[7,9]]
+--   </pre>
+listaAmatriz :: Int -> [a] -> [[a]]
+
+-- | <b>(prop_numeroParesAdyacentesIguales (M xss))</b> se verifica si las
+--   definiciones de numeroParesAdyacentesIguales son equivalentes sobre
+--   xss. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; :{
+--    all prop_numeroParesAdyacentesIguales
+--        [M [[0,1],[0,2]],
+--         M [[0,0],[1,2]],
+--         M [[0,1],[0,0]],
+--         M [[1,2],[1,4],[4,4]],
+--         M [[0,0,0],[0,0,0],[0,0,0]],
+--         M [[0,0,0],[0,1,0],[0,0,0]],
+--         M [[0,0,0,0],[0,0,0,0],[0,0,0,0]]]
+--   :}
+--   True
+--   </pre>
+prop_numeroParesAdyacentesIguales :: Matriz -> Bool
+
+-- | Comprueba la equivalencia de todas las definiciones de
+--   numeroParesAdyacentesIguales.
+--   
+--   <pre>
+--   &gt;&gt;&gt; verifica_numeroParesAdyacentesIguales
+--   +++ OK, passed 100 tests.
+--   </pre>
+verifica_numeroParesAdyacentesIguales :: IO ()
+instance GHC.Show.Show Pares_adyacentes_iguales.Matriz
+
+
+-- | Definir la función
+--   
+--   <pre>
 --   ordenadosPorMaximo :: Ord a =&gt; [[a]] -&gt; [[a]]
 --   </pre>
 --   
@@ -855,6 +1011,15 @@ module Mas_repetido
 
 -- | 1ª definición (por recursión)
 masRepetido :: Ord a => [a] -> (a, Int)
+
+-- | <b>(masRepetidos xs)</b> es la lista de los elementos de xs con más
+--   repeticiones consecutivas junto con el número de sus repeticiones
+--   consecutivas. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; masRepetidos "aabxxbccb"
+--   [('a',2),('x',2),('c',2)]
+--   </pre>
 masRepetidos :: Ord a => [a] -> [(a, Int)]
 
 -- | 2ª definición (con <a>group</a> y <a>maximum</a>).

@@ -62,6 +62,7 @@ library
       Numeracion_de_ternas
       Ordenacion_de_estructuras
       Ordenados_por_maximo
+      Pares_adyacentes_iguales
       Primos_consecutivos_con_media_capicua
       Primos_equidistantes
       Ramas_de_un_arbol

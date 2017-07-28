@@ -32,3 +32,4 @@ durante el curso 2013-14.
 + 16: [[./src/Amplia_columnas.hs][Ampliación de columnas de una matriz]].             
 + 19: [[./src/Regiones.hs][Regiones en el plano]].                            
 + 20: [[./src/Mas_repetido.hs][Elemento con más repeticiones consecutivas]].                           
++ 21: [[./src/Pares_adyacentes_iguales.hs][Número de pares de elementos adyacentes iguales]]. 

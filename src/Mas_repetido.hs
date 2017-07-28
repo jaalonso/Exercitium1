@@ -38,6 +38,12 @@ import Test.QuickCheck
 masRepetido :: Ord a => [a] -> (a,Int)
 masRepetido = maximum . masRepetidos
 
+-- | __(masRepetidos xs)__ es la lista de los elementos de xs con más
+-- repeticiones consecutivas junto con el número de sus repeticiones
+-- consecutivas. Por ejemplo,
+--
+-- >>> masRepetidos "aabxxbccb"
+-- [('a',2),('x',2),('c',2)]
 masRepetidos :: Ord a => [a] -> [(a,Int)]
 masRepetidos []  = []
 masRepetidos [x] = [(x,1)]
