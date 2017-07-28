@@ -30,3 +30,4 @@ durante el curso 2013-14.
 + 14: [[./src/Ordenacion_de_estructuras.hs][Ordenación de estructuras]].                       
 + 15: [[./src/Emparejamiento_binario.hs][Emparejamiento binario]].                          
 + 16: [[./src/Amplia_columnas.hs][Ampliación de columnas de una matriz]].             
++ 19: [[./src/Regiones.hs][Regiones en el plano]].                            

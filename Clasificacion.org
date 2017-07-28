@@ -32,6 +32,8 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 
 * Definiciones por recursión.
 ** Recursión numérica.
++ [[./src/Regiones.hs][Regiones en el plano]].                            
+
 ** Rescursión simple sobre listas
 ** Recursión sobre listas
 + [[./src/Iguales_al_siguiente.hs][Iguales al siguiente]] (S2).
