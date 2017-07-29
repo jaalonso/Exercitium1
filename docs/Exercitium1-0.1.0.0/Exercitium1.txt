@@ -356,6 +356,67 @@ prop_segmentos :: (Enum a, Eq a) => [a] -> Bool
 verifica_segmentos :: IO ()
 
 
+-- | <b>Reiteración de una función</b>
+--   
+--   Definir la función
+--   
+--   <pre>
+--   reiteracion :: Int -&gt; (a -&gt; a) -&gt; a -&gt; a
+--   </pre>
+--   
+--   tal que <b>(reiteracion n f x)</b> es el resultado de aplicar n veces
+--   la función f a x. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; reiteracion 10 (+1) 5
+--   15
+--   
+--   &gt;&gt;&gt; reiteracion 10 (+5) 0
+--   50
+--   
+--   &gt;&gt;&gt; reiteracion  4 (*2) 1
+--   16
+--   
+--   &gt;&gt;&gt; reiteracion 4 (5:) []
+--   [5,5,5,5]
+--   </pre>
+--   
+--   Comprobar con QuickCheck que se verifican las siguientes propiedades
+--   
+--   <pre>
+--   reiteracion 10 (+1) x  == 10 + x 
+--   reiteracion 10 (+x) 0  == 10 * x 
+--   reiteracion 10 (x:) [] == replicate 10 x  
+--   </pre>
+module Reiteracion_de_funciones
+
+-- | 1ª definición (por recursión).
+reiteracion :: Int -> (a -> a) -> a -> a
+
+-- | 2ª definición (por recursión sin el 3ª argumento).
+reiteracion2 :: Int -> (a -> a) -> a -> a
+
+-- | 3ª definición (con <a>iterate</a>).
+reiteracion3 :: Int -> (a -> a) -> a -> a
+
+-- | Comprobación de la equivalencia de las definiciones de
+--   <a>reiteracion</a>.
+--   
+--   <pre>
+--   &gt;&gt;&gt; quickCheck prop_equiv_reiteracion
+--   +++ OK, passed 100 tests.
+--   </pre>
+prop_equiv_reiteracion :: (Positive Int) -> (Fun Int Int) -> Int -> Bool
+
+-- | Comprobación de propiedades.
+--   
+--   <pre>
+--   &gt;&gt;&gt; quickCheck prop_reiteracion
+--   +++ OK, passed 100 tests.
+--   </pre>
+prop_reiteracion :: Int -> Bool
+
+
 -- | En los siguientes dibujos se observa que el número máximo de regiones
 --   en el plano generadas con 1, 2 ó 3 líneas son 2, 4 ó 7,
 --   respectivamente.

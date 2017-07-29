@@ -72,6 +72,9 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 + [[./src/Alfabeto_desde.hs][Alfabeto comenzado en un carácter]] (S6, S7).
 
 * Funciones de orden superior.
+** Funciones con argumentos funcionales
++ [[./src/Reiteracion_de_funciones.hs][Reiteración de una función]] (S1, S2).
+
 ** Con map 
 + [[./src/Ordenados_por_maximo.hs][Ordenación por el máximo]].
 + [[./src/Anagramas.hs][Anagramas]].
@@ -87,6 +90,8 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 
 ** Con iterate
 + [[./src/Lista_cuadrada.hs][Lista cuadrada]] (S3 y S4).
++ [[./src/Reiteracion_de_funciones.hs][Reiteración de una función]] (S3).
+
 ** Con until
 ** Con otras funciones de orden superior
 + [[./src/Alfabeto_desde.hs][Alfabeto comenzado en un carácter]] (S2, S3).
