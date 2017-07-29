@@ -37,3 +37,4 @@ durante el curso 2013-14.
 + 23: [[./src/Biparticiones_de_una_lista.hs][Biparticiones de una lista]].                      
 + 26: [[./src/Trenza.hs][Trenzado de listas]].                              
 + 27: [[./src/Triangulares_con_cifras.hs][Números triangulares con n cifras distintas]].     
++ 28: [[./src/Enumera_arbol.hs][Enumeración de árboles binarios]].                 

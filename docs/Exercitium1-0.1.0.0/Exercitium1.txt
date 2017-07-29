@@ -1468,6 +1468,78 @@ prop_igualesAlSiguiente :: [Int] -> Bool
 verifica_igualesAlSiguiente :: IO ()
 
 
+-- | <b>Enumeración de árboles binarios</b>
+--   
+--   Los árboles binarios se pueden representar mediante el tipo Arbol
+--   definido por
+--   
+--   <pre>
+--   data Arbol a = H a 
+--                | N a (Arbol a) (Arbol a)
+--                deriving Show
+--   </pre>
+--   
+--   Por ejemplo, el árbol
+--   
+--   <pre>
+--         "B"
+--         / \ 
+--        /   \
+--       /     \
+--     "B"     "A"
+--     / \     / \
+--   "A" "B" "C" "C"
+--   </pre>
+--   
+--   se puede definir por
+--   
+--   <pre>
+--   ej1 :: Arbol String
+--   ej1 = N "B" (N "B" (H "A") (H "B")) (N "A" (H "C") (H "C"))
+--   </pre>
+--   
+--   Definir la función
+--   
+--   <pre>
+--   enumeraArbol :: Arbol t -&gt; Arbol Int
+--   </pre>
+--   
+--   tal que <b>(enumeraArbol a)</b> es el árbol obtenido numerando las
+--   hojas y los nodos de a desde la hoja izquierda hasta la raíz. Por
+--   ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; enumeraArbol ej1
+--   N 6 (N 2 (H 0) (H 1)) (N 5 (H 3) (H 4))
+--   </pre>
+--   
+--   Gráficamente,
+--   
+--   <pre>
+--         6 
+--        / \ 
+--       /   \
+--      /     \
+--     2       5 
+--    / \     / \
+--   0   1   3   4  
+--   </pre>
+module Enumera_arbol
+
+-- | Tipo de dato de árboles binarios.
+data Arbol a
+H :: a -> Arbol a
+N :: a -> (Arbol a) -> (Arbol a) -> Arbol a
+
+-- | Ejemplo de árbol.
+ej1 :: Arbol String
+
+-- | Definición.
+enumeraArbol :: Arbol t -> Arbol Int
+instance GHC.Classes.Eq a => GHC.Classes.Eq (Enumera_arbol.Arbol a)
+instance GHC.Show.Show a => GHC.Show.Show (Enumera_arbol.Arbol a)
+
+
 -- | Definir la función
 --   
 --   <pre>
