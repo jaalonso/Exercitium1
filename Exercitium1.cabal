@@ -51,6 +51,7 @@ library
       Amplia_columnas
       Anagramas
       Bandera_tricolor
+      Biparticiones_de_una_lista
       ElementosMinimales
       Emparejamiento_binario
       Iguales_al_siguiente

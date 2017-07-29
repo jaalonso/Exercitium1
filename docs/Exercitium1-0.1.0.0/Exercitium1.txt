@@ -1403,6 +1403,57 @@ minimales :: Eq a => [[a]] -> [[a]]
 subconjuntoPropio :: Eq a => [a] -> [a] -> Bool
 
 
+-- | Definir la función
+--   
+--   <pre>
+--   biparticiones :: [a] -&gt; [([a],[a])]
+--   </pre>
+--   
+--   tal que <b>(biparticiones xs)</b> es la lista de pares formados por un
+--   prefijo de xs y el resto de xs. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; biparticiones [3,2,5]
+--   [([],[3,2,5]),([3],[2,5]),([3,2],[5]),([3,2,5],[])]
+--   
+--   &gt;&gt;&gt; biparticiones "Roma"
+--   [("","Roma"),("R","oma"),("Ro","ma"),("Rom","a"),("Roma","")]
+--   </pre>
+module Biparticiones_de_una_lista
+
+-- | 1ª definición (con <a>splitAt</a>).
+biparticiones :: [a] -> [([a], [a])]
+
+-- | 2ª definición (con <a>inits</a> y <a>tails</a>).
+biparticiones2 :: [a] -> [([a], [a])]
+
+-- | 3ª definición (por recursión).
+biparticiones3 :: [a] -> [([a], [a])]
+
+-- | 4ª definición (con <a>liftA2</a>).
+biparticiones4 :: [a] -> [([a], [a])]
+
+-- | 5ª definición (con <a>&lt;$&gt;</a> y <a>&lt;*&gt;</a>).
+biparticiones5 :: [a] -> [([a], [a])]
+
+-- | <b>(prop_biparticiones xs)</b> se verifica si las definiciones de
+--   biparticiones son equivalentes sobre xs. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; prop_biparticiones [3,2,5]
+--   True
+--   </pre>
+prop_biparticiones :: [Int] -> Bool
+
+-- | Comprueba la equivalencia de las definiciones de biparticiones.
+--   
+--   <pre>
+--   &gt;&gt;&gt; verifica_biparticiones
+--   +++ OK, passed 100 tests.
+--   </pre>
+verifica_biparticiones :: IO ()
+
+
 -- | El problema de la bandera tricolor consiste en lo siguiente: Dada un
 --   lista de objetos xs que pueden ser rojos, amarillos o morados, se pide
 --   devolver una lista ys que contiene los elementos de xs, primero los

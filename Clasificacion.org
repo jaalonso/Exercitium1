@@ -17,6 +17,7 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 * Definiciones por comprensión.
 ** Con un generador                                                        
 + [[./src/Mas_repetido.hs][Elemento con más repeticiones consecutivas]] (S2, S3, S4).
++ [[./src/Biparticiones_de_una_lista.hs][Biparticiones de una lista]] (S1)
 
 ** Con varios generadores                                                  
 ** Con generadores dependientes                                            
@@ -29,6 +30,7 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 + [[./src/Primos_consecutivos_con_media_capicua.hs][Primos consecutivos con media capicúa]].
 + [[./src/MaximosLocales.hs][Máximos locales]] (S2).
 + [[./src/Pares_adyacentes_iguales.hs][Número de pares de elementos adyacentes iguales]] (S1).
++ [[./src/Biparticiones_de_una_lista.hs][Biparticiones de una lista]] (S2).
 
 ** Con generadores anidados
 + [[./src/Ordenados_por_maximo.hs][Ordenación por el máximo]].
@@ -39,6 +41,8 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 + [[./src/Regiones.hs][Regiones en el plano]].                            
 
 ** Rescursión simple sobre listas
++ [[./src/Biparticiones_de_una_lista.hs][Biparticiones de una lista]] (S3)
+
 ** Recursión sobre listas
 + [[./src/Iguales_al_siguiente.hs][Iguales al siguiente]] (S2).
 + [[./src/Primos_equidistantes.hs][Primos equidistantes]].
