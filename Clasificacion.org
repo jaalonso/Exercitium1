@@ -121,6 +121,7 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 ** Matrices
 + [[./src/Amplia_columnas.hs][Ampliación de columnas de una matriz]].             
 + [[./src/Pares_adyacentes_iguales.hs][Número de pares de elementos adyacentes iguales]] (S3).
++ [[./src/Algun_vecino_menor.hs][Elementos con algún vecino menor]].                
 
 * Relaciones binarias homogéneas.
 

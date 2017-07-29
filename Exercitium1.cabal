@@ -48,6 +48,7 @@ library
     , primes
   exposed-modules:
       Alfabeto_desde
+      Algun_vecino_menor
       Amplia_columnas
       Anagramas
       Bandera_tricolor

@@ -1865,6 +1865,45 @@ type Matriz = Array (Int, Int) Int
 ampliaColumnas :: Matriz -> Matriz -> Matriz
 
 
+-- | <b>Elementos de una matriz con algún vecino menor</b>
+--   
+--   Las matrices puede representarse mediante tablas cuyos índices son
+--   pares de números naturales:
+--   
+--   <pre>
+--   type Matriz = Array (Int,Int) Int
+--   </pre>
+--   
+--   Definir la función
+--   
+--   <pre>
+--   algunMenor :: Matriz -&gt; [Int]
+--   </pre>
+--   
+--   tal que <b>(algunMenor p)</b> es la lista de los elementos de p que
+--   tienen algún vecino menor que él. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; algunMenor (listArray ((1,1),(3,4)) [9,4,6,5,8,1,7,3,4,2,5,4])
+--   [9,4,6,5,8,7,4,2,5,4]          
+--   </pre>
+--   
+--   pues sólo el 1 y el 3 no tienen ningún vecino menor en la matriz
+--   
+--   <pre>
+--   |9 4 6 5|
+--   |8 1 7 3|
+--   |4 2 5 4|
+--   </pre>
+module Algun_vecino_menor
+
+-- | Tipo de las matrices.
+type Matriz = Array (Int, Int) Int
+
+-- | Definición.
+algunMenor :: Matriz -> [Int]
+
+
 -- | Definir la función
 --   
 --   <pre>
