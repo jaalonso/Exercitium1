@@ -188,7 +188,9 @@ triangulares :: [Integer]
 nCifras :: Integer -> Int
 
 
--- | Definir la función
+-- | <b>Trenzado de listas</b>
+--   
+--   Definir la función
 --   
 --   <pre>
 --   trenza :: [a] -&gt; [a] -&gt; [a]
