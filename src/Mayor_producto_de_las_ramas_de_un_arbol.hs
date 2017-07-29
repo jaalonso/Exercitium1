@@ -40,7 +40,7 @@
 -- 12
 -- >>> mayorProducto (N 3 [N 5 [N 6 []], N 4 [], N 7 [N 2 [], N 1 []]])
 -- 90
--- >>> mayorProducto2 (N (-8) [N 0 [N (-9) []],N 6 []])
+-- >>> mayorProducto (N (-8) [N 0 [N (-9) []],N 6 []])
 -- 0
 -- >>> let a = N (-4) [N (-7) [],N 14 [N 19 []],N (-1) [N (-6) [],N 21 []],N (-4) []]
 -- >>> mayorProducto a
@@ -69,7 +69,29 @@ productosRamas (N x xs) = [x * y | a <- xs, y <- productosRamas a]
 
 -- | 2ª definición.
 mayorProducto2 :: (Ord a, Num a) => Arbol a -> a
-mayorProducto2 = maximum . productosRamas
+mayorProducto2 (N x []) = x
+mayorProducto2 (N x xs)
+  | x > 0     = x * maximum (map mayorProducto2 xs)
+  | x == 0    = 0
+  | otherwise = x * minimum (map menorProducto xs)
+
+-- | __(menorProducto a)__ es el menor producto de las ramas del árbol
+-- a. Por ejemplo,
+-- 
+-- >>> menorProducto (N 1 [N 2 [], N  3 []])
+-- 2
+-- >>> menorProducto (N 1 [N 8 [], N  4 [N 3 []]])
+-- 8
+-- >>> menorProducto (N 1 [N 2 [],N 3 [N 4 []]])
+-- 2
+-- >>> menorProducto (N 3 [N 5 [N 6 []], N 4 [], N 7 [N 2 [], N 1 []]])
+-- 12
+menorProducto :: (Ord a, Num a) => Arbol a -> a
+menorProducto (N x []) = x
+menorProducto (N x xs)
+  | x > 0     = x * minimum (map menorProducto xs)
+  | x == 0    = 0
+  | otherwise = x * maximum (map mayorProducto2 xs)
 
 -- | 3ª definición.
 mayorProducto3 :: (Ord a, Num a) => Arbol a -> a
