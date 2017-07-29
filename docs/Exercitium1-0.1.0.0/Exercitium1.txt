@@ -96,6 +96,98 @@ valor2 :: Num a => Polinomio a -> a -> a
 equivalencia_valor :: IO ()
 
 
+-- | <b>Números triangulares con n cifras distintas</b>
+--   
+--   Los números triangulares se forman como sigue
+--   
+--   <pre>
+--   *     *      * 
+--        * *    * *
+--              * * *
+--   1     3      6
+--   </pre>
+--   
+--   La sucesión de los números triangulares se obtiene sumando los números
+--   naturales. Así, los 5 primeros números triangulares son
+--   
+--   <pre>
+--    1 = 1
+--    3 = 1+2
+--    6 = 1+2+3
+--   10 = 1+2+3+4
+--   15 = 1+2+3+4+5
+--   </pre>
+--   
+--   Definir la función
+--   
+--   <pre>
+--   triangularesConCifras :: Int -&gt; [Integer]
+--   </pre>
+--   
+--   tal que <b>(triangulares n)</b> es la lista de los números
+--   triangulares con n cifras distintas. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; take 6 (triangularesConCifras 1)
+--   [1,3,6,55,66,666]
+--   
+--   &gt;&gt;&gt; take 6 (triangularesConCifras 2)
+--   [10,15,21,28,36,45]
+--   
+--   &gt;&gt;&gt; take 6 (triangularesConCifras 3)
+--   [105,120,136,153,190,210]
+--   
+--   &gt;&gt;&gt; take 5 (triangularesConCifras 4)
+--   [1035,1275,1326,1378,1485]
+--   
+--   &gt;&gt;&gt; take 2 (triangularesConCifras 10)
+--   [1062489753,1239845706]
+--   </pre>
+module Triangulares_con_cifras
+
+-- | Definición.
+triangularesConCifras :: Int -> [Integer]
+
+-- | <b>triangulares</b> es la sucesión de los números triangulares. Por
+--   ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; take 15 triangulares1
+--   [1,3,6,10,15,21,28,36,45,55,66,78,91,105,120]
+--   </pre>
+triangulares1 :: [Integer]
+
+-- | 2ª definición de <a>triangulares</a> (usando <a>zipWith</a>).
+triangulares2 :: [Integer]
+
+-- | 3ª definición de <a>triangulares</a> (usando <a>scanl</a>).
+triangulares3 :: [Integer]
+
+-- | 4ª definición de triangulares (con la fórmula)
+triangulares4 :: [Integer]
+
+-- | <b>(prop_triangulares n)</b> se verifica si las definiciones de
+--   triangulares son equivalentes en sus primeros n términos. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; prop_triangulares 100
+--   True
+--   </pre>
+prop_triangulares :: Int -> Bool
+
+-- | Usaremos como <b>triangulares</b> la 3ª definición.
+triangulares :: [Integer]
+
+-- | <b>(nCifras x)</b> es el número de cifras distintas del número x. Por
+--   ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; nCifras 325275
+--   4
+--   </pre>
+nCifras :: Integer -> Int
+
+
 -- | Definir la función
 --   
 --   <pre>

@@ -72,6 +72,7 @@ library
       Segmentos_consecutivos
       Suma_si_todos_justos
       Trenza
+      Triangulares_con_cifras
       Valor_de_un_polinomio
   default-language: Haskell2010
 
