@@ -6,6 +6,8 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 ** Definiciones por composición de funciones sobre listas y booleanos      
 ** Definiciones por composición de funciones aritméticas                   
 ** Definiciones con condicionales                                          
++ [[./src/PimPamPum.hs][Pim, Pam, Pum y divisibilidad]] (S3).
+
 ** Definiciones con ecuaciones con guardas                                 
 ** Definiciones con equiparación de patrones                                
 *** Constantes como patrones                                               
@@ -15,9 +17,10 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 *** Funciones auxiliares                                                   
 
 * Definiciones por comprensión.
-** Con un generador                                                        
+** Con un generador                                        
 + [[./src/Mas_repetido.hs][Elemento con más repeticiones consecutivas]] (S2, S3, S4).
 + [[./src/Biparticiones_de_una_lista.hs][Biparticiones de una lista]] (S1)
++ [[./src/PimPamPum.hs][Pim, Pam, Pum y divisibilidad]] (S2).
 
 ** Con varios generadores                                                  
 ** Con generadores dependientes                                            
@@ -33,6 +36,7 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 + [[./src/Biparticiones_de_una_lista.hs][Biparticiones de una lista]] (S2).
 + [[./src/Trenza.hs][Trenzado de listas]] (S1).
 + [[./src/Triangulares_con_cifras.hs][Números triangulares con n cifras distintas]] (S1).
++ [[./src/PimPamPum.hs][Pim, Pam, Pum y divisibilidad]] (S1, S4).
 
 ** Con generadores anidados
 + [[./src/Ordenados_por_maximo.hs][Ordenación por el máximo]].

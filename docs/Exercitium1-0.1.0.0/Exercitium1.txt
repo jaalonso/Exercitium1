@@ -685,6 +685,78 @@ verifica_primosConsecutivosConMediaCapicua :: Int -> Bool
 nPrimosConsecutivosConMediaCapicua :: Int -> Int
 
 
+-- | <b>Pim, Pam, Pum y divisibilidad</b>
+--   
+--   Definir la función
+--   
+--   <pre>
+--   sonido :: Int -&gt; String
+--   </pre>
+--   
+--   tal que <b>(sonido n)</b> escribe <a>Pim</a> si n es divisible por 3,
+--   además escribe <a>Pam</a> si n es divisible por 5 y también escribe
+--   <a>Pum</a> si n es divisible por 7. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; sonido   3
+--   "Pim"
+--   
+--   &gt;&gt;&gt; sonido   5
+--   "Pam"
+--   
+--   &gt;&gt;&gt; sonido   7
+--   "Pum"
+--   
+--   &gt;&gt;&gt; sonido   8
+--   ""
+--   
+--   &gt;&gt;&gt; sonido   9
+--   "Pim"
+--   
+--   &gt;&gt;&gt; sonido  15
+--   "PimPam"
+--   
+--   &gt;&gt;&gt; sonido  21
+--   "PimPum"
+--   
+--   &gt;&gt;&gt; sonido  35
+--   "PamPum"
+--   
+--   &gt;&gt;&gt; sonido 105
+--   "PimPamPum"
+--   </pre>
+module PimPamPum
+
+-- | 1ª solución.
+sonido :: Int -> String
+
+-- | 2ª solución.
+sonido2 :: Int -> String
+
+-- | 3ª solución.
+sonido3 :: Int -> String
+
+-- | 4ª solución.
+sonido4 :: Int -> String
+
+-- | <b>(prop_equiv_sonido x)</b> se verifica si las definiciones de
+--   <a>sonido</a> son equivalentes sobre x. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; all prop_equiv_sonido [3,5,7,9,15,21,35,105]
+--   True
+--   </pre>
+prop_equiv_sonido :: Int -> Bool
+
+-- | Comprueba la equivalencia de las definiciones de <a>sonido</a>.
+--   
+--   <pre>
+--   &gt;&gt;&gt; verifica_equiv_sonido
+--   +++ OK, passed 100 tests.
+--   </pre>
+verifica_equiv_sonido :: IO ()
+
+
 -- | Definir la función
 --   
 --   <pre>
