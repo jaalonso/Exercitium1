@@ -31,6 +31,7 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 + [[./src/MaximosLocales.hs][Máximos locales]] (S2).
 + [[./src/Pares_adyacentes_iguales.hs][Número de pares de elementos adyacentes iguales]] (S1).
 + [[./src/Biparticiones_de_una_lista.hs][Biparticiones de una lista]] (S2).
++ [[./src/Trenza.hs][Trenzado de listas]] (S1).
 
 ** Con generadores anidados
 + [[./src/Ordenados_por_maximo.hs][Ordenación por el máximo]].
@@ -53,6 +54,8 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 ** Recursión en los dos argumentos.
 + [[./src/ElementosMinimales.hs][Determinación de los elementos minimales]].
 + [[./src/Mastermind.hs][Mastermind]].
++ [[./src/Trenza.hs][Trenzado de listas]] (S4).
+
 ** Recursión cruzada
 + [[./src/Mayor_producto_de_las_ramas_de_un_arbol.hs][Mayor producto de las ramas de un árbol]] (S2).
 
@@ -87,6 +90,7 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 ** Con otras funciones de orden superior
 + [[./src/Alfabeto_desde.hs][Alfabeto comenzado en un carácter]] (S2, S3).
 + [[./src/Emparejamiento_binario.hs][Emparejamiento binario]].                          
++ [[./src/Trenza.hs][Trenzado de listas]] (S2, S3).
 
 * Listas infinitas.
 + [[./src/Lista_cuadrada.hs][Lista cuadrada]] (S1 y S2).

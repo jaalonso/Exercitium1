@@ -35,3 +35,4 @@ durante el curso 2013-14.
 + 21: [[./src/Pares_adyacentes_iguales.hs][Número de pares de elementos adyacentes iguales]]. 
 + 22: [[./src/Mayor_producto_de_las_ramas_de_un_arbol.hs][Mayor producto de las ramas de un árbol]].         
 + 23: [[./src/Biparticiones_de_una_lista.hs][Biparticiones de una lista]].                      
++ 26: [[./src/Trenza.hs][Trenzado de listas]].                              
