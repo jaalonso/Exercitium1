@@ -1015,6 +1015,65 @@ instance GHC.Show.Show Ordenacion_de_estructuras.Notas
 instance GHC.Read.Read Ordenacion_de_estructuras.Notas
 
 
+-- | <b>Número de inversiones</b>
+--   
+--   Se dice que en una sucesión de números x(1), x(2), ..., x(n) hay una
+--   inversión cuando existe un par de números x(i) &gt; x(j), siendo i
+--   &lt; j. Por ejemplo, en la permutación 2, 1, 4, 3 hay dos inversiones
+--   (2 antes que 1 y 4 antes que 3) y en la permutación 4, 3, 1, 2 hay
+--   cinco inversiones (4 antes 3, 4 antes 1, 4 antes 2, 3 antes 1, 3 antes
+--   2).
+--   
+--   Definir la función
+--   
+--   <pre>
+--   numeroInversiones :: Ord a =&gt; [a] -&gt; Int  
+--   </pre>
+--   
+--   tal que <b>(numeroInversiones xs)</b> es el número de inversiones de
+--   xs. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; numeroInversiones [2,1,4,3]
+--   2
+--   
+--   &gt;&gt;&gt; numeroInversiones [4,3,1,2]
+--   5
+--   </pre>
+module Numero_de_inversiones
+
+-- | 1ª solución (por recursión y compresión).
+numeroInversiones :: Ord a => [a] -> Int
+
+-- | 2ª solución (por recursión y <a>filter</a>).
+numeroInversiones2 :: Ord a => [a] -> Int
+
+-- | 3ª solución (por comprensión)
+numeroInversiones3 :: Ord a => [a] -> Int
+
+-- | 4ª solución (con vectores)
+numeroInversiones4 :: Ord a => [a] -> Int
+
+-- | <b>(prop_equiv_numeroInversiones xs)</b> se verifica si las
+--   definiciones de <a>numeroInversiones</a> son equivalentes sobre xs.
+--   Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; all prop_equiv_numeroInversiones [[2,1,4,3], [4,3,1,2]]
+--   True
+--   </pre>
+prop_equiv_numeroInversiones :: [Int] -> Bool
+
+-- | Comprueba la equivalencia de las definiciones de
+--   <a>numeroInversiones</a>.
+--   
+--   <pre>
+--   &gt;&gt;&gt; verifica_equiv_numeroInversiones
+--   +++ OK, passed 100 tests.
+--   </pre>
+verifica_equiv_numeroInversiones :: IO ()
+
+
 -- | Las ternas de números naturales se pueden ordenar como sigue
 --   
 --   <pre>

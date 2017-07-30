@@ -46,3 +46,4 @@ durante el curso 2013-14.
 + 03: [[./src/Alergias.hs][Código de las alergias]].                        
 + 04: [[./src/Indices_verdaderos.hs][Índices de valores verdaderos]].                 
 + 05: [[./src/Descomposiciones_triangulares.hs][Descomposiciones como sumas de tres triangulares]].                 
++ 06: [[./src/Numero_de_inversiones.hs][Número de inversiones]].                         

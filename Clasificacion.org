@@ -24,6 +24,8 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 
 ** Con varios generadores                                                  
 ** Con generadores dependientes                                            
++ [[./src/Numero_de_inversiones.hs][Número de inversiones]] (S3).
+
 ** Con guardas                                                             
 + [[./src/Bandera_tricolor.hs][La bandera tricolor]].
 ** Con igualdad                                                            
@@ -70,6 +72,7 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 * Definiciones por recursión y por comprensión.
 + [[./src/ElementosMinimales.hs][Determinación de los elementos minimales]].
 + [[./src/Segmentos_consecutivos.hs][Segmentos de elementos consecutivos]] (S2).
++ [[./src/Numero_de_inversiones.hs][Número de inversiones]] (S1).
 
 * Funciones sobre cadenas.
 + [[./src/Anagramas.hs][Anagramas]].
@@ -87,6 +90,8 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 + [[./src/Pares_adyacentes_iguales.hs][Número de pares de elementos adyacentes iguales]] (S2).
 
 ** Con filter
++ [[./src/Numero_de_inversiones.hs][Número de inversiones]] (S2).
+
 ** Con plegado
 ** Con takeWhile o dropWhile
 + [[./src/Alfabeto_desde.hs][Alfabeto comenzado en un carácter]] (S1).
@@ -130,6 +135,7 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 * Vectores y matrices.
 ** Vectores
 + [[./src/Valor_de_un_polinomio.hs][Valor de un polinomio mediante vectores]].         
++ [[./src/Numero_de_inversiones.hs][Número de inversiones]] (S4).
 
 ** Matrices
 + [[./src/Amplia_columnas.hs][Ampliación de columnas de una matriz]].             
