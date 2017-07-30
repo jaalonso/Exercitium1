@@ -54,6 +54,7 @@ library
       Anagramas
       Bandera_tricolor
       Biparticiones_de_una_lista
+      Descomposiciones_triangulares
       ElementosMinimales
       Emparejamiento_binario
       Enumera_arbol

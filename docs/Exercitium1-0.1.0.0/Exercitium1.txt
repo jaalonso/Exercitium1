@@ -1847,6 +1847,69 @@ minimales :: Eq a => [[a]] -> [[a]]
 subconjuntoPropio :: Eq a => [a] -> [a] -> Bool
 
 
+-- | <b>Descomposiciones como sumas de tres triangulares</b>
+--   
+--   Definir la función
+--   
+--   <pre>
+--   descomposicionesTriangulares :: Int -&gt; [(Int, Int, Int)] 
+--   </pre>
+--   
+--   tal que <b>(descomposicionesTriangulares n)</b> es la lista de las
+--   ternas correspondientes a las descomposiciones de n en tres sumandos,
+--   como máximo, formados por números triangulares. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; descomposicionesTriangulares 6
+--   [(0,0,6),(0,3,3)]
+--   
+--   &gt;&gt;&gt; descomposicionesTriangulares 26
+--   [(1,10,15),(6,10,10)]
+--   
+--   &gt;&gt;&gt; descomposicionesTriangulares 21
+--   [(0,0,21),(0,6,15),(1,10,10),(3,3,15)]
+--   
+--   &gt;&gt;&gt; descomposicionesTriangulares 61
+--   [(0,6,55),(1,15,45),(3,3,55),(6,10,45),(10,15,36)]
+--   
+--   &gt;&gt;&gt; descomposicionesTriangulares 66
+--   [(0,0,66),(0,21,45),(1,10,55),(6,15,45),(10,28,28),(15,15,36)]
+--   
+--   &gt;&gt;&gt; descomposicionesTriangulares 126
+--   [(0,6,120),(0,21,105),(3,3,120),(3,45,78),(6,15,105),(15,45,66),(36,45,45)]
+--   
+--   &gt;&gt;&gt; length (descomposicionesTriangulares 9256)
+--   88
+--   
+--   &gt;&gt;&gt; length (descomposicionesTriangulares 10000)
+--   42
+--   </pre>
+--   
+--   Comprobar con QuickCheck que todo número se puede descomponer como
+--   suma de tres triangulares.
+module Descomposiciones_triangulares
+
+-- | Definición.
+descomposicionesTriangulares :: Int -> [(Int, Int, Int)]
+
+-- | <b>triangulares</b> es la lista de los números triangulares. Por
+--   ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; take 10 triangulares
+--   [0,1,3,6,10,15,21,28,36,45]
+--   </pre>
+triangulares :: [Int]
+
+-- | Comprobación de la propiedad.
+--   
+--   <pre>
+--   &gt;&gt;&gt; quickCheck prop_descomposicionesTriangulares
+--   +++ OK, passed 100 tests.
+--   </pre>
+prop_descomposicionesTriangulares :: (Positive Int) -> Bool
+
+
 -- | Definir la función
 --   
 --   <pre>

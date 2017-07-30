@@ -45,3 +45,4 @@ durante el curso 2013-14.
 + 02: [[./src/PimPamPum.hs][Pim, Pam, Pum y divisibilidad]].                 
 + 03: [[./src/Alergias.hs][Código de las alergias]].                        
 + 04: [[./src/Indices_verdaderos.hs][Índices de valores verdaderos]].                 
++ 05: [[./src/Descomposiciones_triangulares.hs][Descomposiciones como sumas de tres triangulares]].                 
