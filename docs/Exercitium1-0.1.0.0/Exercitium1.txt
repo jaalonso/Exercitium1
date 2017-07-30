@@ -2109,3 +2109,147 @@ prop_alfabetoDesde :: Char -> Bool
 --   +++ OK, passed 100 tests.
 --   </pre>
 verifica_alfabetoDesde :: IO ()
+
+
+-- | <b>Código de las alergias</b>
+--   
+--   Para la determinación de las alergia se utiliza los siguientes códigos
+--   para los alérgenos:
+--   
+--   <pre>
+--   Huevos ........   1
+--   Cacahuetes ....   2
+--   Mariscos ......   4
+--   Fresas ........   8
+--   Tomates .......  16
+--   Chocolate .....  32
+--   Polen .........  64
+--   Gatos ......... 128
+--   </pre>
+--   
+--   Así, si Juan es alérgico a los cacahuetes y al chocolate, su
+--   puntuación es 34 (es decir, 2+32).
+--   
+--   Los alérgenos se representan mediante el siguiente tipo de dato
+--   
+--   <pre>
+--   data Alergeno = Huevos
+--                 | Cacahuetes
+--                 | Mariscos
+--                 | Fresas
+--                 | Tomates
+--                 | Chocolate
+--                 | Polen
+--                 | Gatos
+--                 deriving (Enum, Eq, Show, Bounded)
+--   </pre>
+--   
+--   Definir la función
+--   
+--   <pre>
+--   alergias :: Int -&gt; [Alergeno]
+--   </pre>
+--   
+--   tal que <b>(alergias n)</b> es la lista de alergias correspondiente a
+--   una puntuación n. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; alergias 0
+--   []
+--   
+--   &gt;&gt;&gt; alergias 1
+--   [Huevos]
+--   
+--   &gt;&gt;&gt; alergias 2
+--   [Cacahuetes]
+--   
+--   &gt;&gt;&gt; alergias 8
+--   [Fresas]
+--   
+--   &gt;&gt;&gt; alergias 3
+--   [Huevos,Cacahuetes]
+--   
+--   &gt;&gt;&gt; alergias 5
+--   [Huevos,Mariscos]
+--   
+--   &gt;&gt;&gt; alergias 248
+--   [Fresas,Tomates,Chocolate,Polen,Gatos]
+--   
+--   &gt;&gt;&gt; alergias 255
+--   [Huevos,Cacahuetes,Mariscos,Fresas,Tomates,Chocolate,Polen,Gatos]
+--   
+--   &gt;&gt;&gt; alergias 509
+--   [Huevos,Mariscos,Fresas,Tomates,Chocolate,Polen,Gatos]
+--   </pre>
+module Alergias
+
+-- | Tipo de alergenos.
+data Alergeno
+Huevos :: Alergeno
+Cacahuetes :: Alergeno
+Mariscos :: Alergeno
+Fresas :: Alergeno
+Tomates :: Alergeno
+Chocolate :: Alergeno
+Polen :: Alergeno
+Gatos :: Alergeno
+
+-- | 1ª definición (usando números binarios).
+alergias :: Int -> [Alergeno]
+
+-- | <b>(int2bin n)</b> es la representación binaria del número n. Por
+--   ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; int2bin 10
+--   [0,1,0,1]
+--   </pre>
+--   
+--   ya que 10 = 0*1 + 1*2 + 0*4 + 1*8
+int2bin :: Int -> [Int]
+
+-- | 2ª definición (sin usar números binarios).
+alergias2 :: Int -> [Alergeno]
+
+-- | 3ª definición (con combinaciones).
+alergias3 :: Int -> [Alergeno]
+
+-- | <b>alergenos</b> es la lista de los alergenos
+alergenos :: [Alergeno]
+
+-- | <b>codigos</b> es la lista de los códigos de los alergenos.
+codigos :: [Int]
+
+-- | <b>(descomposicion n)</b> es la descomposición de n (módulo 256) como
+--   sumas de potencias de 2. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; descomposicion 3
+--   [1,2]
+--   
+--   &gt;&gt;&gt; descomposicion 5
+--   [1,4]
+--   
+--   &gt;&gt;&gt; descomposicion 248
+--   [8,16,32,64,128]
+--   
+--   &gt;&gt;&gt; descomposicion 255
+--   [1,2,4,8,16,32,64,128]
+--   
+--   &gt;&gt;&gt; descomposicion 509
+--   [1,4,8,16,32,64,128]
+--   </pre>
+descomposicion :: Int -> [Int]
+
+-- | Comprobación de la equivalencia de las definiciones de
+--   <tt>alergia</tt>.
+--   
+--   <pre>
+--   &gt;&gt;&gt; quickCheck prop_equiv_alergias
+--   +++ OK, passed 100 tests.
+--   </pre>
+prop_equiv_alergias :: (NonNegative Int) -> Bool
+instance GHC.Enum.Bounded Alergias.Alergeno
+instance GHC.Show.Show Alergias.Alergeno
+instance GHC.Classes.Eq Alergias.Alergeno
+instance GHC.Enum.Enum Alergias.Alergeno

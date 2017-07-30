@@ -112,6 +112,8 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 * Tipos definidos y tipos de datos algebraicos.
 ** Tipos no recursivos
 + [[./src/Ordenacion_de_estructuras.hs][Ordenación de estructuras]].
++ [[./src/Bandera_tricolor.hs][La bandera tricolor]].                  
++ [[./src/Alergias.hs][Código de las alergias]].                        
 
 ** Árboles binarios.
 + [[./src/Enumera_arbol.hs][Enumeración de árboles binarios]].                 

@@ -47,6 +47,7 @@ library
     , base >=4.7 && <5
     , primes
   exposed-modules:
+      Alergias
       Alfabeto_desde
       Algun_vecino_menor
       Amplia_columnas
