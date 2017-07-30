@@ -106,6 +106,7 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 * Listas infinitas.
 + [[./src/Lista_cuadrada.hs][Lista cuadrada]] (S1 y S2).
 + [[./src/Numeracion_de_ternas.hs][Numeración de ternas de naturales]].               
++ [[./src/Indices_verdaderos.hs][Índices de valores verdaderos]].                 
 
 * Funciones con tipos opcionales (Maybe)
 + [[./src/Suma_si_todos_justos.hs][Suma si todos los valores son justos]].            

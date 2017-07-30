@@ -1546,6 +1546,93 @@ prop_listaCuadrada :: NonNegative Int -> Int -> [Int] -> Bool
 verifica_listaCuadrada :: IO ()
 
 
+-- | <b>Índices de valores verdaderos</b>
+--   
+--   Definir la función
+--   
+--   <pre>
+--   indicesVerdaderos :: [Int] -&gt; [Bool]
+--   </pre>
+--   
+--   tal que <b>(indicesVerdaderos xs)</b> es la lista infinita de
+--   booleanos tal que sólo son verdaderos los elementos cuyos índices
+--   pertenecen a la lista estrictamente creciente xs. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; take 6 (indicesVerdaderos [1,4])
+--   [False,True,False,False,True,False]
+--   
+--   &gt;&gt;&gt; take 6 (indicesVerdaderos [0,2..])
+--   [True,False,True,False,True,False]
+--   
+--   &gt;&gt;&gt; take 3 (indicesVerdaderos [])
+--   [False,False,False]
+--   
+--   &gt;&gt;&gt; take 6 (indicesVerdaderos [1..])
+--   [False,True,True,True,True,True]
+--   </pre>
+module Indices_verdaderos
+
+-- | 1ª definición (por comprensión).
+indicesVerdaderos :: [Int] -> [Bool]
+
+-- | <b>(pertenece x ys)</b> se verifica si x pertenece a la lista
+--   estrictamente creciente (posiblemente infinita) ys. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; pertenece 9 [1,3..]
+--   True
+--   
+--   &gt;&gt;&gt; pertenece 6 [1,3..]
+--   False
+--   </pre>
+pertenece :: Int -> [Int] -> Bool
+
+-- | 2ª solución (por recursión).
+indicesVerdaderos2 :: [Int] -> [Bool]
+
+-- | 3ª solución (por recursión).
+indicesVerdaderos3 :: [Int] -> [Bool]
+
+-- | 4ª definición (por recursión).
+indicesVerdaderos4 :: [Int] -> [Bool]
+
+-- | Tipo de los índices.
+newtype Indices
+I :: [Int] -> Indices
+
+-- | Generador de índices. Por ejemplo,
+--   
+--   <pre>
+--   &gt; sample indices
+--   I []
+--   I [1]
+--   I []
+--   I [2]
+--   I [0,1,5,8]
+--   I [4,6,7,10]
+--   I [0,11]
+--   I [1,5,6,9,10]
+--   I [0,7,8,10,12,14,16]
+--   I [0,5,13]
+--   I [17]
+--   </pre>
+indices :: Gen Indices
+
+-- | Inclusión de <a>Indices</a> en <a>Arbitrary</a>.
+
+-- | Comprobación de la equivalencia de las definiciones de
+--   <a>indicesVerdaderos</a>.
+--   
+--   <pre>
+--   &gt;&gt;&gt; quickCheck prop_equiv_indicesVerdaderos
+--   +++ OK, passed 100 tests.
+--   </pre>
+prop_equiv_indicesVerdaderos :: (Positive Int) -> Indices -> Bool
+instance GHC.Show.Show Indices_verdaderos.Indices
+instance Test.QuickCheck.Arbitrary.Arbitrary Indices_verdaderos.Indices
+
+
 -- | Definir la función
 --   
 --   <pre>

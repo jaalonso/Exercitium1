@@ -44,3 +44,4 @@ durante el curso 2013-14.
 * Junio de 2014
 + 02: [[./src/PimPamPum.hs][Pim, Pam, Pum y divisibilidad]].                 
 + 03: [[./src/Alergias.hs][Código de las alergias]].                        
++ 04: [[./src/Indices_verdaderos.hs][Índices de valores verdaderos]].                 

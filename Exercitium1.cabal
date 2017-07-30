@@ -58,6 +58,7 @@ library
       Emparejamiento_binario
       Enumera_arbol
       Iguales_al_siguiente
+      Indices_verdaderos
       Lista_cuadrada
       Mas_repetido
       Mastermind
