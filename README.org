@@ -50,3 +50,4 @@ durante el curso 2013-14.
 + 09: [[./src/Separacion_por_posicion.hs][Sepación por posición]].                         
 + 10: [[./src/EmparejamientoDeArboles.hs][Emparejamiento de árboles]].                     
 + 11: [[./src/Elimina_unitarias.hs][Eliminación de las ocurrencias unitarias]].      
++ 12: [[./src/Ordenada_ciclicamente.hs][Ordenada cíclicamente]].

@@ -66,6 +66,7 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 + [[./src/ElementosMinimales.hs][Determinación de los elementos minimales]].
 + [[./src/Mastermind.hs][Mastermind]].
 + [[./src/Trenza.hs][Trenzado de listas]] (S4).
++ [[./src/Ordenada_ciclicamente.hs][Ordenada cíclicamente]] (S2).
 
 ** Recursión cruzada
 + [[./src/Mayor_producto_de_las_ramas_de_un_arbol.hs][Mayor producto de las ramas de un árbol]] (S2).
@@ -79,6 +80,7 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 + [[./src/ElementosMinimales.hs][Determinación de los elementos minimales]].
 + [[./src/Segmentos_consecutivos.hs][Segmentos de elementos consecutivos]] (S2).
 + [[./src/Numero_de_inversiones.hs][Número de inversiones]] (S1).
++ [[./src/Ordenada_ciclicamente.hs][Ordenada cíclicamente]] (S1).
 
 * Funciones sobre cadenas.
 + [[./src/Anagramas.hs][Anagramas]].
