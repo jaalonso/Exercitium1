@@ -29,6 +29,7 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 
 ** Con guardas                                                             
 + [[./src/Bandera_tricolor.hs][La bandera tricolor]].
++ [[./src/Elimina_unitarias.hs][Eliminación de las ocurrencias unitarias]] (S1, S5).
 ** Con igualdad                                                            
 ** Con la función zip
 + [[./src/Iguales_al_siguiente.hs][Iguales al siguiente]] (S1, S3).
@@ -72,6 +73,7 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 
 ** Recursión con acumuladores
 + [[./src/Bandera_tricolor.hs][La bandera tricolor]].
++ [[./src/Elimina_unitarias.hs][Eliminación de las ocurrencias unitarias]] (S4).
 
 * Definiciones por recursión y por comprensión.
 + [[./src/ElementosMinimales.hs][Determinación de los elementos minimales]].
@@ -95,6 +97,7 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 
 ** Con filter
 + [[./src/Numero_de_inversiones.hs][Número de inversiones]] (S2).
++ [[./src/Elimina_unitarias.hs][Eliminación de las ocurrencias unitarias]] (S2).
 
 ** Con plegado
 + [[./src/Separacion_por_posicion.hs][Sepación por posición]] (S5).
@@ -102,6 +105,7 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 ** Con takeWhile o dropWhile
 + [[./src/Alfabeto_desde.hs][Alfabeto comenzado en un carácter]] (S1).
 + [[./src/Mas_repetido.hs][Elemento con más repeticiones consecutivas]] (S1).
++ [[./src/Elimina_unitarias.hs][Eliminación de las ocurrencias unitarias]] (S3).
 
 ** Con iterate
 + [[./src/Lista_cuadrada.hs][Lista cuadrada]] (S3 y S4).
@@ -113,6 +117,7 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 + [[./src/Emparejamiento_binario.hs][Emparejamiento binario]].                          
 + [[./src/Trenza.hs][Trenzado de listas]] (S2, S3).
 + [[./src/Triangulares_con_cifras.hs][Números triangulares con n cifras distintas]] (S2).
++ [[./src/Elimina_unitarias.hs][Eliminación de las ocurrencias unitarias]] (S6).
 
 * Listas infinitas.
 + [[./src/Lista_cuadrada.hs][Lista cuadrada]] (S1 y S2).

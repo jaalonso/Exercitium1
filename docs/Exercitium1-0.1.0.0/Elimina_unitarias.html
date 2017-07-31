@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Elimina_unitarias</title><link href="ocean.css" rel="stylesheet" type="text/css" title="Ocean" /><script src="haddock-util.js" type="text/javascript"></script><script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script><script type="text/javascript">//<![CDATA[
+window.onload = function () {pageLoad();setSynopsis("mini_Elimina_unitarias.html");};
+//]]>
+</script></head><body><div id="package-header"><ul class="links" id="page-menu"><li><a href="src/Elimina_unitarias.html">Source</a></li><li><a href="index.html">Contents</a></li><li><a href="doc-index.html">Index</a></li></ul><p class="caption">Exercitium1-0.1.0.0: Problemas de Exercitium (Volumen 1)</p></div><div id="content"><div id="module-header"><table class="info"><tr><th valign="top">Copyright</th><td>Exercitium (11-05-14)</td></tr><tr><th>License</th><td>GPL-3</td></tr><tr><th>Maintainer</th><td>JoseA.Alonso@gmail.com</td></tr><tr><th>Safe Haskell</th><td>Safe</td></tr><tr><th>Language</th><td>Haskell2010</td></tr></table><p class="caption">Elimina_unitarias</p></div><div id="description"><p class="caption">Description</p><div class="doc"><p><strong>Eliminaci&#243;n de las ocurrencias unitarias</strong></p><p>Definir la funci&#243;n</p><pre>eliminaUnitarias :: Char -&gt; String -&gt; String</pre><p>tal que <strong>(eliminaUnitarias c cs)</strong> es la lista obtenida eliminando de la
+ cadena cs las ocurrencias unitarias del car&#225;cter c (es decir,
+ aquellas ocurrencias de c tales que su elemento anterior y posterior
+ es distinto de c). Por ejemplo,</p><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>eliminaUnitarias 'X' &quot;&quot;
+</code></strong>&quot;&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>eliminaUnitarias 'X' &quot;X&quot;
+</code></strong>&quot;&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>eliminaUnitarias 'X' &quot;XX&quot;
+</code></strong>&quot;XX&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>eliminaUnitarias 'X' &quot;XXX&quot;
+</code></strong>&quot;XXX&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>eliminaUnitarias 'X' &quot;abcd&quot;
+</code></strong>&quot;abcd&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>eliminaUnitarias 'X' &quot;Xabcd&quot;
+</code></strong>&quot;abcd&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>eliminaUnitarias 'X' &quot;XXabcd&quot;
+</code></strong>&quot;XXabcd&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>eliminaUnitarias 'X' &quot;XXXabcd&quot;
+</code></strong>&quot;XXXabcd&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>eliminaUnitarias 'X' &quot;abcdX&quot;
+</code></strong>&quot;abcd&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>eliminaUnitarias 'X' &quot;abcdXX&quot;
+</code></strong>&quot;abcdXX&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>eliminaUnitarias 'X' &quot;abcdXXX&quot;
+</code></strong>&quot;abcdXXX&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>eliminaUnitarias 'X' &quot;abXcd&quot;
+</code></strong>&quot;abcd&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>eliminaUnitarias 'X' &quot;abXXcd&quot;
+</code></strong>&quot;abXXcd&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>eliminaUnitarias 'X' &quot;abXXXcd&quot;
+</code></strong>&quot;abXXXcd&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>eliminaUnitarias 'X' &quot;XabXcdX&quot;
+</code></strong>&quot;abcd&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>eliminaUnitarias 'X' &quot;XXabXXcdXX&quot;
+</code></strong>&quot;XXabXXcdXX&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>eliminaUnitarias 'X' &quot;XXXabXXXcdXXX&quot;
+</code></strong>&quot;XXXabXXXcdXXX&quot;
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>eliminaUnitarias 'X' &quot;XabXXcdXeXXXfXx&quot;
+</code></strong>&quot;abXXcdeXXXfx&quot;
+</pre></div></div><div id="synopsis"><p id="control.syn" class="caption expander" onclick="toggleSection('syn')">Synopsis</p><ul id="section.syn" class="hide" onclick="toggleSection('syn')"><li class="src short"><a href="#v:eliminaUnitarias">eliminaUnitarias</a> :: <a href="../base-4.9.1.0/Data-Char.html#t:Char">Char</a> -&gt; <a href="../base-4.9.1.0/Data-String.html#t:String">String</a> -&gt; <a href="../base-4.9.1.0/Data-String.html#t:String">String</a></li><li class="src short"><a href="#v:eliminaUnitarias2">eliminaUnitarias2</a> :: <a href="../base-4.9.1.0/Data-Char.html#t:Char">Char</a> -&gt; <a href="../base-4.9.1.0/Data-String.html#t:String">String</a> -&gt; <a href="../base-4.9.1.0/Data-String.html#t:String">String</a></li><li class="src short"><a href="#v:eliminaUnitarias3">eliminaUnitarias3</a> :: <a href="../base-4.9.1.0/Data-Char.html#t:Char">Char</a> -&gt; <a href="../base-4.9.1.0/Data-String.html#t:String">String</a> -&gt; <a href="../base-4.9.1.0/Data-String.html#t:String">String</a></li><li class="src short"><a href="#v:eliminaUnitarias4">eliminaUnitarias4</a> :: <a href="../base-4.9.1.0/Data-Char.html#t:Char">Char</a> -&gt; <a href="../base-4.9.1.0/Data-String.html#t:String">String</a> -&gt; <a href="../base-4.9.1.0/Data-String.html#t:String">String</a></li><li class="src short"><a href="#v:eliminaUnitarias5">eliminaUnitarias5</a> :: <a href="../base-4.9.1.0/Data-Char.html#t:Char">Char</a> -&gt; <a href="../base-4.9.1.0/Data-String.html#t:String">String</a> -&gt; <a href="../base-4.9.1.0/Data-String.html#t:String">String</a></li><li class="src short"><a href="#v:eliminaUnitarias6">eliminaUnitarias6</a> :: <a href="../base-4.9.1.0/Data-Char.html#t:Char">Char</a> -&gt; <a href="../base-4.9.1.0/Data-String.html#t:String">String</a> -&gt; <a href="../base-4.9.1.0/Data-String.html#t:String">String</a></li><li class="src short"><a href="#v:prop_equiv_eliminaUnitarias">prop_equiv_eliminaUnitarias</a> :: <a href="../base-4.9.1.0/Data-Char.html#t:Char">Char</a> -&gt; <a href="../base-4.9.1.0/Data-String.html#t:String">String</a> -&gt; <a href="../base-4.9.1.0/Data-Bool.html#t:Bool">Bool</a></li><li class="src short"><a href="#v:verifica_equiv_eliminaUnitarias">verifica_equiv_eliminaUnitarias</a> :: <a href="../base-4.9.1.0/System-IO.html#t:IO">IO</a> ()</li></ul></div><div id="interface"><h1>Documentation</h1><div class="top"><p class="src"><a id="v:eliminaUnitarias" class="def">eliminaUnitarias</a> :: <a href="../base-4.9.1.0/Data-Char.html#t:Char">Char</a> -&gt; <a href="../base-4.9.1.0/Data-String.html#t:String">String</a> -&gt; <a href="../base-4.9.1.0/Data-String.html#t:String">String</a> <a href="src/Elimina_unitarias.html#eliminaUnitarias" class="link">Source</a> <a href="#v:eliminaUnitarias" class="selflink">#</a></p><div class="doc"><p>1&#170; soluci&#243;n (por comprensi&#243;n).</p></div></div><div class="top"><p class="src"><a id="v:eliminaUnitarias2" class="def">eliminaUnitarias2</a> :: <a href="../base-4.9.1.0/Data-Char.html#t:Char">Char</a> -&gt; <a href="../base-4.9.1.0/Data-String.html#t:String">String</a> -&gt; <a href="../base-4.9.1.0/Data-String.html#t:String">String</a> <a href="src/Elimina_unitarias.html#eliminaUnitarias2" class="link">Source</a> <a href="#v:eliminaUnitarias2" class="selflink">#</a></p><div class="doc"><p>2&#170; soluci&#243;n (por composici&#243;n).</p></div></div><div class="top"><p class="src"><a id="v:eliminaUnitarias3" class="def">eliminaUnitarias3</a> :: <a href="../base-4.9.1.0/Data-Char.html#t:Char">Char</a> -&gt; <a href="../base-4.9.1.0/Data-String.html#t:String">String</a> -&gt; <a href="../base-4.9.1.0/Data-String.html#t:String">String</a> <a href="src/Elimina_unitarias.html#eliminaUnitarias3" class="link">Source</a> <a href="#v:eliminaUnitarias3" class="selflink">#</a></p><div class="doc"><p>3&#170; soluci&#243;n (por recursi&#243;n).</p></div></div><div class="top"><p class="src"><a id="v:eliminaUnitarias4" class="def">eliminaUnitarias4</a> :: <a href="../base-4.9.1.0/Data-Char.html#t:Char">Char</a> -&gt; <a href="../base-4.9.1.0/Data-String.html#t:String">String</a> -&gt; <a href="../base-4.9.1.0/Data-String.html#t:String">String</a> <a href="src/Elimina_unitarias.html#eliminaUnitarias4" class="link">Source</a> <a href="#v:eliminaUnitarias4" class="selflink">#</a></p><div class="doc"><p>4&#170; soluci&#243;n (por recursi&#243;n con acumuladores).</p></div></div><div class="top"><p class="src"><a id="v:eliminaUnitarias5" class="def">eliminaUnitarias5</a> :: <a href="../base-4.9.1.0/Data-Char.html#t:Char">Char</a> -&gt; <a href="../base-4.9.1.0/Data-String.html#t:String">String</a> -&gt; <a href="../base-4.9.1.0/Data-String.html#t:String">String</a> <a href="src/Elimina_unitarias.html#eliminaUnitarias5" class="link">Source</a> <a href="#v:eliminaUnitarias5" class="selflink">#</a></p><div class="doc"><p>5&#170; soluci&#243;n (con &#237;ndices).</p></div></div><div class="top"><p class="src"><a id="v:eliminaUnitarias6" class="def">eliminaUnitarias6</a> :: <a href="../base-4.9.1.0/Data-Char.html#t:Char">Char</a> -&gt; <a href="../base-4.9.1.0/Data-String.html#t:String">String</a> -&gt; <a href="../base-4.9.1.0/Data-String.html#t:String">String</a> <a href="src/Elimina_unitarias.html#eliminaUnitarias6" class="link">Source</a> <a href="#v:eliminaUnitarias6" class="selflink">#</a></p><div class="doc"><p>6&#170; soluci&#243;n (por recursi&#243;n con <code><a href="../base-4.9.1.0/GHC-OldList.html#v:span">span</a></code>).</p></div></div><div class="top"><p class="src"><a id="v:prop_equiv_eliminaUnitarias" class="def">prop_equiv_eliminaUnitarias</a> :: <a href="../base-4.9.1.0/Data-Char.html#t:Char">Char</a> -&gt; <a href="../base-4.9.1.0/Data-String.html#t:String">String</a> -&gt; <a href="../base-4.9.1.0/Data-Bool.html#t:Bool">Bool</a> <a href="src/Elimina_unitarias.html#prop_equiv_eliminaUnitarias" class="link">Source</a> <a href="#v:prop_equiv_eliminaUnitarias" class="selflink">#</a></p><div class="doc"><p><strong>(prop_equiv_eliminaUnitarias c cs)</strong> se verifica si las
+ definiciones de eliminaUnitarias son equivalentes sobre c y cs. Por
+ ejemplo,</p><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>prop_equiv_eliminaUnitarias 'X' &quot;XabXXcdXeXXXfXx&quot;
+</code></strong>True
+</pre></div></div><div class="top"><p class="src"><a id="v:verifica_equiv_eliminaUnitarias" class="def">verifica_equiv_eliminaUnitarias</a> :: <a href="../base-4.9.1.0/System-IO.html#t:IO">IO</a> () <a href="src/Elimina_unitarias.html#verifica_equiv_eliminaUnitarias" class="link">Source</a> <a href="#v:verifica_equiv_eliminaUnitarias" class="selflink">#</a></p><div class="doc"><p>Comprueba la equivalencia de las definiciones de
+ <code><a href="Elimina_unitarias.html#v:eliminaUnitarias">eliminaUnitarias</a></code>.</p><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>verifica_equiv_eliminaUnitarias
+</code></strong>+++ OK, passed 100 tests.
+</pre></div></div><div class="doc"><p><strong>Comparaci&#243;n de eficiencia</strong></p><pre>&gt; length (eliminaUnitarias5 '3' (show (2^100000)))
+27599
+(2.13 secs, 15,602,672 bytes)
+&gt; length (eliminaUnitarias '3' (show (2^100000)))
+27599
+(0.02 secs, 14,934,296 bytes)</pre><pre>&gt; length (eliminaUnitarias '3' (show (2^10000000)))
+2766278
+(1.94 secs, 1,465,644,920 bytes)
+&gt; length (eliminaUnitarias2 '3' (show (2^10000000)))
+2766278
+(1.40 secs, 1,231,149,824 bytes)
+&gt; length (eliminaUnitarias3 '3' (show (2^10000000)))
+2766278
+(1.69 secs, 918,640,064 bytes)
+&gt; length (eliminaUnitarias4 '3' (show (2^10000000)))
+2766278
+(2.03 secs, 797,135,176 bytes)
+&gt; length (eliminaUnitarias6 '3' (show (2^10000000)))
+2766278
+(1.52 secs, 938,221,096 bytes)</pre></div></div></div><div id="footer"><p>Produced by <a href="http://www.haskell.org/haddock/">Haddock</a> version 2.17.3</p></div></body></html>

@@ -56,6 +56,7 @@ library
       Biparticiones_de_una_lista
       Descomposiciones_triangulares
       ElementosMinimales
+      Elimina_unitarias
       Emparejamiento_binario
       EmparejamientoDeArboles
       Enumera_arbol

@@ -2013,6 +2013,114 @@ instance GHC.Classes.Eq a => GHC.Classes.Eq (EmparejamientoDeArboles.Arbol a)
 instance GHC.Show.Show a => GHC.Show.Show (EmparejamientoDeArboles.Arbol a)
 
 
+-- | <b>Eliminación de las ocurrencias unitarias</b>
+--   
+--   Definir la función
+--   
+--   <pre>
+--   eliminaUnitarias :: Char -&gt; String -&gt; String
+--   </pre>
+--   
+--   tal que <b>(eliminaUnitarias c cs)</b> es la lista obtenida eliminando
+--   de la cadena cs las ocurrencias unitarias del carácter c (es decir,
+--   aquellas ocurrencias de c tales que su elemento anterior y posterior
+--   es distinto de c). Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; eliminaUnitarias 'X' ""
+--   ""
+--   
+--   &gt;&gt;&gt; eliminaUnitarias 'X' "X"
+--   ""
+--   
+--   &gt;&gt;&gt; eliminaUnitarias 'X' "XX"
+--   "XX"
+--   
+--   &gt;&gt;&gt; eliminaUnitarias 'X' "XXX"
+--   "XXX"
+--   
+--   &gt;&gt;&gt; eliminaUnitarias 'X' "abcd"
+--   "abcd"
+--   
+--   &gt;&gt;&gt; eliminaUnitarias 'X' "Xabcd"
+--   "abcd"
+--   
+--   &gt;&gt;&gt; eliminaUnitarias 'X' "XXabcd"
+--   "XXabcd"
+--   
+--   &gt;&gt;&gt; eliminaUnitarias 'X' "XXXabcd"
+--   "XXXabcd"
+--   
+--   &gt;&gt;&gt; eliminaUnitarias 'X' "abcdX"
+--   "abcd"
+--   
+--   &gt;&gt;&gt; eliminaUnitarias 'X' "abcdXX"
+--   "abcdXX"
+--   
+--   &gt;&gt;&gt; eliminaUnitarias 'X' "abcdXXX"
+--   "abcdXXX"
+--   
+--   &gt;&gt;&gt; eliminaUnitarias 'X' "abXcd"
+--   "abcd"
+--   
+--   &gt;&gt;&gt; eliminaUnitarias 'X' "abXXcd"
+--   "abXXcd"
+--   
+--   &gt;&gt;&gt; eliminaUnitarias 'X' "abXXXcd"
+--   "abXXXcd"
+--   
+--   &gt;&gt;&gt; eliminaUnitarias 'X' "XabXcdX"
+--   "abcd"
+--   
+--   &gt;&gt;&gt; eliminaUnitarias 'X' "XXabXXcdXX"
+--   "XXabXXcdXX"
+--   
+--   &gt;&gt;&gt; eliminaUnitarias 'X' "XXXabXXXcdXXX"
+--   "XXXabXXXcdXXX"
+--   
+--   &gt;&gt;&gt; eliminaUnitarias 'X' "XabXXcdXeXXXfXx"
+--   "abXXcdeXXXfx"
+--   </pre>
+module Elimina_unitarias
+
+-- | 1ª solución (por comprensión).
+eliminaUnitarias :: Char -> String -> String
+
+-- | 2ª solución (por composición).
+eliminaUnitarias2 :: Char -> String -> String
+
+-- | 3ª solución (por recursión).
+eliminaUnitarias3 :: Char -> String -> String
+
+-- | 4ª solución (por recursión con acumuladores).
+eliminaUnitarias4 :: Char -> String -> String
+
+-- | 5ª solución (con índices).
+eliminaUnitarias5 :: Char -> String -> String
+
+-- | 6ª solución (por recursión con <a>span</a>).
+eliminaUnitarias6 :: Char -> String -> String
+
+-- | <b>(prop_equiv_eliminaUnitarias c cs)</b> se verifica si las
+--   definiciones de eliminaUnitarias son equivalentes sobre c y cs. Por
+--   ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; prop_equiv_eliminaUnitarias 'X' "XabXXcdXeXXXfXx"
+--   True
+--   </pre>
+prop_equiv_eliminaUnitarias :: Char -> String -> Bool
+
+-- | Comprueba la equivalencia de las definiciones de
+--   <a>eliminaUnitarias</a>.
+--   
+--   <pre>
+--   &gt;&gt;&gt; verifica_equiv_eliminaUnitarias
+--   +++ OK, passed 100 tests.
+--   </pre>
+verifica_equiv_eliminaUnitarias :: IO ()
+
+
 -- | Definir la función
 --   
 --   <pre>
