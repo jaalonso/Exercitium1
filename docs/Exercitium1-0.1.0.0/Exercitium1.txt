@@ -274,6 +274,81 @@ sumaSiTodosJustos :: (Num a, Eq a) => [Maybe a] -> Maybe a
 verifica_sumaSiTodosJustos :: IO ()
 
 
+-- | <b>Separación por posición</b>
+--   
+--   Definir la función
+--   
+--   <pre>
+--   particion :: [a] -&gt; ([a],[a])
+--   </pre>
+--   
+--   tal que <b>(particion xs)</b> es el par cuya primera componente son
+--   los elementos de xs en posiciones pares y su segunda componente son
+--   los restantes elementos. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; particion [3,5,6,2]
+--   ([3,6],[5,2])
+--   
+--   &gt;&gt;&gt; particion [3,5,6,2,7]
+--   ([3,6,7],[5,2])
+--   
+--   &gt;&gt;&gt; particion "particion"
+--   ("priin","atco")
+--   </pre>
+module Separacion_por_posicion
+
+-- | 1ª definición (por recursión y auxiliares con recursión cruzada).
+particion :: [a] -> ([a], [a])
+
+-- | <b>(pares xs)</b> es la lista de los elementos de xs en posiciones
+--   pares. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; pares [3,5,6,2]
+--   [3,6]
+--   </pre>
+pares :: [a] -> [a]
+
+-- | <b>(impares xs)</b> es la lista de los elementos de xs en posiciones
+--   impares. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; impares [3,5,6,2]
+--   [5,2]
+--   </pre>
+impares :: [a] -> [a]
+
+-- | 2ª definición (por comprensión).
+particion2 :: [a] -> ([a], [a])
+
+-- | 3ª definición (por comprensión e índices)
+particion3 :: [a] -> ([a], [a])
+
+-- | 4ª definición (por recursión).
+particion4 :: [a] -> ([a], [a])
+
+-- | 5ª definición (por plegado).
+particion5 :: [a] -> ([a], [a])
+
+-- | <b>(prop_equiv_particion xs)</b> se verifica si las definiciones de
+--   <a>particion</a> son equivalentes sobre xs. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; all prop_equiv_particion [[3,5,6,2], [3,5,6,2,7]]
+--   True
+--   </pre>
+prop_equiv_particion :: [Int] -> Bool
+
+-- | Comprueba la equivalencia de las definiciones de <a>particion</a>.
+--   
+--   <pre>
+--   &gt;&gt;&gt; verifica_equiv_particion
+--   +++ OK, passed 100 tests.
+--   </pre>
+verifica_equiv_particion :: IO ()
+
+
 -- | Definir la función
 --   
 --   <pre>
@@ -1870,6 +1945,72 @@ gen_operaciones :: Gen [Operacion]
 --   </pre>
 prop_zipBinario :: [Int] -> [Int] -> Property
 instance GHC.Show.Show Emparejamiento_binario.Operacion
+
+
+-- | <b>Emparejamiento de árboles</b>
+--   
+--   Los árboles se pueden representar mediante el siguiente tipo de datos
+--   
+--   <pre>
+--   data Arbol a = N a [Arbol a]
+--     deriving Show
+--   </pre>
+--   
+--   Por ejemplo, los árboles
+--   
+--   <pre>
+--     1               3
+--    / \             /|\ 
+--   6   3           / | \
+--       |          5  4  7
+--       5          |     /\ 
+--                  6    2  1
+--   </pre>
+--   
+--   se representan por
+--   
+--   <pre>
+--   ej1, ej2 :: Arbol Int
+--   ej1 = N 1 [N 6 [],N 3 [N 5 []]]
+--   ej2 = N 3 [N 5 [N 6 []], N 4 [], N 7 [N 2 [], N 1 []]]
+--   </pre>
+--   
+--   Definir la función
+--   
+--   <pre>
+--   emparejaArboles :: (a -&gt; b -&gt; c) -&gt; Arbol a -&gt; Arbol b -&gt; Arbol c
+--   </pre>
+--   
+--   tal que <b>(emparejaArboles f a1 a2)</b> es el árbol obtenido
+--   aplicando la función f a los elementos de los árboles a1 y a2 que se
+--   encuentran en la misma posición. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; emparejaArboles (+) (N 1 [N 2 [], N 3[]]) (N 1 [N 6 []])
+--   N 2 [N 8 []]
+--   
+--   &gt;&gt;&gt; emparejaArboles (+) ej1 ej2
+--   N 4 [N 11 [],N 7 []]
+--   
+--   &gt;&gt;&gt; emparejaArboles (+) ej1 ej1
+--   N 2 [N 12 [],N 6 [N 10 []]]
+--   </pre>
+module EmparejamientoDeArboles
+
+-- | Tipo de árboles.
+data Arbol a
+N :: a -> [Arbol a] -> Arbol a
+
+-- | Ejemplo de árbol.
+ej1 :: Arbol Int
+
+-- | Ejemplo de árbol.
+ej2 :: Arbol Int
+
+-- | Definición.
+emparejaArboles :: (a -> b -> c) -> Arbol a -> Arbol b -> Arbol c
+instance GHC.Classes.Eq a => GHC.Classes.Eq (EmparejamientoDeArboles.Arbol a)
+instance GHC.Show.Show a => GHC.Show.Show (EmparejamientoDeArboles.Arbol a)
 
 
 -- | Definir la función

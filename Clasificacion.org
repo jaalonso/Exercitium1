@@ -21,6 +21,7 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 + [[./src/Mas_repetido.hs][Elemento con más repeticiones consecutivas]] (S2, S3, S4).
 + [[./src/Biparticiones_de_una_lista.hs][Biparticiones de una lista]] (S1)
 + [[./src/PimPamPum.hs][Pim, Pam, Pum y divisibilidad]] (S2).
++ [[./src/Separacion_por_posicion.hs][Sepación por posición]] (S3).
 
 ** Con varios generadores                                                  
 ** Con generadores dependientes                                            
@@ -39,6 +40,7 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 + [[./src/Trenza.hs][Trenzado de listas]] (S1).
 + [[./src/Triangulares_con_cifras.hs][Números triangulares con n cifras distintas]] (S1).
 + [[./src/PimPamPum.hs][Pim, Pam, Pum y divisibilidad]] (S1, S4).
++ [[./src/Separacion_por_posicion.hs][Sepación por posición]] (S2).
 
 ** Con generadores anidados
 + [[./src/Ordenados_por_maximo.hs][Ordenación por el máximo]].
@@ -50,6 +52,7 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 
 ** Rescursión simple sobre listas
 + [[./src/Biparticiones_de_una_lista.hs][Biparticiones de una lista]] (S3)
++ [[./src/Separacion_por_posicion.hs][Sepación por posición]] (S4).
 
 ** Recursión sobre listas
 + [[./src/Iguales_al_siguiente.hs][Iguales al siguiente]] (S2).
@@ -65,6 +68,7 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 
 ** Recursión cruzada
 + [[./src/Mayor_producto_de_las_ramas_de_un_arbol.hs][Mayor producto de las ramas de un árbol]] (S2).
++ [[./src/Separacion_por_posicion.hs][Sepación por posición]] (S1).
 
 ** Recursión con acumuladores
 + [[./src/Bandera_tricolor.hs][La bandera tricolor]].
@@ -93,6 +97,8 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 + [[./src/Numero_de_inversiones.hs][Número de inversiones]] (S2).
 
 ** Con plegado
++ [[./src/Separacion_por_posicion.hs][Sepación por posición]] (S5).
+
 ** Con takeWhile o dropWhile
 + [[./src/Alfabeto_desde.hs][Alfabeto comenzado en un carácter]] (S1).
 + [[./src/Mas_repetido.hs][Elemento con más repeticiones consecutivas]] (S1).
@@ -127,6 +133,7 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 ** Árboles generales.
 + [[./src/Ramas_de_un_arbol.hs][Ramas de un árbol]].                               
 + [[./src/Mayor_producto_de_las_ramas_de_un_arbol.hs][Mayor producto de las ramas de un árbol]].         
++ [[./src/EmparejamientoDeArboles.hs][Emparejamiento de árboles]].                     
 
 ** Expresiones aritméticas.
 

@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Separacion_por_posicion</title><link href="ocean.css" rel="stylesheet" type="text/css" title="Ocean" /><script src="haddock-util.js" type="text/javascript"></script><script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script><script type="text/javascript">//<![CDATA[
+window.onload = function () {pageLoad();setSynopsis("mini_Separacion_por_posicion.html");};
+//]]>
+</script></head><body><div id="package-header"><ul class="links" id="page-menu"><li><a href="src/Separacion_por_posicion.html">Source</a></li><li><a href="index.html">Contents</a></li><li><a href="doc-index.html">Index</a></li></ul><p class="caption">Exercitium1-0.1.0.0: Problemas de Exercitium (Volumen 1)</p></div><div id="content"><div id="module-header"><table class="info"><tr><th valign="top">Copyright</th><td>Exercitium (09-05-14)</td></tr><tr><th>License</th><td>GPL-3</td></tr><tr><th>Maintainer</th><td>JoseA.Alonso@gmail.com</td></tr><tr><th>Safe Haskell</th><td>Safe</td></tr><tr><th>Language</th><td>Haskell2010</td></tr></table><p class="caption">Separacion_por_posicion</p></div><div id="description"><p class="caption">Description</p><div class="doc"><p><strong>Separaci&#243;n por posici&#243;n</strong></p><p>Definir la funci&#243;n</p><pre>particion :: [a] -&gt; ([a],[a])</pre><p>tal que <strong>(particion xs)</strong> es el par cuya primera componente son los
+ elementos de xs en posiciones pares y su segunda componente son los
+ restantes elementos. Por ejemplo,</p><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>particion [3,5,6,2]
+</code></strong>([3,6],[5,2])
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>particion [3,5,6,2,7]
+</code></strong>([3,6,7],[5,2])
+<code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>particion &quot;particion&quot;
+</code></strong>(&quot;priin&quot;,&quot;atco&quot;)
+</pre></div></div><div id="synopsis"><p id="control.syn" class="caption expander" onclick="toggleSection('syn')">Synopsis</p><ul id="section.syn" class="hide" onclick="toggleSection('syn')"><li class="src short"><a href="#v:particion">particion</a> :: [a] -&gt; ([a], [a])</li><li class="src short"><a href="#v:pares">pares</a> :: [a] -&gt; [a]</li><li class="src short"><a href="#v:impares">impares</a> :: [a] -&gt; [a]</li><li class="src short"><a href="#v:particion2">particion2</a> :: [a] -&gt; ([a], [a])</li><li class="src short"><a href="#v:particion3">particion3</a> :: [a] -&gt; ([a], [a])</li><li class="src short"><a href="#v:particion4">particion4</a> :: [a] -&gt; ([a], [a])</li><li class="src short"><a href="#v:particion5">particion5</a> :: [a] -&gt; ([a], [a])</li><li class="src short"><a href="#v:prop_equiv_particion">prop_equiv_particion</a> :: [<a href="../base-4.9.1.0/Data-Int.html#t:Int">Int</a>] -&gt; <a href="../base-4.9.1.0/Data-Bool.html#t:Bool">Bool</a></li><li class="src short"><a href="#v:verifica_equiv_particion">verifica_equiv_particion</a> :: <a href="../base-4.9.1.0/System-IO.html#t:IO">IO</a> ()</li></ul></div><div id="interface"><h1>Documentation</h1><div class="top"><p class="src"><a id="v:particion" class="def">particion</a> :: [a] -&gt; ([a], [a]) <a href="src/Separacion_por_posicion.html#particion" class="link">Source</a> <a href="#v:particion" class="selflink">#</a></p><div class="doc"><p>1&#170; definici&#243;n (por recursi&#243;n y auxiliares con recursi&#243;n cruzada).</p></div></div><div class="top"><p class="src"><a id="v:pares" class="def">pares</a> :: [a] -&gt; [a] <a href="src/Separacion_por_posicion.html#pares" class="link">Source</a> <a href="#v:pares" class="selflink">#</a></p><div class="doc"><p><strong>(pares xs)</strong> es la lista de los elementos de xs en posiciones
+ pares. Por ejemplo,</p><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>pares [3,5,6,2]
+</code></strong>[3,6]
+</pre></div></div><div class="top"><p class="src"><a id="v:impares" class="def">impares</a> :: [a] -&gt; [a] <a href="src/Separacion_por_posicion.html#impares" class="link">Source</a> <a href="#v:impares" class="selflink">#</a></p><div class="doc"><p><strong>(impares xs)</strong> es la lista de los elementos de xs en posiciones
+ impares. Por ejemplo,</p><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>impares [3,5,6,2]
+</code></strong>[5,2]
+</pre></div></div><div class="top"><p class="src"><a id="v:particion2" class="def">particion2</a> :: [a] -&gt; ([a], [a]) <a href="src/Separacion_por_posicion.html#particion2" class="link">Source</a> <a href="#v:particion2" class="selflink">#</a></p><div class="doc"><p>2&#170; definici&#243;n (por comprensi&#243;n).</p></div></div><div class="top"><p class="src"><a id="v:particion3" class="def">particion3</a> :: [a] -&gt; ([a], [a]) <a href="src/Separacion_por_posicion.html#particion3" class="link">Source</a> <a href="#v:particion3" class="selflink">#</a></p><div class="doc"><p>3&#170; definici&#243;n (por comprensi&#243;n e &#237;ndices)</p></div></div><div class="top"><p class="src"><a id="v:particion4" class="def">particion4</a> :: [a] -&gt; ([a], [a]) <a href="src/Separacion_por_posicion.html#particion4" class="link">Source</a> <a href="#v:particion4" class="selflink">#</a></p><div class="doc"><p>4&#170; definici&#243;n (por recursi&#243;n).</p></div></div><div class="top"><p class="src"><a id="v:particion5" class="def">particion5</a> :: [a] -&gt; ([a], [a]) <a href="src/Separacion_por_posicion.html#particion5" class="link">Source</a> <a href="#v:particion5" class="selflink">#</a></p><div class="doc"><p>5&#170; definici&#243;n (por plegado).</p></div></div><div class="top"><p class="src"><a id="v:prop_equiv_particion" class="def">prop_equiv_particion</a> :: [<a href="../base-4.9.1.0/Data-Int.html#t:Int">Int</a>] -&gt; <a href="../base-4.9.1.0/Data-Bool.html#t:Bool">Bool</a> <a href="src/Separacion_por_posicion.html#prop_equiv_particion" class="link">Source</a> <a href="#v:prop_equiv_particion" class="selflink">#</a></p><div class="doc"><p><strong>(prop_equiv_particion xs)</strong> se verifica si las definiciones de
+ <code><a href="Separacion_por_posicion.html#v:particion">particion</a></code> son equivalentes sobre xs. Por ejemplo,</p><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>all prop_equiv_particion [[3,5,6,2], [3,5,6,2,7]]
+</code></strong>True
+</pre></div></div><div class="top"><p class="src"><a id="v:verifica_equiv_particion" class="def">verifica_equiv_particion</a> :: <a href="../base-4.9.1.0/System-IO.html#t:IO">IO</a> () <a href="src/Separacion_por_posicion.html#verifica_equiv_particion" class="link">Source</a> <a href="#v:verifica_equiv_particion" class="selflink">#</a></p><div class="doc"><p>Comprueba la equivalencia de las definiciones de <code><a href="Separacion_por_posicion.html#v:particion">particion</a></code>.</p><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>verifica_equiv_particion
+</code></strong>+++ OK, passed 100 tests.
+</pre></div></div><div class="doc"><p><strong>Comparaci&#243;n de eficiencia</strong></p><pre>&gt; sum (snd (particion [1..20000]))
+100010000
+(0.03 secs, 4,220,080 bytes)
+&gt; sum (snd (particion2 [1..20000]))
+100010000
+(0.05 secs, 9,817,496 bytes)
+&gt; sum (snd (particion3 [1..20000]))
+100010000
+(1.26 secs, 4,701,208 bytes)
+&gt; sum (snd (particion4 [1..20000]))
+100010000
+(0.06 secs, 9,979,608 bytes)
+&gt; sum (snd (particion5 [1..20000]))
+100010000
+(0.04 secs, 7,124,400 bytes)
+
+&gt; sum (snd (particion [1..10^6]))
+250000500000
+(0.92 secs, 192,989,200 bytes)
+&gt; sum (snd (particion2 [1..10^6]))
+250000500000
+(2.24 secs, 472,989,112 bytes)
+&gt; sum (snd (particion4 [1..10^6]))
+250000500000
+(1.88 secs, 480,988,912 bytes)
+&gt; sum (snd (particion5 [1..10^6]))
+250000500000
+(2.12 secs, 339,451,600 bytes)</pre></div></div></div><div id="footer"><p>Produced by <a href="http://www.haskell.org/haddock/">Haddock</a> version 2.17.3</p></div></body></html>

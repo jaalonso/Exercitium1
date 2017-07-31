@@ -47,3 +47,5 @@ durante el curso 2013-14.
 + 04: [[./src/Indices_verdaderos.hs][Índices de valores verdaderos]].                 
 + 05: [[./src/Descomposiciones_triangulares.hs][Descomposiciones como sumas de tres triangulares]].                 
 + 06: [[./src/Numero_de_inversiones.hs][Número de inversiones]].                         
++ 09: [[./src/Separacion_por_posicion.hs][Sepación por posición]].                         
++ 10: [[./src/EmparejamientoDeArboles.hs][Emparejamiento de árboles]].                     
