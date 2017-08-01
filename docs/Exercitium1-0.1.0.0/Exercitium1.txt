@@ -1191,6 +1191,89 @@ instance GHC.Show.Show Ordenacion_de_estructuras.Notas
 instance GHC.Read.Read Ordenacion_de_estructuras.Notas
 
 
+-- | <b>Órbita prima</b>
+--   
+--   La órbita prima de un número n es la sucesión construida de la
+--   siguiente forma:
+--   
+--   <ul>
+--   <li>si n es compuesto su órbita no tiene elementos</li>
+--   <li>si n es primo, entonces n está en su órbita; además, sumamos n y
+--   sus dígitos, si el resultado es un número primo repetimos el proceso
+--   hasta obtener un número compuesto.</li>
+--   </ul>
+--   
+--   Por ejemplo, con el 11 podemos repetir el proceso dos veces
+--   
+--   <ul>
+--   <li>3 = 11+1+1</li>
+--   <li>17 = 13+1+3</li>
+--   </ul>
+--   
+--   Así, la órbita prima de 11 es 11, 13, 17.
+--   
+--   Definir la función
+--   
+--   <pre>
+--   orbita :: Integer -&gt; [Integer]
+--   </pre>
+--   
+--   tal que <b>(orbita n)</b> es la órbita prima de n. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; orbita 11
+--   [11,13,17]
+--   
+--   &gt;&gt;&gt; orbita 59
+--   [59,73,83]
+--   </pre>
+--   
+--   Calcular el menor número cuya órbita prima tiene más de 3 elementos.
+module Orbita_prima
+
+-- | 1ª definición (por recursión)
+orbita :: Integer -> [Integer]
+
+-- | <b>(esPrimo n)</b> se verifica si n es primo. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; esPrimo 17
+--   True
+--   
+--   &gt;&gt;&gt; esPrimo 21
+--   False
+--   </pre>
+esPrimo :: Integer -> Bool
+
+-- | <b>(cifras n)</b> es la lista de las cifras de n. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; cifras 32542
+--   [3,2,5,4,2]
+--   </pre>
+cifras :: Integer -> [Integer]
+
+-- | 2ª definición (con iterate)
+orbita2 :: Integer -> [Integer]
+
+-- | <b>(prop_equiv_orbita n)</b> se verifica si las definiciones de
+--   <a>orbita</a> son equivalentes sobre n. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; all prop_equiv_orbita [11, 59]
+--   True
+--   </pre>
+prop_equiv_orbita :: Integer -> Bool
+
+-- | Comprueba la equivalencia de las definiciones de <a>orbita</a>.
+--   
+--   <pre>
+--   &gt;&gt;&gt; verifica_equiv_orbita
+--   +++ OK, passed 100 tests.
+--   </pre>
+verifica_equiv_orbita :: IO ()
+
+
 -- | <b>Número de inversiones</b>
 --   
 --   Se dice que en una sucesión de números x(1), x(2), ..., x(n) hay una

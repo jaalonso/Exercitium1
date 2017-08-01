@@ -81,6 +81,7 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 + [[./src/Segmentos_consecutivos.hs][Segmentos de elementos consecutivos]] (S2).
 + [[./src/Numero_de_inversiones.hs][Número de inversiones]] (S1).
 + [[./src/Ordenada_ciclicamente.hs][Ordenada cíclicamente]] (S1).
++ [[./src/Orbita_prima.hs][Órbita prima]] (S1).
 
 * Funciones sobre cadenas.
 + [[./src/Anagramas.hs][Anagramas]].
@@ -112,6 +113,7 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 ** Con iterate
 + [[./src/Lista_cuadrada.hs][Lista cuadrada]] (S3 y S4).
 + [[./src/Reiteracion_de_funciones.hs][Reiteración de una función]] (S3).
++ [[./src/Orbita_prima.hs][Órbita prima]] (S2).
 
 ** Con until
 ** Con otras funciones de orden superior
