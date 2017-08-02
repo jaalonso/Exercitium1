@@ -2339,6 +2339,57 @@ minimales :: Eq a => [[a]] -> [[a]]
 subconjuntoPropio :: Eq a => [a] -> [a] -> Bool
 
 
+-- | <b>Divisores de un número con final dado</b>
+--   
+--   Definir la función
+--   
+--   <pre>
+--   divisoresConFinal :: Integer -&gt; Integer -&gt; [Integer]
+--   </pre>
+--   
+--   tal que <b>(divisoresConFinal n m)</b> es la lista de los divisores de
+--   n cuyos dígitos finales coincide con m. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; divisoresConFinal 84 4
+--   [4,14,84]
+--   
+--   &gt;&gt;&gt; divisoresConFinal 720 20
+--   [20,120,720]
+--   </pre>
+module Divisores_con_final
+
+-- | 1ª definición.
+divisoresConFinal :: Integer -> Integer -> [Integer]
+
+-- | <b>(final x y)</b> se verifica si las cifras finales de x coincide con
+--   y. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; final 325 5
+--   True
+--   
+--   &gt;&gt;&gt; final 325 25
+--   True
+--   
+--   &gt;&gt;&gt; final 325 35
+--   False
+--   </pre>
+final :: Integer -> Integer -> Bool
+
+-- | 2ª solución (con <a>isSuffixOf</a>).
+divisoresConFinal2 :: Integer -> Integer -> [Integer]
+
+-- | Comprobación de la equivalencia de las definiciones de
+--   <a>divisoresConFinal</a>.
+--   
+--   <pre>
+--   &gt;&gt;&gt; quickCheck prop_equiv_divisoresConFinal
+--   +++ OK, passed 100 tests.
+--   </pre>
+prop_equiv_divisoresConFinal :: (Positive Integer) -> (Positive Integer) -> Bool
+
+
 -- | <b>Descomposiciones como sumas de tres triangulares</b>
 --   
 --   Definir la función

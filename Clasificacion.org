@@ -30,6 +30,8 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 ** Con guardas                                                             
 + [[./src/Bandera_tricolor.hs][La bandera tricolor]].
 + [[./src/Elimina_unitarias.hs][Eliminación de las ocurrencias unitarias]] (S1, S5).
++ [[./src/Divisores_con_final.hs][Divisores de un número con final dado]].         
+
 ** Con igualdad                                                            
 ** Con la función zip
 + [[./src/Iguales_al_siguiente.hs][Iguales al siguiente]] (S1, S3).
