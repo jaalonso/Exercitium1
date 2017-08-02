@@ -2453,6 +2453,87 @@ triangulares :: [Int]
 prop_descomposicionesTriangulares :: (Positive Int) -> Bool
 
 
+-- | <b>Descomposiciones de x como sumas de n sumandos en la lista ns</b>
+--   
+--   Definir la función
+--   
+--   <pre>
+--   sumas :: (Num a, Ord a) =&gt; Int -&gt; [a] -&gt; a -&gt; [[a]]
+--   </pre>
+--   
+--   tal que <b>(sumas n ns x)</b> es la lista de las descomposiciones de x
+--   como sumas de n sumandos en la lista ns. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; sumas 2 [1,2] 3
+--   [[1,2]]
+--   
+--   &gt;&gt;&gt; sumas 2 [-1] (-2)
+--   [[-1,-1]]
+--   
+--   &gt;&gt;&gt; sumas 2 [-1,3,-1] 2
+--   [[-1,3]]
+--   
+--   &gt;&gt;&gt; sumas 2 [1,2] 4
+--   [[2,2]]
+--   
+--   &gt;&gt;&gt; sumas 2 [1,2] 5
+--   []
+--   
+--   &gt;&gt;&gt; sumas 3 [1,2] 5
+--   [[1,2,2]]
+--   
+--   &gt;&gt;&gt; sumas 3 [1,2] 6
+--   [[2,2,2]]
+--   
+--   &gt;&gt;&gt; sumas 2 [1,2,5] 6
+--   [[1,5]]
+--   
+--   &gt;&gt;&gt; sumas 2 [1,2,3,5] 4
+--   [[1,3],[2,2]]
+--   
+--   &gt;&gt;&gt; sumas 2 [1..5] 6
+--   [[1,5],[2,4],[3,3]]
+--   
+--   &gt;&gt;&gt; sumas 3 [1..5] 7
+--   [[1,1,5],[1,2,4],[1,3,3],[2,2,3]]
+--   
+--   &gt;&gt;&gt; sumas 3 [1..200] 4
+--   [[1,1,2]]
+--   </pre>
+module Descomposiciones_con_n_sumandos
+
+-- | 1ª definición (fuerza bruta)
+sumas1 :: (Num a, Ord a) => Int -> [a] -> a -> [[a]]
+
+-- | <b>(combinacionesR k xs)</b> es la lista de las combinaciones orden k
+--   de los elementos de xs con repeticiones. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; combinacionesR 2 "abc"
+--   ["aa","ab","ac","bb","bc","cc"]
+--   
+--   &gt;&gt;&gt; combinacionesR 3 "bc"
+--   ["bbb","bbc","bcc","ccc"]
+--   
+--   &gt;&gt;&gt; combinacionesR 3 "abc"
+--   ["aaa","aab","aac","abb","abc","acc","bbb","bbc","bcc","ccc"]
+--   </pre>
+combinacionesR :: Int -> [a] -> [[a]]
+
+-- | 2ª definición (divide y vencerás).
+sumas :: (Num a, Ord a) => Int -> [a] -> a -> [[a]]
+
+-- | <b>(prop_equiv_sumas n ns x)</b> se verifica si las definiciones de
+--   <a>sumas</a> son equivalentes para n, ns y x. Por ejemplo,
+--   
+--   <pre>
+--   &gt;&gt;&gt; quickCheckWith (stdArgs {maxSize=7}) prop_equiv_sumas
+--   +++ OK, passed 100 tests.
+--   </pre>
+prop_equiv_sumas :: (Positive Int) -> [Int] -> Int -> Bool
+
+
 -- | Definir la función
 --   
 --   <pre>

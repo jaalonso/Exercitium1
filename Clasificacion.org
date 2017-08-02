@@ -84,6 +84,7 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 + [[./src/Numero_de_inversiones.hs][Número de inversiones]] (S1).
 + [[./src/Ordenada_ciclicamente.hs][Ordenada cíclicamente]] (S1).
 + [[./src/Orbita_prima.hs][Órbita prima]] (S1).
++ [[./src/Descomposiciones_con_n_sumandos.hs][Descomposiciones como sumas de n sumandos]] (S2).
 
 * Funciones sobre cadenas.
 + [[./src/Anagramas.hs][Anagramas]].
@@ -163,5 +164,8 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 * Relaciones binarias homogéneas.
 
 * Operaciones con conjuntos.
+
+* Combinatoria
++ [[./src/Descomposiciones_con_n_sumandos.hs][Descomposiciones como sumas de n sumandos]] (S1).
 
 * Grafos.

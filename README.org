@@ -53,3 +53,4 @@ durante el curso 2013-14.
 + 12: [[./src/Ordenada_ciclicamente.hs][Ordenada cíclicamente]].
 + 13: [[./src/Orbita_prima.hs][Órbita prima]].                                  
 + 16: [[./src/Divisores_con_final.hs][Divisores de un número con final dado]].         
++ 17: [[./src/Descomposiciones_con_n_sumandos.hs][Descomposiciones como sumas de n sumandos]]      

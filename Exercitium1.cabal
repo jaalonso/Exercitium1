@@ -54,6 +54,7 @@ library
       Anagramas
       Bandera_tricolor
       Biparticiones_de_una_lista
+      Descomposiciones_con_n_sumandos
       Descomposiciones_triangulares
       Divisores_con_final
       ElementosMinimales
