@@ -1,11 +1,11 @@
 -- |
 -- Module      : Descomposiciones_con_n_sumandos
--- Description : Descomposiciones de x como sumas de n sumandos en la lista ns.
+-- Description : Descomposiciones de x como sumas de n sumandos de la lista ns.
 -- Copyright   : Exercitium  (17-05-14)
 -- License     : GPL-3
 -- Maintainer  : JoseA.Alonso@gmail.com
 -- 
--- __Descomposiciones de x como sumas de n sumandos en la lista ns__
+-- __Descomposiciones de x como sumas de n sumandos de la lista ns__
 -- 
 -- Definir la función
 -- 
