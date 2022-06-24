@@ -47,9 +47,11 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 
 ** Con generadores anidados
 + [[./src/Ordenados_por_maximo.hs][Ordenación por el máximo]].
+
 ** Con cadenas                                                             
 
 * Definiciones por recursión.
+
 ** Recursión numérica.
 + [[./src/Regiones.hs][Regiones en el plano]].                            
 
@@ -64,6 +66,7 @@ Esta clasificación es la misma que la de [[https://www.cs.us.es/~jalonso/public
 + [[./src/Segmentos_consecutivos.hs][Segmentos de elementos consecutivos]] (S1).
 
 ** Recursión sobre listas de listas.
+
 ** Recursión en los dos argumentos.
 + [[./src/ElementosMinimales.hs][Determinación de los elementos minimales]].
 + [[./src/Mastermind.hs][Mastermind]].
